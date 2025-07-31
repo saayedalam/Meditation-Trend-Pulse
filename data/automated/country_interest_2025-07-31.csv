@@ -1,0 +1,1131 @@
+country,keyword,search_interest
+Afghanistan,meditation,77
+Albania,meditation,80
+Algeria,meditation,79
+American Samoa,meditation,100
+Andorra,meditation,45
+Angola,meditation,64
+Antigua & Barbuda,meditation,79
+Argentina,meditation,18
+Armenia,meditation,79
+Aruba,meditation,80
+Australia,meditation,75
+Austria,meditation,91
+Azerbaijan,meditation,74
+Bahamas,meditation,82
+Bahrain,meditation,79
+Bangladesh,meditation,84
+Barbados,meditation,75
+Belarus,meditation,69
+Belgium,meditation,68
+Belize,meditation,80
+Benin,meditation,98
+Bermuda,meditation,76
+Bhutan,meditation,56
+Bolivia,meditation,30
+Bosnia & Herzegovina,meditation,75
+Botswana,meditation,86
+Brazil,meditation,27
+British Virgin Islands,meditation,100
+Brunei,meditation,76
+Bulgaria,meditation,79
+Burkina Faso,meditation,97
+Burundi,meditation,100
+Cambodia,meditation,79
+Cameroon,meditation,98
+Canada,meditation,78
+Cape Verde,meditation,71
+Caribbean Netherlands,meditation,77
+Cayman Islands,meditation,71
+Central African Republic,meditation,100
+Chad,meditation,100
+Chile,meditation,15
+China,meditation,68
+Colombia,meditation,21
+Comoros,meditation,100
+Congo - Brazzaville,meditation,100
+Congo - Kinshasa,meditation,98
+Cook Islands,meditation,53
+Costa Rica,meditation,44
+Croatia,meditation,66
+Cuba,meditation,38
+Curaçao,meditation,75
+Cyprus,meditation,72
+Czechia,meditation,56
+Côte d’Ivoire,meditation,97
+Denmark,meditation,64
+Djibouti,meditation,100
+Dominica,meditation,100
+Dominican Republic,meditation,48
+Ecuador,meditation,25
+Egypt,meditation,75
+El Salvador,meditation,32
+Equatorial Guinea,meditation,100
+Eritrea,meditation,100
+Estonia,meditation,69
+Eswatini,meditation,80
+Ethiopia,meditation,80
+Falkland Islands (Islas Malvinas),meditation,0
+Faroe Islands,meditation,61
+Fiji,meditation,89
+Finland,meditation,50
+France,meditation,92
+French Guiana,meditation,91
+French Polynesia,meditation,91
+Gabon,meditation,98
+Gambia,meditation,90
+Georgia,meditation,77
+Germany,meditation,91
+Ghana,meditation,93
+Gibraltar,meditation,76
+Greece,meditation,67
+Greenland,meditation,83
+Grenada,meditation,82
+Guadeloupe,meditation,95
+Guam,meditation,74
+Guatemala,meditation,33
+Guernsey,meditation,69
+Guinea,meditation,100
+Guinea-Bissau,meditation,100
+Guyana,meditation,83
+Haiti,meditation,98
+Honduras,meditation,37
+Hong Kong,meditation,60
+Hungary,meditation,55
+Iceland,meditation,59
+India,meditation,90
+Indonesia,meditation,53
+Iran,meditation,80
+Iraq,meditation,72
+Ireland,meditation,72
+Isle of Man,meditation,64
+Israel,meditation,75
+Italy,meditation,31
+Jamaica,meditation,82
+Japan,meditation,77
+Jersey,meditation,73
+Jordan,meditation,73
+Kazakhstan,meditation,74
+Kenya,meditation,84
+Kosovo,meditation,80
+Kuwait,meditation,80
+Kyrgyzstan,meditation,77
+Laos,meditation,70
+Latvia,meditation,77
+Lebanon,meditation,78
+Lesotho,meditation,89
+Liberia,meditation,90
+Libya,meditation,74
+Liechtenstein,meditation,96
+Lithuania,meditation,66
+Luxembourg,meditation,81
+Macao,meditation,72
+Madagascar,meditation,94
+Malawi,meditation,91
+Malaysia,meditation,77
+Maldives,meditation,77
+Mali,meditation,100
+Malta,meditation,70
+Marshall Islands,meditation,100
+Martinique,meditation,98
+Mauritania,meditation,80
+Mauritius,meditation,87
+Mayotte,meditation,100
+Mexico,meditation,29
+Micronesia,meditation,100
+Moldova,meditation,67
+Mongolia,meditation,79
+Montenegro,meditation,73
+Morocco,meditation,81
+Mozambique,meditation,67
+Myanmar (Burma),meditation,75
+Namibia,meditation,83
+Nepal,meditation,91
+Netherlands,meditation,40
+New Caledonia,meditation,97
+New Zealand,meditation,72
+Nicaragua,meditation,36
+Niger,meditation,86
+Nigeria,meditation,88
+North Macedonia,meditation,78
+Northern Mariana Islands,meditation,77
+Norway,meditation,56
+Oman,meditation,81
+Pakistan,meditation,79
+Palau,meditation,100
+Palestine,meditation,71
+Panama,meditation,41
+Papua New Guinea,meditation,88
+Paraguay,meditation,27
+Peru,meditation,17
+Philippines,meditation,76
+Poland,meditation,46
+Portugal,meditation,51
+Puerto Rico,meditation,55
+Qatar,meditation,78
+Romania,meditation,64
+Russia,meditation,70
+Rwanda,meditation,87
+Réunion,meditation,94
+Samoa,meditation,100
+San Marino,meditation,40
+Saudi Arabia,meditation,77
+Senegal,meditation,92
+Serbia,meditation,73
+Seychelles,meditation,91
+Sierra Leone,meditation,81
+Singapore,meditation,71
+Sint Maarten,meditation,85
+Slovakia,meditation,66
+Slovenia,meditation,79
+Solomon Islands,meditation,100
+Somalia,meditation,83
+South Africa,meditation,82
+South Korea,meditation,68
+South Sudan,meditation,100
+Spain,meditation,26
+Sri Lanka,meditation,85
+St. Barthélemy,meditation,97
+St. Helena,meditation,63
+St. Kitts & Nevis,meditation,86
+St. Lucia,meditation,88
+St. Martin,meditation,100
+St. Pierre & Miquelon,meditation,100
+St. Vincent & Grenadines,meditation,82
+Sudan,meditation,78
+Suriname,meditation,78
+Sweden,meditation,64
+Switzerland,meditation,85
+Syria,meditation,83
+Taiwan,meditation,69
+Tajikistan,meditation,84
+Tanzania,meditation,91
+Thailand,meditation,74
+Timor-Leste,meditation,83
+Togo,meditation,97
+Tonga,meditation,100
+Trinidad & Tobago,meditation,83
+Tunisia,meditation,83
+Turkmenistan,meditation,86
+Turks & Caicos Islands,meditation,85
+Türkiye,meditation,42
+U.S. Virgin Islands,meditation,77
+Uganda,meditation,89
+Ukraine,meditation,73
+United Arab Emirates,meditation,78
+United Kingdom,meditation,69
+United States,meditation,76
+Uruguay,meditation,20
+Uzbekistan,meditation,78
+Vanuatu,meditation,100
+Venezuela,meditation,29
+Vietnam,meditation,69
+Western Sahara,meditation,100
+Yemen,meditation,75
+Zambia,meditation,89
+Zimbabwe,meditation,85
+Åland Islands,meditation,89
+Afghanistan,mindfulness,17
+Albania,mindfulness,14
+Algeria,mindfulness,16
+American Samoa,mindfulness,0
+Andorra,mindfulness,50
+Angola,mindfulness,33
+Antigua & Barbuda,mindfulness,17
+Argentina,mindfulness,74
+Armenia,mindfulness,15
+Aruba,mindfulness,13
+Australia,mindfulness,15
+Austria,mindfulness,4
+Azerbaijan,mindfulness,22
+Bahamas,mindfulness,13
+Bahrain,mindfulness,15
+Bangladesh,mindfulness,13
+Barbados,mindfulness,15
+Belarus,mindfulness,27
+Belgium,mindfulness,23
+Belize,mindfulness,18
+Benin,mindfulness,2
+Bermuda,mindfulness,16
+Bhutan,mindfulness,43
+Bolivia,mindfulness,68
+Bosnia & Herzegovina,mindfulness,20
+Botswana,mindfulness,11
+Brazil,mindfulness,68
+British Virgin Islands,mindfulness,0
+Brunei,mindfulness,24
+Bulgaria,mindfulness,14
+Burkina Faso,mindfulness,3
+Burundi,mindfulness,0
+Cambodia,mindfulness,17
+Cameroon,mindfulness,2
+Canada,mindfulness,13
+Cape Verde,mindfulness,29
+Caribbean Netherlands,mindfulness,23
+Cayman Islands,mindfulness,14
+Central African Republic,mindfulness,0
+Chad,mindfulness,0
+Chile,mindfulness,82
+China,mindfulness,27
+Colombia,mindfulness,74
+Comoros,mindfulness,0
+Congo - Brazzaville,mindfulness,0
+Congo - Kinshasa,mindfulness,2
+Cook Islands,mindfulness,0
+Costa Rica,mindfulness,44
+Croatia,mindfulness,26
+Cuba,mindfulness,57
+Curaçao,mindfulness,16
+Cyprus,mindfulness,21
+Czechia,mindfulness,37
+Côte d’Ivoire,mindfulness,3
+Denmark,mindfulness,31
+Djibouti,mindfulness,0
+Dominica,mindfulness,0
+Dominican Republic,mindfulness,45
+Ecuador,mindfulness,71
+Egypt,mindfulness,20
+El Salvador,mindfulness,64
+Equatorial Guinea,mindfulness,0
+Eritrea,mindfulness,0
+Estonia,mindfulness,22
+Eswatini,mindfulness,12
+Ethiopia,mindfulness,17
+Falkland Islands (Islas Malvinas),mindfulness,100
+Faroe Islands,mindfulness,39
+Fiji,mindfulness,11
+Finland,mindfulness,45
+France,mindfulness,3
+French Guiana,mindfulness,0
+French Polynesia,mindfulness,3
+Gabon,mindfulness,2
+Gambia,mindfulness,10
+Georgia,mindfulness,18
+Germany,mindfulness,4
+Ghana,mindfulness,7
+Gibraltar,mindfulness,14
+Greece,mindfulness,22
+Greenland,mindfulness,17
+Grenada,mindfulness,12
+Guadeloupe,mindfulness,2
+Guam,mindfulness,23
+Guatemala,mindfulness,62
+Guernsey,mindfulness,22
+Guinea,mindfulness,0
+Guinea-Bissau,mindfulness,0
+Guyana,mindfulness,17
+Haiti,mindfulness,2
+Honduras,mindfulness,60
+Hong Kong,mindfulness,37
+Hungary,mindfulness,41
+Iceland,mindfulness,15
+India,mindfulness,7
+Indonesia,mindfulness,41
+Iran,mindfulness,18
+Iraq,mindfulness,20
+Ireland,mindfulness,18
+Isle of Man,mindfulness,18
+Israel,mindfulness,20
+Italy,mindfulness,62
+Jamaica,mindfulness,14
+Japan,mindfulness,20
+Jersey,mindfulness,17
+Jordan,mindfulness,21
+Kazakhstan,mindfulness,20
+Kenya,mindfulness,13
+Kosovo,mindfulness,16
+Kuwait,mindfulness,14
+Kyrgyzstan,mindfulness,23
+Laos,mindfulness,22
+Latvia,mindfulness,16
+Lebanon,mindfulness,16
+Lesotho,mindfulness,8
+Liberia,mindfulness,10
+Libya,mindfulness,19
+Liechtenstein,mindfulness,4
+Lithuania,mindfulness,29
+Luxembourg,mindfulness,12
+Macao,mindfulness,25
+Madagascar,mindfulness,5
+Malawi,mindfulness,9
+Malaysia,mindfulness,20
+Maldives,mindfulness,15
+Mali,mindfulness,0
+Malta,mindfulness,22
+Marshall Islands,mindfulness,0
+Martinique,mindfulness,0
+Mauritania,mindfulness,20
+Mauritius,mindfulness,9
+Mayotte,mindfulness,0
+Mexico,mindfulness,66
+Micronesia,mindfulness,0
+Moldova,mindfulness,25
+Mongolia,mindfulness,17
+Montenegro,mindfulness,19
+Morocco,mindfulness,14
+Mozambique,mindfulness,27
+Myanmar (Burma),mindfulness,23
+Namibia,mindfulness,11
+Nepal,mindfulness,7
+Netherlands,mindfulness,42
+New Caledonia,mindfulness,0
+New Zealand,mindfulness,18
+Nicaragua,mindfulness,53
+Niger,mindfulness,14
+Nigeria,mindfulness,11
+North Macedonia,mindfulness,15
+Northern Mariana Islands,mindfulness,23
+Norway,mindfulness,31
+Oman,mindfulness,14
+Pakistan,mindfulness,19
+Palau,mindfulness,0
+Palestine,mindfulness,22
+Panama,mindfulness,52
+Papua New Guinea,mindfulness,10
+Paraguay,mindfulness,70
+Peru,mindfulness,80
+Philippines,mindfulness,23
+Poland,mindfulness,50
+Portugal,mindfulness,41
+Puerto Rico,mindfulness,39
+Qatar,mindfulness,17
+Romania,mindfulness,29
+Russia,mindfulness,24
+Rwanda,mindfulness,11
+Réunion,mindfulness,1
+Samoa,mindfulness,0
+San Marino,mindfulness,60
+Saudi Arabia,mindfulness,19
+Senegal,mindfulness,7
+Serbia,mindfulness,19
+Seychelles,mindfulness,9
+Sierra Leone,mindfulness,19
+Singapore,mindfulness,26
+Sint Maarten,mindfulness,15
+Slovakia,mindfulness,29
+Slovenia,mindfulness,14
+Solomon Islands,mindfulness,0
+Somalia,mindfulness,14
+South Africa,mindfulness,11
+South Korea,mindfulness,25
+South Sudan,mindfulness,0
+Spain,mindfulness,66
+Sri Lanka,mindfulness,13
+St. Barthélemy,mindfulness,0
+St. Helena,mindfulness,28
+St. Kitts & Nevis,mindfulness,14
+St. Lucia,mindfulness,9
+St. Martin,mindfulness,0
+St. Pierre & Miquelon,mindfulness,0
+St. Vincent & Grenadines,mindfulness,11
+Sudan,mindfulness,20
+Suriname,mindfulness,17
+Sweden,mindfulness,26
+Switzerland,mindfulness,7
+Syria,mindfulness,17
+Taiwan,mindfulness,25
+Tajikistan,mindfulness,16
+Tanzania,mindfulness,7
+Thailand,mindfulness,20
+Timor-Leste,mindfulness,17
+Togo,mindfulness,3
+Tonga,mindfulness,0
+Trinidad & Tobago,mindfulness,12
+Tunisia,mindfulness,12
+Turkmenistan,mindfulness,14
+Turks & Caicos Islands,mindfulness,15
+Türkiye,mindfulness,54
+U.S. Virgin Islands,mindfulness,9
+Uganda,mindfulness,10
+Ukraine,mindfulness,23
+United Arab Emirates,mindfulness,16
+United Kingdom,mindfulness,22
+United States,mindfulness,15
+Uruguay,mindfulness,70
+Uzbekistan,mindfulness,19
+Vanuatu,mindfulness,0
+Venezuela,mindfulness,66
+Vietnam,mindfulness,24
+Western Sahara,mindfulness,0
+Yemen,mindfulness,25
+Zambia,mindfulness,9
+Zimbabwe,mindfulness,12
+Åland Islands,mindfulness,11
+Afghanistan,breathwork,0
+Albania,breathwork,2
+Algeria,breathwork,2
+American Samoa,breathwork,0
+Andorra,breathwork,0
+Angola,breathwork,0
+Antigua & Barbuda,breathwork,0
+Argentina,breathwork,1
+Armenia,breathwork,2
+Aruba,breathwork,0
+Australia,breathwork,2
+Austria,breathwork,2
+Azerbaijan,breathwork,1
+Bahamas,breathwork,2
+Bahrain,breathwork,1
+Bangladesh,breathwork,1
+Barbados,breathwork,3
+Belarus,breathwork,1
+Belgium,breathwork,2
+Belize,breathwork,0
+Benin,breathwork,0
+Bermuda,breathwork,0
+Bhutan,breathwork,0
+Bolivia,breathwork,1
+Bosnia & Herzegovina,breathwork,2
+Botswana,breathwork,0
+Brazil,breathwork,1
+British Virgin Islands,breathwork,0
+Brunei,breathwork,0
+Bulgaria,breathwork,2
+Burkina Faso,breathwork,0
+Burundi,breathwork,0
+Cambodia,breathwork,2
+Cameroon,breathwork,0
+Canada,breathwork,1
+Cape Verde,breathwork,0
+Caribbean Netherlands,breathwork,0
+Cayman Islands,breathwork,2
+Central African Republic,breathwork,0
+Chad,breathwork,0
+Chile,breathwork,0
+China,breathwork,1
+Colombia,breathwork,1
+Comoros,breathwork,0
+Congo - Brazzaville,breathwork,0
+Congo - Kinshasa,breathwork,0
+Cook Islands,breathwork,0
+Costa Rica,breathwork,6
+Croatia,breathwork,1
+Cuba,breathwork,0
+Curaçao,breathwork,0
+Cyprus,breathwork,2
+Czechia,breathwork,3
+Côte d’Ivoire,breathwork,0
+Denmark,breathwork,1
+Djibouti,breathwork,0
+Dominica,breathwork,0
+Dominican Republic,breathwork,2
+Ecuador,breathwork,1
+Egypt,breathwork,2
+El Salvador,breathwork,2
+Equatorial Guinea,breathwork,0
+Eritrea,breathwork,0
+Estonia,breathwork,5
+Eswatini,breathwork,4
+Ethiopia,breathwork,1
+Falkland Islands (Islas Malvinas),breathwork,0
+Faroe Islands,breathwork,0
+Fiji,breathwork,0
+Finland,breathwork,1
+France,breathwork,1
+French Guiana,breathwork,0
+French Polynesia,breathwork,2
+Gabon,breathwork,0
+Gambia,breathwork,0
+Georgia,breathwork,3
+Germany,breathwork,2
+Ghana,breathwork,0
+Gibraltar,breathwork,0
+Greece,breathwork,4
+Greenland,breathwork,0
+Grenada,breathwork,0
+Guadeloupe,breathwork,0
+Guam,breathwork,0
+Guatemala,breathwork,2
+Guernsey,breathwork,0
+Guinea,breathwork,0
+Guinea-Bissau,breathwork,0
+Guyana,breathwork,0
+Haiti,breathwork,0
+Honduras,breathwork,1
+Hong Kong,breathwork,1
+Hungary,breathwork,1
+Iceland,breathwork,4
+India,breathwork,0
+Indonesia,breathwork,3
+Iran,breathwork,0
+Iraq,breathwork,3
+Ireland,breathwork,1
+Isle of Man,breathwork,2
+Israel,breathwork,1
+Italy,breathwork,1
+Jamaica,breathwork,1
+Japan,breathwork,1
+Jersey,breathwork,1
+Jordan,breathwork,2
+Kazakhstan,breathwork,2
+Kenya,breathwork,1
+Kosovo,breathwork,0
+Kuwait,breathwork,1
+Kyrgyzstan,breathwork,0
+Laos,breathwork,3
+Latvia,breathwork,3
+Lebanon,breathwork,2
+Lesotho,breathwork,0
+Liberia,breathwork,0
+Libya,breathwork,2
+Liechtenstein,breathwork,0
+Lithuania,breathwork,2
+Luxembourg,breathwork,2
+Macao,breathwork,0
+Madagascar,breathwork,1
+Malawi,breathwork,0
+Malaysia,breathwork,1
+Maldives,breathwork,2
+Mali,breathwork,0
+Malta,breathwork,1
+Marshall Islands,breathwork,0
+Martinique,breathwork,0
+Mauritania,breathwork,0
+Mauritius,breathwork,1
+Mayotte,breathwork,0
+Mexico,breathwork,2
+Micronesia,breathwork,0
+Moldova,breathwork,3
+Mongolia,breathwork,0
+Montenegro,breathwork,3
+Morocco,breathwork,2
+Mozambique,breathwork,0
+Myanmar (Burma),breathwork,1
+Namibia,breathwork,2
+Nepal,breathwork,0
+Netherlands,breathwork,4
+New Caledonia,breathwork,0
+New Zealand,breathwork,2
+Nicaragua,breathwork,6
+Niger,breathwork,0
+Nigeria,breathwork,0
+North Macedonia,breathwork,1
+Northern Mariana Islands,breathwork,0
+Norway,breathwork,3
+Oman,breathwork,1
+Pakistan,breathwork,1
+Palau,breathwork,0
+Palestine,breathwork,3
+Panama,breathwork,2
+Papua New Guinea,breathwork,0
+Paraguay,breathwork,1
+Peru,breathwork,1
+Philippines,breathwork,0
+Poland,breathwork,1
+Portugal,breathwork,3
+Puerto Rico,breathwork,2
+Qatar,breathwork,1
+Romania,breathwork,2
+Russia,breathwork,2
+Rwanda,breathwork,0
+Réunion,breathwork,1
+Samoa,breathwork,0
+San Marino,breathwork,0
+Saudi Arabia,breathwork,1
+Senegal,breathwork,0
+Serbia,breathwork,2
+Seychelles,breathwork,0
+Sierra Leone,breathwork,0
+Singapore,breathwork,1
+Sint Maarten,breathwork,0
+Slovakia,breathwork,2
+Slovenia,breathwork,2
+Solomon Islands,breathwork,0
+Somalia,breathwork,3
+South Africa,breathwork,1
+South Korea,breathwork,3
+South Sudan,breathwork,0
+Spain,breathwork,1
+Sri Lanka,breathwork,1
+St. Barthélemy,breathwork,0
+St. Helena,breathwork,3
+St. Kitts & Nevis,breathwork,0
+St. Lucia,breathwork,0
+St. Martin,breathwork,0
+St. Pierre & Miquelon,breathwork,0
+St. Vincent & Grenadines,breathwork,0
+Sudan,breathwork,0
+Suriname,breathwork,0
+Sweden,breathwork,2
+Switzerland,breathwork,2
+Syria,breathwork,0
+Taiwan,breathwork,2
+Tajikistan,breathwork,0
+Tanzania,breathwork,1
+Thailand,breathwork,4
+Timor-Leste,breathwork,0
+Togo,breathwork,0
+Tonga,breathwork,0
+Trinidad & Tobago,breathwork,1
+Tunisia,breathwork,2
+Turkmenistan,breathwork,0
+Turks & Caicos Islands,breathwork,0
+Türkiye,breathwork,1
+U.S. Virgin Islands,breathwork,0
+Uganda,breathwork,0
+Ukraine,breathwork,1
+United Arab Emirates,breathwork,2
+United Kingdom,breathwork,2
+United States,breathwork,1
+Uruguay,breathwork,0
+Uzbekistan,breathwork,1
+Vanuatu,breathwork,0
+Venezuela,breathwork,1
+Vietnam,breathwork,3
+Western Sahara,breathwork,0
+Yemen,breathwork,0
+Zambia,breathwork,0
+Zimbabwe,breathwork,0
+Åland Islands,breathwork,0
+Afghanistan,yoga nidra,3
+Albania,yoga nidra,1
+Algeria,yoga nidra,1
+American Samoa,yoga nidra,0
+Andorra,yoga nidra,5
+Angola,yoga nidra,0
+Antigua & Barbuda,yoga nidra,0
+Argentina,yoga nidra,7
+Armenia,yoga nidra,2
+Aruba,yoga nidra,0
+Australia,yoga nidra,2
+Austria,yoga nidra,3
+Azerbaijan,yoga nidra,2
+Bahamas,yoga nidra,2
+Bahrain,yoga nidra,2
+Bangladesh,yoga nidra,1
+Barbados,yoga nidra,4
+Belarus,yoga nidra,1
+Belgium,yoga nidra,6
+Belize,yoga nidra,0
+Benin,yoga nidra,0
+Bermuda,yoga nidra,3
+Bhutan,yoga nidra,0
+Bolivia,yoga nidra,1
+Bosnia & Herzegovina,yoga nidra,2
+Botswana,yoga nidra,1
+Brazil,yoga nidra,3
+British Virgin Islands,yoga nidra,0
+Brunei,yoga nidra,0
+Bulgaria,yoga nidra,2
+Burkina Faso,yoga nidra,0
+Burundi,yoga nidra,0
+Cambodia,yoga nidra,1
+Cameroon,yoga nidra,0
+Canada,yoga nidra,2
+Cape Verde,yoga nidra,0
+Caribbean Netherlands,yoga nidra,0
+Cayman Islands,yoga nidra,5
+Central African Republic,yoga nidra,0
+Chad,yoga nidra,0
+Chile,yoga nidra,3
+China,yoga nidra,2
+Colombia,yoga nidra,4
+Comoros,yoga nidra,0
+Congo - Brazzaville,yoga nidra,0
+Congo - Kinshasa,yoga nidra,0
+Cook Islands,yoga nidra,47
+Costa Rica,yoga nidra,3
+Croatia,yoga nidra,5
+Cuba,yoga nidra,3
+Curaçao,yoga nidra,9
+Cyprus,yoga nidra,2
+Czechia,yoga nidra,3
+Côte d’Ivoire,yoga nidra,0
+Denmark,yoga nidra,3
+Djibouti,yoga nidra,0
+Dominica,yoga nidra,0
+Dominican Republic,yoga nidra,3
+Ecuador,yoga nidra,2
+Egypt,yoga nidra,1
+El Salvador,yoga nidra,1
+Equatorial Guinea,yoga nidra,0
+Eritrea,yoga nidra,0
+Estonia,yoga nidra,2
+Eswatini,yoga nidra,0
+Ethiopia,yoga nidra,1
+Falkland Islands (Islas Malvinas),yoga nidra,0
+Faroe Islands,yoga nidra,0
+Fiji,yoga nidra,0
+Finland,yoga nidra,3
+France,yoga nidra,4
+French Guiana,yoga nidra,9
+French Polynesia,yoga nidra,4
+Gabon,yoga nidra,0
+Gambia,yoga nidra,0
+Georgia,yoga nidra,1
+Germany,yoga nidra,3
+Ghana,yoga nidra,0
+Gibraltar,yoga nidra,0
+Greece,yoga nidra,5
+Greenland,yoga nidra,0
+Grenada,yoga nidra,6
+Guadeloupe,yoga nidra,3
+Guam,yoga nidra,0
+Guatemala,yoga nidra,2
+Guernsey,yoga nidra,3
+Guinea,yoga nidra,0
+Guinea-Bissau,yoga nidra,0
+Guyana,yoga nidra,0
+Haiti,yoga nidra,0
+Honduras,yoga nidra,1
+Hong Kong,yoga nidra,1
+Hungary,yoga nidra,2
+Iceland,yoga nidra,19
+India,yoga nidra,2
+Indonesia,yoga nidra,2
+Iran,yoga nidra,1
+Iraq,yoga nidra,2
+Ireland,yoga nidra,3
+Isle of Man,yoga nidra,5
+Israel,yoga nidra,2
+Italy,yoga nidra,6
+Jamaica,yoga nidra,1
+Japan,yoga nidra,1
+Jersey,yoga nidra,4
+Jordan,yoga nidra,2
+Kazakhstan,yoga nidra,2
+Kenya,yoga nidra,0
+Kosovo,yoga nidra,2
+Kuwait,yoga nidra,3
+Kyrgyzstan,yoga nidra,0
+Laos,yoga nidra,2
+Latvia,yoga nidra,2
+Lebanon,yoga nidra,2
+Lesotho,yoga nidra,0
+Liberia,yoga nidra,0
+Libya,yoga nidra,0
+Liechtenstein,yoga nidra,0
+Lithuania,yoga nidra,2
+Luxembourg,yoga nidra,4
+Macao,yoga nidra,3
+Madagascar,yoga nidra,0
+Malawi,yoga nidra,0
+Malaysia,yoga nidra,1
+Maldives,yoga nidra,3
+Mali,yoga nidra,0
+Malta,yoga nidra,1
+Marshall Islands,yoga nidra,0
+Martinique,yoga nidra,2
+Mauritania,yoga nidra,0
+Mauritius,yoga nidra,1
+Mayotte,yoga nidra,0
+Mexico,yoga nidra,2
+Micronesia,yoga nidra,0
+Moldova,yoga nidra,3
+Mongolia,yoga nidra,2
+Montenegro,yoga nidra,3
+Morocco,yoga nidra,2
+Mozambique,yoga nidra,3
+Myanmar (Burma),yoga nidra,0
+Namibia,yoga nidra,2
+Nepal,yoga nidra,1
+Netherlands,yoga nidra,13
+New Caledonia,yoga nidra,3
+New Zealand,yoga nidra,3
+Nicaragua,yoga nidra,4
+Niger,yoga nidra,0
+Nigeria,yoga nidra,0
+North Macedonia,yoga nidra,2
+Northern Mariana Islands,yoga nidra,0
+Norway,yoga nidra,8
+Oman,yoga nidra,2
+Pakistan,yoga nidra,0
+Palau,yoga nidra,0
+Palestine,yoga nidra,1
+Panama,yoga nidra,3
+Papua New Guinea,yoga nidra,0
+Paraguay,yoga nidra,2
+Peru,yoga nidra,2
+Philippines,yoga nidra,0
+Poland,yoga nidra,2
+Portugal,yoga nidra,3
+Puerto Rico,yoga nidra,1
+Qatar,yoga nidra,2
+Romania,yoga nidra,3
+Russia,yoga nidra,2
+Rwanda,yoga nidra,0
+Réunion,yoga nidra,4
+Samoa,yoga nidra,0
+San Marino,yoga nidra,0
+Saudi Arabia,yoga nidra,1
+Senegal,yoga nidra,1
+Serbia,yoga nidra,4
+Seychelles,yoga nidra,0
+Sierra Leone,yoga nidra,0
+Singapore,yoga nidra,1
+Sint Maarten,yoga nidra,0
+Slovakia,yoga nidra,2
+Slovenia,yoga nidra,3
+Solomon Islands,yoga nidra,0
+Somalia,yoga nidra,0
+South Africa,yoga nidra,1
+South Korea,yoga nidra,2
+South Sudan,yoga nidra,0
+Spain,yoga nidra,6
+Sri Lanka,yoga nidra,0
+St. Barthélemy,yoga nidra,3
+St. Helena,yoga nidra,3
+St. Kitts & Nevis,yoga nidra,0
+St. Lucia,yoga nidra,0
+St. Martin,yoga nidra,0
+St. Pierre & Miquelon,yoga nidra,0
+St. Vincent & Grenadines,yoga nidra,0
+Sudan,yoga nidra,0
+Suriname,yoga nidra,2
+Sweden,yoga nidra,7
+Switzerland,yoga nidra,6
+Syria,yoga nidra,0
+Taiwan,yoga nidra,2
+Tajikistan,yoga nidra,0
+Tanzania,yoga nidra,0
+Thailand,yoga nidra,1
+Timor-Leste,yoga nidra,0
+Togo,yoga nidra,0
+Tonga,yoga nidra,0
+Trinidad & Tobago,yoga nidra,1
+Tunisia,yoga nidra,2
+Turkmenistan,yoga nidra,0
+Turks & Caicos Islands,yoga nidra,0
+Türkiye,yoga nidra,2
+U.S. Virgin Islands,yoga nidra,7
+Uganda,yoga nidra,0
+Ukraine,yoga nidra,1
+United Arab Emirates,yoga nidra,2
+United Kingdom,yoga nidra,2
+United States,yoga nidra,2
+Uruguay,yoga nidra,10
+Uzbekistan,yoga nidra,1
+Vanuatu,yoga nidra,0
+Venezuela,yoga nidra,3
+Vietnam,yoga nidra,2
+Western Sahara,yoga nidra,0
+Yemen,yoga nidra,0
+Zambia,yoga nidra,0
+Zimbabwe,yoga nidra,0
+Åland Islands,yoga nidra,0
+Afghanistan,guided meditation,3
+Albania,guided meditation,3
+Algeria,guided meditation,2
+American Samoa,guided meditation,0
+Andorra,guided meditation,0
+Angola,guided meditation,3
+Antigua & Barbuda,guided meditation,4
+Argentina,guided meditation,0
+Armenia,guided meditation,2
+Aruba,guided meditation,7
+Australia,guided meditation,6
+Austria,guided meditation,0
+Azerbaijan,guided meditation,1
+Bahamas,guided meditation,1
+Bahrain,guided meditation,3
+Bangladesh,guided meditation,1
+Barbados,guided meditation,3
+Belarus,guided meditation,2
+Belgium,guided meditation,1
+Belize,guided meditation,2
+Benin,guided meditation,0
+Bermuda,guided meditation,5
+Bhutan,guided meditation,1
+Bolivia,guided meditation,0
+Bosnia & Herzegovina,guided meditation,1
+Botswana,guided meditation,2
+Brazil,guided meditation,1
+British Virgin Islands,guided meditation,0
+Brunei,guided meditation,0
+Bulgaria,guided meditation,3
+Burkina Faso,guided meditation,0
+Burundi,guided meditation,0
+Cambodia,guided meditation,1
+Cameroon,guided meditation,0
+Canada,guided meditation,6
+Cape Verde,guided meditation,0
+Caribbean Netherlands,guided meditation,0
+Cayman Islands,guided meditation,8
+Central African Republic,guided meditation,0
+Chad,guided meditation,0
+Chile,guided meditation,0
+China,guided meditation,2
+Colombia,guided meditation,0
+Comoros,guided meditation,0
+Congo - Brazzaville,guided meditation,0
+Congo - Kinshasa,guided meditation,0
+Cook Islands,guided meditation,0
+Costa Rica,guided meditation,3
+Croatia,guided meditation,2
+Cuba,guided meditation,2
+Curaçao,guided meditation,0
+Cyprus,guided meditation,3
+Czechia,guided meditation,1
+Côte d’Ivoire,guided meditation,0
+Denmark,guided meditation,1
+Djibouti,guided meditation,0
+Dominica,guided meditation,0
+Dominican Republic,guided meditation,2
+Ecuador,guided meditation,1
+Egypt,guided meditation,2
+El Salvador,guided meditation,1
+Equatorial Guinea,guided meditation,0
+Eritrea,guided meditation,0
+Estonia,guided meditation,2
+Eswatini,guided meditation,4
+Ethiopia,guided meditation,1
+Falkland Islands (Islas Malvinas),guided meditation,0
+Faroe Islands,guided meditation,0
+Fiji,guided meditation,0
+Finland,guided meditation,1
+France,guided meditation,0
+French Guiana,guided meditation,0
+French Polynesia,guided meditation,0
+Gabon,guided meditation,0
+Gambia,guided meditation,0
+Georgia,guided meditation,1
+Germany,guided meditation,0
+Ghana,guided meditation,0
+Gibraltar,guided meditation,10
+Greece,guided meditation,2
+Greenland,guided meditation,0
+Grenada,guided meditation,0
+Guadeloupe,guided meditation,0
+Guam,guided meditation,3
+Guatemala,guided meditation,1
+Guernsey,guided meditation,6
+Guinea,guided meditation,0
+Guinea-Bissau,guided meditation,0
+Guyana,guided meditation,0
+Haiti,guided meditation,0
+Honduras,guided meditation,1
+Hong Kong,guided meditation,1
+Hungary,guided meditation,1
+Iceland,guided meditation,3
+India,guided meditation,1
+Indonesia,guided meditation,1
+Iran,guided meditation,1
+Iraq,guided meditation,3
+Ireland,guided meditation,6
+Isle of Man,guided meditation,11
+Israel,guided meditation,2
+Italy,guided meditation,0
+Jamaica,guided meditation,2
+Japan,guided meditation,1
+Jersey,guided meditation,5
+Jordan,guided meditation,2
+Kazakhstan,guided meditation,2
+Kenya,guided meditation,2
+Kosovo,guided meditation,2
+Kuwait,guided meditation,2
+Kyrgyzstan,guided meditation,0
+Laos,guided meditation,3
+Latvia,guided meditation,2
+Lebanon,guided meditation,2
+Lesotho,guided meditation,3
+Liberia,guided meditation,0
+Libya,guided meditation,5
+Liechtenstein,guided meditation,0
+Lithuania,guided meditation,1
+Luxembourg,guided meditation,1
+Macao,guided meditation,0
+Madagascar,guided meditation,0
+Malawi,guided meditation,0
+Malaysia,guided meditation,1
+Maldives,guided meditation,3
+Mali,guided meditation,0
+Malta,guided meditation,6
+Marshall Islands,guided meditation,0
+Martinique,guided meditation,0
+Mauritania,guided meditation,0
+Mauritius,guided meditation,2
+Mayotte,guided meditation,0
+Mexico,guided meditation,1
+Micronesia,guided meditation,0
+Moldova,guided meditation,2
+Mongolia,guided meditation,2
+Montenegro,guided meditation,2
+Morocco,guided meditation,1
+Mozambique,guided meditation,3
+Myanmar (Burma),guided meditation,1
+Namibia,guided meditation,2
+Nepal,guided meditation,1
+Netherlands,guided meditation,1
+New Caledonia,guided meditation,0
+New Zealand,guided meditation,5
+Nicaragua,guided meditation,1
+Niger,guided meditation,0
+Nigeria,guided meditation,1
+North Macedonia,guided meditation,4
+Northern Mariana Islands,guided meditation,0
+Norway,guided meditation,2
+Oman,guided meditation,2
+Pakistan,guided meditation,1
+Palau,guided meditation,0
+Palestine,guided meditation,3
+Panama,guided meditation,2
+Papua New Guinea,guided meditation,2
+Paraguay,guided meditation,0
+Peru,guided meditation,0
+Philippines,guided meditation,1
+Poland,guided meditation,1
+Portugal,guided meditation,2
+Puerto Rico,guided meditation,3
+Qatar,guided meditation,2
+Romania,guided meditation,2
+Russia,guided meditation,2
+Rwanda,guided meditation,2
+Réunion,guided meditation,0
+Samoa,guided meditation,0
+San Marino,guided meditation,0
+Saudi Arabia,guided meditation,2
+Senegal,guided meditation,0
+Serbia,guided meditation,2
+Seychelles,guided meditation,0
+Sierra Leone,guided meditation,0
+Singapore,guided meditation,1
+Sint Maarten,guided meditation,0
+Slovakia,guided meditation,1
+Slovenia,guided meditation,2
+Solomon Islands,guided meditation,0
+Somalia,guided meditation,0
+South Africa,guided meditation,5
+South Korea,guided meditation,2
+South Sudan,guided meditation,0
+Spain,guided meditation,1
+Sri Lanka,guided meditation,1
+St. Barthélemy,guided meditation,0
+St. Helena,guided meditation,3
+St. Kitts & Nevis,guided meditation,0
+St. Lucia,guided meditation,3
+St. Martin,guided meditation,0
+St. Pierre & Miquelon,guided meditation,0
+St. Vincent & Grenadines,guided meditation,7
+Sudan,guided meditation,2
+Suriname,guided meditation,3
+Sweden,guided meditation,1
+Switzerland,guided meditation,0
+Syria,guided meditation,0
+Taiwan,guided meditation,2
+Tajikistan,guided meditation,0
+Tanzania,guided meditation,1
+Thailand,guided meditation,1
+Timor-Leste,guided meditation,0
+Togo,guided meditation,0
+Tonga,guided meditation,0
+Trinidad & Tobago,guided meditation,3
+Tunisia,guided meditation,1
+Turkmenistan,guided meditation,0
+Turks & Caicos Islands,guided meditation,0
+Türkiye,guided meditation,1
+U.S. Virgin Islands,guided meditation,7
+Uganda,guided meditation,1
+Ukraine,guided meditation,2
+United Arab Emirates,guided meditation,2
+United Kingdom,guided meditation,5
+United States,guided meditation,6
+Uruguay,guided meditation,0
+Uzbekistan,guided meditation,1
+Vanuatu,guided meditation,0
+Venezuela,guided meditation,1
+Vietnam,guided meditation,2
+Western Sahara,guided meditation,0
+Yemen,guided meditation,0
+Zambia,guided meditation,2
+Zimbabwe,guided meditation,3
+Åland Islands,guided meditation,0

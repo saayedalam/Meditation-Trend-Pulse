@@ -1,0 +1,259 @@
+,country,interest,keyword
+0,Argentina,2,meditation
+1,Australia,98,meditation
+2,Austria,49,meditation
+3,Bangladesh,10,meditation
+4,Belgium,25,meditation
+5,Brazil,2,meditation
+6,Canada,71,meditation
+7,Colombia,2,meditation
+8,Czechia,7,meditation
+9,Denmark,46,meditation
+10,Egypt,6,meditation
+11,Finland,12,meditation
+12,France,39,meditation
+13,Germany,40,meditation
+14,Ghana,31,meditation
+15,Greece,11,meditation
+16,Hong Kong,19,meditation
+17,Hungary,8,meditation
+18,India,35,meditation
+19,Indonesia,3,meditation
+20,Iran,3,meditation
+21,Ireland,100,meditation
+22,Israel,14,meditation
+23,Italy,5,meditation
+24,Japan,1,meditation
+25,Kenya,26,meditation
+26,Malaysia,15,meditation
+27,Mexico,3,meditation
+28,Nepal,51,meditation
+29,Netherlands,17,meditation
+30,New Zealand,70,meditation
+31,Nigeria,16,meditation
+32,Norway,18,meditation
+33,Pakistan,14,meditation
+34,Philippines,18,meditation
+35,Poland,3,meditation
+36,Portugal,14,meditation
+37,Romania,9,meditation
+38,Russia,3,meditation
+39,Saudi Arabia,4,meditation
+40,Singapore,37,meditation
+41,South Africa,37,meditation
+42,South Korea,9,meditation
+43,Spain,6,meditation
+44,Sri Lanka,38,meditation
+45,Sweden,36,meditation
+46,Switzerland,60,meditation
+47,Taiwan,4,meditation
+48,Thailand,7,meditation
+49,Türkiye,2,meditation
+50,Ukraine,2,meditation
+51,United Arab Emirates,25,meditation
+52,United Kingdom,52,meditation
+53,United States,48,meditation
+54,Vietnam,7,meditation
+55,Argentina,49,mindfulness
+56,Australia,79,mindfulness
+57,Austria,9,mindfulness
+58,Bangladesh,6,mindfulness
+59,Belgium,37,mindfulness
+60,Bolivia,20,mindfulness
+61,Brazil,21,mindfulness
+62,Canada,51,mindfulness
+63,Chile,55,mindfulness
+64,Colombia,41,mindfulness
+65,Costa Rica,37,mindfulness
+66,Croatia,20,mindfulness
+67,Czechia,20,mindfulness
+68,Denmark,98,mindfulness
+69,Dominican Republic,18,mindfulness
+70,Ecuador,35,mindfulness
+71,Egypt,7,mindfulness
+72,Finland,50,mindfulness
+73,France,5,mindfulness
+74,Germany,7,mindfulness
+75,Greece,15,mindfulness
+76,Guatemala,23,mindfulness
+77,Hong Kong,48,mindfulness
+78,Hungary,25,mindfulness
+79,India,11,mindfulness
+80,Indonesia,12,mindfulness
+81,Iran,3,mindfulness
+82,Ireland,100,mindfulness
+83,Israel,15,mindfulness
+84,Italy,46,mindfulness
+85,Japan,1,mindfulness
+86,Kenya,18,mindfulness
+87,Malaysia,15,mindfulness
+88,Mexico,36,mindfulness
+89,Netherlands,78,mindfulness
+90,New Zealand,68,mindfulness
+91,Nigeria,8,mindfulness
+92,Norway,45,mindfulness
+93,Pakistan,15,mindfulness
+94,Peru,38,mindfulness
+95,Philippines,23,mindfulness
+96,Poland,18,mindfulness
+97,Portugal,52,mindfulness
+98,Puerto Rico,43,mindfulness
+99,Romania,18,mindfulness
+100,Russia,4,mindfulness
+101,Saudi Arabia,4,mindfulness
+102,Singapore,54,mindfulness
+103,South Africa,19,mindfulness
+104,South Korea,15,mindfulness
+105,Spain,75,mindfulness
+106,Sri Lanka,23,mindfulness
+107,Sweden,57,mindfulness
+108,Switzerland,22,mindfulness
+109,Taiwan,8,mindfulness
+110,Thailand,9,mindfulness
+111,Türkiye,12,mindfulness
+112,Ukraine,3,mindfulness
+113,United Arab Emirates,21,mindfulness
+114,United Kingdom,67,mindfulness
+115,United States,40,mindfulness
+116,Uruguay,55,mindfulness
+117,Venezuela,22,mindfulness
+118,Vietnam,10,mindfulness
+119,Argentina,3,breathwork
+120,Australia,100,breathwork
+121,Austria,34,breathwork
+122,Bangladesh,3,breathwork
+123,Belgium,25,breathwork
+124,Brazil,3,breathwork
+125,Canada,45,breathwork
+126,Chile,3,breathwork
+127,Colombia,3,breathwork
+128,Costa Rica,32,breathwork
+129,Croatia,9,breathwork
+130,Czechia,10,breathwork
+131,Denmark,39,breathwork
+132,Egypt,4,breathwork
+133,Estonia,29,breathwork
+134,Finland,10,breathwork
+135,France,14,breathwork
+136,Germany,26,breathwork
+137,Greece,15,breathwork
+138,Hong Kong,10,breathwork
+139,Hungary,6,breathwork
+140,India,3,breathwork
+141,Indonesia,6,breathwork
+142,Ireland,71,breathwork
+143,Israel,9,breathwork
+144,Italy,4,breathwork
+145,Malaysia,6,breathwork
+146,Mexico,6,breathwork
+147,Morocco,7,breathwork
+148,Netherlands,48,breathwork
+149,New Zealand,70,breathwork
+150,Norway,28,breathwork
+151,Pakistan,4,breathwork
+152,Peru,3,breathwork
+153,Philippines,4,breathwork
+154,Poland,3,breathwork
+155,Portugal,23,breathwork
+156,Romania,9,breathwork
+157,Russia,3,breathwork
+158,Saudi Arabia,1,breathwork
+159,Singapore,18,breathwork
+160,South Africa,21,breathwork
+161,South Korea,12,breathwork
+162,Spain,10,breathwork
+163,Sweden,40,breathwork
+164,Switzerland,56,breathwork
+165,Taiwan,3,breathwork
+166,Thailand,9,breathwork
+167,Türkiye,1,breathwork
+168,Ukraine,1,breathwork
+169,United Arab Emirates,18,breathwork
+170,United Kingdom,45,breathwork
+171,United States,32,breathwork
+172,Vietnam,9,breathwork
+173,Argentina,1,guided meditation
+174,Australia,95,guided meditation
+175,Belgium,5,guided meditation
+176,Canada,61,guided meditation
+177,Denmark,11,guided meditation
+178,Egypt,1,guided meditation
+179,France,1,guided meditation
+180,Germany,1,guided meditation
+181,Greece,4,guided meditation
+182,India,5,guided meditation
+183,Ireland,100,guided meditation
+184,Israel,5,guided meditation
+185,Italy,1,guided meditation
+186,Malaysia,3,guided meditation
+187,Mexico,1,guided meditation
+188,Netherlands,7,guided meditation
+189,New Zealand,56,guided meditation
+190,Norway,9,guided meditation
+191,Pakistan,2,guided meditation
+192,Philippines,3,guided meditation
+193,Poland,1,guided meditation
+194,Portugal,7,guided meditation
+195,Romania,3,guided meditation
+196,Russia,1,guided meditation
+197,Singapore,10,guided meditation
+198,South Africa,25,guided meditation
+199,South Korea,3,guided meditation
+200,Spain,3,guided meditation
+201,Sweden,9,guided meditation
+202,Switzerland,6,guided meditation
+203,Thailand,1,guided meditation
+204,United Arab Emirates,9,guided meditation
+205,United Kingdom,45,guided meditation
+206,United States,43,guided meditation
+207,Vietnam,2,guided meditation
+208,Argentina,10,yoga nidra
+209,Australia,29,yoga nidra
+210,Austria,15,yoga nidra
+211,Belgium,19,yoga nidra
+212,Brazil,1,yoga nidra
+213,Canada,23,yoga nidra
+214,Chile,3,yoga nidra
+215,Colombia,4,yoga nidra
+216,Croatia,8,yoga nidra
+217,Czechia,4,yoga nidra
+218,Denmark,20,yoga nidra
+219,Finland,6,yoga nidra
+220,France,17,yoga nidra
+221,Germany,14,yoga nidra
+222,Greece,7,yoga nidra
+223,Hong Kong,5,yoga nidra
+224,Hungary,3,yoga nidra
+225,Iceland,100,yoga nidra
+226,India,8,yoga nidra
+227,Indonesia,1,yoga nidra
+228,Ireland,39,yoga nidra
+229,Israel,3,yoga nidra
+230,Italy,9,yoga nidra
+231,Malaysia,2,yoga nidra
+232,Mexico,2,yoga nidra
+233,Netherlands,53,yoga nidra
+234,New Zealand,27,yoga nidra
+235,Norway,24,yoga nidra
+236,Peru,1,yoga nidra
+237,Philippines,1,yoga nidra
+238,Poland,2,yoga nidra
+239,Portugal,9,yoga nidra
+240,Romania,4,yoga nidra
+241,Russia,1,yoga nidra
+242,Serbia,4,yoga nidra
+243,Singapore,6,yoga nidra
+244,South Africa,6,yoga nidra
+245,South Korea,2,yoga nidra
+246,Spain,15,yoga nidra
+247,Sweden,31,yoga nidra
+248,Switzerland,39,yoga nidra
+249,Taiwan,1,yoga nidra
+250,Thailand,1,yoga nidra
+251,Türkiye,1,yoga nidra
+252,United Arab Emirates,5,yoga nidra
+253,United Kingdom,20,yoga nidra
+254,United States,12,yoga nidra
+255,Uruguay,15,yoga nidra
+256,Venezuela,2,yoga nidra
+257,Vietnam,2,yoga nidra

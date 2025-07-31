@@ -1,0 +1,1573 @@
+date,keyword,search_interest
+2020-07-26,index,0
+2020-08-02,index,1
+2020-08-09,index,2
+2020-08-16,index,3
+2020-08-23,index,4
+2020-08-30,index,5
+2020-09-06,index,6
+2020-09-13,index,7
+2020-09-20,index,8
+2020-09-27,index,9
+2020-10-04,index,10
+2020-10-11,index,11
+2020-10-18,index,12
+2020-10-25,index,13
+2020-11-01,index,14
+2020-11-08,index,15
+2020-11-15,index,16
+2020-11-22,index,17
+2020-11-29,index,18
+2020-12-06,index,19
+2020-12-13,index,20
+2020-12-20,index,21
+2020-12-27,index,22
+2021-01-03,index,23
+2021-01-10,index,24
+2021-01-17,index,25
+2021-01-24,index,26
+2021-01-31,index,27
+2021-02-07,index,28
+2021-02-14,index,29
+2021-02-21,index,30
+2021-02-28,index,31
+2021-03-07,index,32
+2021-03-14,index,33
+2021-03-21,index,34
+2021-03-28,index,35
+2021-04-04,index,36
+2021-04-11,index,37
+2021-04-18,index,38
+2021-04-25,index,39
+2021-05-02,index,40
+2021-05-09,index,41
+2021-05-16,index,42
+2021-05-23,index,43
+2021-05-30,index,44
+2021-06-06,index,45
+2021-06-13,index,46
+2021-06-20,index,47
+2021-06-27,index,48
+2021-07-04,index,49
+2021-07-11,index,50
+2021-07-18,index,51
+2021-07-25,index,52
+2021-08-01,index,53
+2021-08-08,index,54
+2021-08-15,index,55
+2021-08-22,index,56
+2021-08-29,index,57
+2021-09-05,index,58
+2021-09-12,index,59
+2021-09-19,index,60
+2021-09-26,index,61
+2021-10-03,index,62
+2021-10-10,index,63
+2021-10-17,index,64
+2021-10-24,index,65
+2021-10-31,index,66
+2021-11-07,index,67
+2021-11-14,index,68
+2021-11-21,index,69
+2021-11-28,index,70
+2021-12-05,index,71
+2021-12-12,index,72
+2021-12-19,index,73
+2021-12-26,index,74
+2022-01-02,index,75
+2022-01-09,index,76
+2022-01-16,index,77
+2022-01-23,index,78
+2022-01-30,index,79
+2022-02-06,index,80
+2022-02-13,index,81
+2022-02-20,index,82
+2022-02-27,index,83
+2022-03-06,index,84
+2022-03-13,index,85
+2022-03-20,index,86
+2022-03-27,index,87
+2022-04-03,index,88
+2022-04-10,index,89
+2022-04-17,index,90
+2022-04-24,index,91
+2022-05-01,index,92
+2022-05-08,index,93
+2022-05-15,index,94
+2022-05-22,index,95
+2022-05-29,index,96
+2022-06-05,index,97
+2022-06-12,index,98
+2022-06-19,index,99
+2022-06-26,index,100
+2022-07-03,index,101
+2022-07-10,index,102
+2022-07-17,index,103
+2022-07-24,index,104
+2022-07-31,index,105
+2022-08-07,index,106
+2022-08-14,index,107
+2022-08-21,index,108
+2022-08-28,index,109
+2022-09-04,index,110
+2022-09-11,index,111
+2022-09-18,index,112
+2022-09-25,index,113
+2022-10-02,index,114
+2022-10-09,index,115
+2022-10-16,index,116
+2022-10-23,index,117
+2022-10-30,index,118
+2022-11-06,index,119
+2022-11-13,index,120
+2022-11-20,index,121
+2022-11-27,index,122
+2022-12-04,index,123
+2022-12-11,index,124
+2022-12-18,index,125
+2022-12-25,index,126
+2023-01-01,index,127
+2023-01-08,index,128
+2023-01-15,index,129
+2023-01-22,index,130
+2023-01-29,index,131
+2023-02-05,index,132
+2023-02-12,index,133
+2023-02-19,index,134
+2023-02-26,index,135
+2023-03-05,index,136
+2023-03-12,index,137
+2023-03-19,index,138
+2023-03-26,index,139
+2023-04-02,index,140
+2023-04-09,index,141
+2023-04-16,index,142
+2023-04-23,index,143
+2023-04-30,index,144
+2023-05-07,index,145
+2023-05-14,index,146
+2023-05-21,index,147
+2023-05-28,index,148
+2023-06-04,index,149
+2023-06-11,index,150
+2023-06-18,index,151
+2023-06-25,index,152
+2023-07-02,index,153
+2023-07-09,index,154
+2023-07-16,index,155
+2023-07-23,index,156
+2023-07-30,index,157
+2023-08-06,index,158
+2023-08-13,index,159
+2023-08-20,index,160
+2023-08-27,index,161
+2023-09-03,index,162
+2023-09-10,index,163
+2023-09-17,index,164
+2023-09-24,index,165
+2023-10-01,index,166
+2023-10-08,index,167
+2023-10-15,index,168
+2023-10-22,index,169
+2023-10-29,index,170
+2023-11-05,index,171
+2023-11-12,index,172
+2023-11-19,index,173
+2023-11-26,index,174
+2023-12-03,index,175
+2023-12-10,index,176
+2023-12-17,index,177
+2023-12-24,index,178
+2023-12-31,index,179
+2024-01-07,index,180
+2024-01-14,index,181
+2024-01-21,index,182
+2024-01-28,index,183
+2024-02-04,index,184
+2024-02-11,index,185
+2024-02-18,index,186
+2024-02-25,index,187
+2024-03-03,index,188
+2024-03-10,index,189
+2024-03-17,index,190
+2024-03-24,index,191
+2024-03-31,index,192
+2024-04-07,index,193
+2024-04-14,index,194
+2024-04-21,index,195
+2024-04-28,index,196
+2024-05-05,index,197
+2024-05-12,index,198
+2024-05-19,index,199
+2024-05-26,index,200
+2024-06-02,index,201
+2024-06-09,index,202
+2024-06-16,index,203
+2024-06-23,index,204
+2024-06-30,index,205
+2024-07-07,index,206
+2024-07-14,index,207
+2024-07-21,index,208
+2024-07-28,index,209
+2024-08-04,index,210
+2024-08-11,index,211
+2024-08-18,index,212
+2024-08-25,index,213
+2024-09-01,index,214
+2024-09-08,index,215
+2024-09-15,index,216
+2024-09-22,index,217
+2024-09-29,index,218
+2024-10-06,index,219
+2024-10-13,index,220
+2024-10-20,index,221
+2024-10-27,index,222
+2024-11-03,index,223
+2024-11-10,index,224
+2024-11-17,index,225
+2024-11-24,index,226
+2024-12-01,index,227
+2024-12-08,index,228
+2024-12-15,index,229
+2024-12-22,index,230
+2024-12-29,index,231
+2025-01-05,index,232
+2025-01-12,index,233
+2025-01-19,index,234
+2025-01-26,index,235
+2025-02-02,index,236
+2025-02-09,index,237
+2025-02-16,index,238
+2025-02-23,index,239
+2025-03-02,index,240
+2025-03-09,index,241
+2025-03-16,index,242
+2025-03-23,index,243
+2025-03-30,index,244
+2025-04-06,index,245
+2025-04-13,index,246
+2025-04-20,index,247
+2025-04-27,index,248
+2025-05-04,index,249
+2025-05-11,index,250
+2025-05-18,index,251
+2025-05-25,index,252
+2025-06-01,index,253
+2025-06-08,index,254
+2025-06-15,index,255
+2025-06-22,index,256
+2025-06-29,index,257
+2025-07-06,index,258
+2025-07-13,index,259
+2025-07-20,index,260
+2025-07-27,index,261
+2020-07-26,meditation,90
+2020-08-02,meditation,89
+2020-08-09,meditation,95
+2020-08-16,meditation,90
+2020-08-23,meditation,89
+2020-08-30,meditation,94
+2020-09-06,meditation,94
+2020-09-13,meditation,89
+2020-09-20,meditation,92
+2020-09-27,meditation,90
+2020-10-04,meditation,93
+2020-10-11,meditation,87
+2020-10-18,meditation,83
+2020-10-25,meditation,85
+2020-11-01,meditation,79
+2020-11-08,meditation,84
+2020-11-15,meditation,87
+2020-11-22,meditation,81
+2020-11-29,meditation,89
+2020-12-06,meditation,83
+2020-12-13,meditation,82
+2020-12-20,meditation,84
+2020-12-27,meditation,94
+2021-01-03,meditation,99
+2021-01-10,meditation,95
+2021-01-17,meditation,100
+2021-01-24,meditation,95
+2021-01-31,meditation,93
+2021-02-07,meditation,88
+2021-02-14,meditation,88
+2021-02-21,meditation,91
+2021-02-28,meditation,91
+2021-03-07,meditation,89
+2021-03-14,meditation,87
+2021-03-21,meditation,87
+2021-03-28,meditation,86
+2021-04-04,meditation,84
+2021-04-11,meditation,85
+2021-04-18,meditation,85
+2021-04-25,meditation,87
+2021-05-02,meditation,84
+2021-05-09,meditation,87
+2021-05-16,meditation,88
+2021-05-23,meditation,87
+2021-05-30,meditation,80
+2021-06-06,meditation,79
+2021-06-13,meditation,82
+2021-06-20,meditation,79
+2021-06-27,meditation,76
+2021-07-04,meditation,77
+2021-07-11,meditation,78
+2021-07-18,meditation,77
+2021-07-25,meditation,83
+2021-08-01,meditation,75
+2021-08-08,meditation,76
+2021-08-15,meditation,81
+2021-08-22,meditation,77
+2021-08-29,meditation,76
+2021-09-05,meditation,84
+2021-09-12,meditation,82
+2021-09-19,meditation,84
+2021-09-26,meditation,83
+2021-10-03,meditation,83
+2021-10-10,meditation,77
+2021-10-17,meditation,81
+2021-10-24,meditation,78
+2021-10-31,meditation,78
+2021-11-07,meditation,80
+2021-11-14,meditation,81
+2021-11-21,meditation,73
+2021-11-28,meditation,76
+2021-12-05,meditation,76
+2021-12-12,meditation,78
+2021-12-19,meditation,70
+2021-12-26,meditation,77
+2022-01-02,meditation,90
+2022-01-09,meditation,84
+2022-01-16,meditation,79
+2022-01-23,meditation,81
+2022-01-30,meditation,87
+2022-02-06,meditation,81
+2022-02-13,meditation,80
+2022-02-20,meditation,80
+2022-02-27,meditation,80
+2022-03-06,meditation,79
+2022-03-13,meditation,78
+2022-03-20,meditation,81
+2022-03-27,meditation,78
+2022-04-03,meditation,76
+2022-04-10,meditation,75
+2022-04-17,meditation,73
+2022-04-24,meditation,79
+2022-05-01,meditation,74
+2022-05-08,meditation,76
+2022-05-15,meditation,76
+2022-05-22,meditation,74
+2022-05-29,meditation,72
+2022-06-05,meditation,72
+2022-06-12,meditation,77
+2022-06-19,meditation,77
+2022-06-26,meditation,81
+2022-07-03,meditation,73
+2022-07-10,meditation,74
+2022-07-17,meditation,76
+2022-07-24,meditation,77
+2022-07-31,meditation,74
+2022-08-07,meditation,77
+2022-08-14,meditation,73
+2022-08-21,meditation,75
+2022-08-28,meditation,74
+2022-09-04,meditation,74
+2022-09-11,meditation,80
+2022-09-18,meditation,76
+2022-09-25,meditation,73
+2022-10-02,meditation,73
+2022-10-09,meditation,77
+2022-10-16,meditation,78
+2022-10-23,meditation,76
+2022-10-30,meditation,76
+2022-11-06,meditation,78
+2022-11-13,meditation,82
+2022-11-20,meditation,72
+2022-11-27,meditation,75
+2022-12-04,meditation,78
+2022-12-11,meditation,77
+2022-12-18,meditation,71
+2022-12-25,meditation,73
+2023-01-01,meditation,88
+2023-01-08,meditation,83
+2023-01-15,meditation,81
+2023-01-22,meditation,83
+2023-01-29,meditation,81
+2023-02-05,meditation,77
+2023-02-12,meditation,80
+2023-02-19,meditation,87
+2023-02-26,meditation,78
+2023-03-05,meditation,81
+2023-03-12,meditation,80
+2023-03-19,meditation,84
+2023-03-26,meditation,77
+2023-04-02,meditation,78
+2023-04-09,meditation,74
+2023-04-16,meditation,76
+2023-04-23,meditation,74
+2023-04-30,meditation,78
+2023-05-07,meditation,74
+2023-05-14,meditation,76
+2023-05-21,meditation,72
+2023-05-28,meditation,71
+2023-06-04,meditation,72
+2023-06-11,meditation,71
+2023-06-18,meditation,75
+2023-06-25,meditation,73
+2023-07-02,meditation,72
+2023-07-09,meditation,73
+2023-07-16,meditation,74
+2023-07-23,meditation,78
+2023-07-30,meditation,71
+2023-08-06,meditation,68
+2023-08-13,meditation,73
+2023-08-20,meditation,72
+2023-08-27,meditation,74
+2023-09-03,meditation,75
+2023-09-10,meditation,72
+2023-09-17,meditation,75
+2023-09-24,meditation,75
+2023-10-01,meditation,74
+2023-10-08,meditation,75
+2023-10-15,meditation,72
+2023-10-22,meditation,71
+2023-10-29,meditation,66
+2023-11-05,meditation,73
+2023-11-12,meditation,70
+2023-11-19,meditation,67
+2023-11-26,meditation,71
+2023-12-03,meditation,72
+2023-12-10,meditation,72
+2023-12-17,meditation,68
+2023-12-24,meditation,67
+2023-12-31,meditation,73
+2024-01-07,meditation,75
+2024-01-14,meditation,73
+2024-01-21,meditation,73
+2024-01-28,meditation,77
+2024-02-04,meditation,76
+2024-02-11,meditation,74
+2024-02-18,meditation,76
+2024-02-25,meditation,76
+2024-03-03,meditation,74
+2024-03-10,meditation,70
+2024-03-17,meditation,83
+2024-03-24,meditation,73
+2024-03-31,meditation,69
+2024-04-07,meditation,71
+2024-04-14,meditation,66
+2024-04-21,meditation,67
+2024-04-28,meditation,69
+2024-05-05,meditation,65
+2024-05-12,meditation,68
+2024-05-19,meditation,66
+2024-05-26,meditation,68
+2024-06-02,meditation,66
+2024-06-09,meditation,69
+2024-06-16,meditation,67
+2024-06-23,meditation,65
+2024-06-30,meditation,63
+2024-07-07,meditation,66
+2024-07-14,meditation,63
+2024-07-21,meditation,62
+2024-07-28,meditation,65
+2024-08-04,meditation,66
+2024-08-11,meditation,65
+2024-08-18,meditation,67
+2024-08-25,meditation,68
+2024-09-01,meditation,68
+2024-09-08,meditation,70
+2024-09-15,meditation,69
+2024-09-22,meditation,69
+2024-09-29,meditation,68
+2024-10-06,meditation,64
+2024-10-13,meditation,63
+2024-10-20,meditation,64
+2024-10-27,meditation,63
+2024-11-03,meditation,63
+2024-11-10,meditation,67
+2024-11-17,meditation,68
+2024-11-24,meditation,64
+2024-12-01,meditation,64
+2024-12-08,meditation,64
+2024-12-15,meditation,69
+2024-12-22,meditation,62
+2024-12-29,meditation,70
+2025-01-05,meditation,72
+2025-01-12,meditation,70
+2025-01-19,meditation,74
+2025-01-26,meditation,71
+2025-02-02,meditation,67
+2025-02-09,meditation,67
+2025-02-16,meditation,68
+2025-02-23,meditation,65
+2025-03-02,meditation,67
+2025-03-09,meditation,66
+2025-03-16,meditation,66
+2025-03-23,meditation,66
+2025-03-30,meditation,67
+2025-04-06,meditation,67
+2025-04-13,meditation,63
+2025-04-20,meditation,64
+2025-04-27,meditation,61
+2025-05-04,meditation,60
+2025-05-11,meditation,64
+2025-05-18,meditation,60
+2025-05-25,meditation,58
+2025-06-01,meditation,64
+2025-06-08,meditation,65
+2025-06-15,meditation,62
+2025-06-22,meditation,65
+2025-06-29,meditation,60
+2025-07-06,meditation,67
+2025-07-13,meditation,66
+2025-07-20,meditation,69
+2025-07-27,meditation,69
+2020-07-26,mindfulness,22
+2020-08-02,mindfulness,21
+2020-08-09,mindfulness,21
+2020-08-16,mindfulness,23
+2020-08-23,mindfulness,23
+2020-08-30,mindfulness,25
+2020-09-06,mindfulness,26
+2020-09-13,mindfulness,25
+2020-09-20,mindfulness,26
+2020-09-27,mindfulness,23
+2020-10-04,mindfulness,24
+2020-10-11,mindfulness,21
+2020-10-18,mindfulness,21
+2020-10-25,mindfulness,20
+2020-11-01,mindfulness,18
+2020-11-08,mindfulness,21
+2020-11-15,mindfulness,20
+2020-11-22,mindfulness,19
+2020-11-29,mindfulness,21
+2020-12-06,mindfulness,20
+2020-12-13,mindfulness,19
+2020-12-20,mindfulness,16
+2020-12-27,mindfulness,18
+2021-01-03,mindfulness,21
+2021-01-10,mindfulness,21
+2021-01-17,mindfulness,22
+2021-01-24,mindfulness,22
+2021-01-31,mindfulness,22
+2021-02-07,mindfulness,21
+2021-02-14,mindfulness,21
+2021-02-21,mindfulness,22
+2021-02-28,mindfulness,22
+2021-03-07,mindfulness,21
+2021-03-14,mindfulness,20
+2021-03-21,mindfulness,19
+2021-03-28,mindfulness,18
+2021-04-04,mindfulness,20
+2021-04-11,mindfulness,20
+2021-04-18,mindfulness,22
+2021-04-25,mindfulness,20
+2021-05-02,mindfulness,20
+2021-05-09,mindfulness,20
+2021-05-16,mindfulness,20
+2021-05-23,mindfulness,21
+2021-05-30,mindfulness,19
+2021-06-06,mindfulness,19
+2021-06-13,mindfulness,18
+2021-06-20,mindfulness,19
+2021-06-27,mindfulness,17
+2021-07-04,mindfulness,17
+2021-07-11,mindfulness,17
+2021-07-18,mindfulness,17
+2021-07-25,mindfulness,16
+2021-08-01,mindfulness,16
+2021-08-08,mindfulness,17
+2021-08-15,mindfulness,18
+2021-08-22,mindfulness,17
+2021-08-29,mindfulness,18
+2021-09-05,mindfulness,18
+2021-09-12,mindfulness,20
+2021-09-19,mindfulness,18
+2021-09-26,mindfulness,18
+2021-10-03,mindfulness,20
+2021-10-10,mindfulness,19
+2021-10-17,mindfulness,20
+2021-10-24,mindfulness,18
+2021-10-31,mindfulness,19
+2021-11-07,mindfulness,19
+2021-11-14,mindfulness,19
+2021-11-21,mindfulness,17
+2021-11-28,mindfulness,18
+2021-12-05,mindfulness,18
+2021-12-12,mindfulness,18
+2021-12-19,mindfulness,12
+2021-12-26,mindfulness,13
+2022-01-02,mindfulness,19
+2022-01-09,mindfulness,20
+2022-01-16,mindfulness,20
+2022-01-23,mindfulness,23
+2022-01-30,mindfulness,22
+2022-02-06,mindfulness,21
+2022-02-13,mindfulness,21
+2022-02-20,mindfulness,20
+2022-02-27,mindfulness,22
+2022-03-06,mindfulness,21
+2022-03-13,mindfulness,19
+2022-03-20,mindfulness,20
+2022-03-27,mindfulness,22
+2022-04-03,mindfulness,21
+2022-04-10,mindfulness,20
+2022-04-17,mindfulness,19
+2022-04-24,mindfulness,21
+2022-05-01,mindfulness,21
+2022-05-08,mindfulness,21
+2022-05-15,mindfulness,19
+2022-05-22,mindfulness,20
+2022-05-29,mindfulness,17
+2022-06-05,mindfulness,18
+2022-06-12,mindfulness,18
+2022-06-19,mindfulness,18
+2022-06-26,mindfulness,17
+2022-07-03,mindfulness,17
+2022-07-10,mindfulness,18
+2022-07-17,mindfulness,16
+2022-07-24,mindfulness,16
+2022-07-31,mindfulness,16
+2022-08-07,mindfulness,17
+2022-08-14,mindfulness,17
+2022-08-21,mindfulness,18
+2022-08-28,mindfulness,19
+2022-09-04,mindfulness,19
+2022-09-11,mindfulness,21
+2022-09-18,mindfulness,19
+2022-09-25,mindfulness,19
+2022-10-02,mindfulness,19
+2022-10-09,mindfulness,20
+2022-10-16,mindfulness,20
+2022-10-23,mindfulness,19
+2022-10-30,mindfulness,19
+2022-11-06,mindfulness,21
+2022-11-13,mindfulness,21
+2022-11-20,mindfulness,17
+2022-11-27,mindfulness,19
+2022-12-04,mindfulness,18
+2022-12-11,mindfulness,18
+2022-12-18,mindfulness,15
+2022-12-25,mindfulness,14
+2023-01-01,mindfulness,18
+2023-01-08,mindfulness,20
+2023-01-15,mindfulness,19
+2023-01-22,mindfulness,20
+2023-01-29,mindfulness,21
+2023-02-05,mindfulness,20
+2023-02-12,mindfulness,19
+2023-02-19,mindfulness,19
+2023-02-26,mindfulness,19
+2023-03-05,mindfulness,20
+2023-03-12,mindfulness,19
+2023-03-19,mindfulness,19
+2023-03-26,mindfulness,20
+2023-04-02,mindfulness,17
+2023-04-09,mindfulness,18
+2023-04-16,mindfulness,20
+2023-04-23,mindfulness,23
+2023-04-30,mindfulness,20
+2023-05-07,mindfulness,18
+2023-05-14,mindfulness,19
+2023-05-21,mindfulness,19
+2023-05-28,mindfulness,18
+2023-06-04,mindfulness,19
+2023-06-11,mindfulness,17
+2023-06-18,mindfulness,17
+2023-06-25,mindfulness,16
+2023-07-02,mindfulness,16
+2023-07-09,mindfulness,17
+2023-07-16,mindfulness,17
+2023-07-23,mindfulness,16
+2023-07-30,mindfulness,15
+2023-08-06,mindfulness,16
+2023-08-13,mindfulness,16
+2023-08-20,mindfulness,17
+2023-08-27,mindfulness,18
+2023-09-03,mindfulness,18
+2023-09-10,mindfulness,19
+2023-09-17,mindfulness,21
+2023-09-24,mindfulness,20
+2023-10-01,mindfulness,19
+2023-10-08,mindfulness,20
+2023-10-15,mindfulness,20
+2023-10-22,mindfulness,19
+2023-10-29,mindfulness,18
+2023-11-05,mindfulness,18
+2023-11-12,mindfulness,19
+2023-11-19,mindfulness,17
+2023-11-26,mindfulness,18
+2023-12-03,mindfulness,19
+2023-12-10,mindfulness,18
+2023-12-17,mindfulness,15
+2023-12-24,mindfulness,13
+2023-12-31,mindfulness,17
+2024-01-07,mindfulness,19
+2024-01-14,mindfulness,18
+2024-01-21,mindfulness,19
+2024-01-28,mindfulness,20
+2024-02-04,mindfulness,21
+2024-02-11,mindfulness,18
+2024-02-18,mindfulness,20
+2024-02-25,mindfulness,19
+2024-03-03,mindfulness,19
+2024-03-10,mindfulness,20
+2024-03-17,mindfulness,20
+2024-03-24,mindfulness,17
+2024-03-31,mindfulness,17
+2024-04-07,mindfulness,18
+2024-04-14,mindfulness,19
+2024-04-21,mindfulness,18
+2024-04-28,mindfulness,19
+2024-05-05,mindfulness,17
+2024-05-12,mindfulness,19
+2024-05-19,mindfulness,18
+2024-05-26,mindfulness,17
+2024-06-02,mindfulness,18
+2024-06-09,mindfulness,17
+2024-06-16,mindfulness,17
+2024-06-23,mindfulness,15
+2024-06-30,mindfulness,16
+2024-07-07,mindfulness,16
+2024-07-14,mindfulness,15
+2024-07-21,mindfulness,16
+2024-07-28,mindfulness,16
+2024-08-04,mindfulness,15
+2024-08-11,mindfulness,16
+2024-08-18,mindfulness,18
+2024-08-25,mindfulness,18
+2024-09-01,mindfulness,19
+2024-09-08,mindfulness,21
+2024-09-15,mindfulness,20
+2024-09-22,mindfulness,21
+2024-09-29,mindfulness,20
+2024-10-06,mindfulness,21
+2024-10-13,mindfulness,21
+2024-10-20,mindfulness,20
+2024-10-27,mindfulness,20
+2024-11-03,mindfulness,24
+2024-11-10,mindfulness,24
+2024-11-17,mindfulness,23
+2024-11-24,mindfulness,21
+2024-12-01,mindfulness,20
+2024-12-08,mindfulness,19
+2024-12-15,mindfulness,16
+2024-12-22,mindfulness,11
+2024-12-29,mindfulness,14
+2025-01-05,mindfulness,19
+2025-01-12,mindfulness,20
+2025-01-19,mindfulness,18
+2025-01-26,mindfulness,20
+2025-02-02,mindfulness,20
+2025-02-09,mindfulness,20
+2025-02-16,mindfulness,19
+2025-02-23,mindfulness,20
+2025-03-02,mindfulness,19
+2025-03-09,mindfulness,19
+2025-03-16,mindfulness,19
+2025-03-23,mindfulness,19
+2025-03-30,mindfulness,19
+2025-04-06,mindfulness,19
+2025-04-13,mindfulness,16
+2025-04-20,mindfulness,18
+2025-04-27,mindfulness,18
+2025-05-04,mindfulness,18
+2025-05-11,mindfulness,18
+2025-05-18,mindfulness,18
+2025-05-25,mindfulness,16
+2025-06-01,mindfulness,19
+2025-06-08,mindfulness,18
+2025-06-15,mindfulness,18
+2025-06-22,mindfulness,18
+2025-06-29,mindfulness,16
+2025-07-06,mindfulness,19
+2025-07-13,mindfulness,18
+2025-07-20,mindfulness,20
+2025-07-27,mindfulness,19
+2020-07-26,breathwork,1
+2020-08-02,breathwork,1
+2020-08-09,breathwork,1
+2020-08-16,breathwork,1
+2020-08-23,breathwork,1
+2020-08-30,breathwork,1
+2020-09-06,breathwork,1
+2020-09-13,breathwork,1
+2020-09-20,breathwork,1
+2020-09-27,breathwork,1
+2020-10-04,breathwork,1
+2020-10-11,breathwork,1
+2020-10-18,breathwork,1
+2020-10-25,breathwork,1
+2020-11-01,breathwork,1
+2020-11-08,breathwork,1
+2020-11-15,breathwork,1
+2020-11-22,breathwork,1
+2020-11-29,breathwork,1
+2020-12-06,breathwork,1
+2020-12-13,breathwork,1
+2020-12-20,breathwork,1
+2020-12-27,breathwork,1
+2021-01-03,breathwork,1
+2021-01-10,breathwork,1
+2021-01-17,breathwork,1
+2021-01-24,breathwork,1
+2021-01-31,breathwork,1
+2021-02-07,breathwork,1
+2021-02-14,breathwork,1
+2021-02-21,breathwork,1
+2021-02-28,breathwork,1
+2021-03-07,breathwork,1
+2021-03-14,breathwork,1
+2021-03-21,breathwork,1
+2021-03-28,breathwork,1
+2021-04-04,breathwork,1
+2021-04-11,breathwork,1
+2021-04-18,breathwork,2
+2021-04-25,breathwork,1
+2021-05-02,breathwork,1
+2021-05-09,breathwork,1
+2021-05-16,breathwork,1
+2021-05-23,breathwork,1
+2021-05-30,breathwork,1
+2021-06-06,breathwork,1
+2021-06-13,breathwork,1
+2021-06-20,breathwork,1
+2021-06-27,breathwork,1
+2021-07-04,breathwork,1
+2021-07-11,breathwork,1
+2021-07-18,breathwork,1
+2021-07-25,breathwork,1
+2021-08-01,breathwork,1
+2021-08-08,breathwork,1
+2021-08-15,breathwork,1
+2021-08-22,breathwork,1
+2021-08-29,breathwork,1
+2021-09-05,breathwork,1
+2021-09-12,breathwork,1
+2021-09-19,breathwork,1
+2021-09-26,breathwork,1
+2021-10-03,breathwork,1
+2021-10-10,breathwork,1
+2021-10-17,breathwork,1
+2021-10-24,breathwork,1
+2021-10-31,breathwork,1
+2021-11-07,breathwork,1
+2021-11-14,breathwork,1
+2021-11-21,breathwork,1
+2021-11-28,breathwork,1
+2021-12-05,breathwork,1
+2021-12-12,breathwork,1
+2021-12-19,breathwork,1
+2021-12-26,breathwork,1
+2022-01-02,breathwork,1
+2022-01-09,breathwork,1
+2022-01-16,breathwork,1
+2022-01-23,breathwork,1
+2022-01-30,breathwork,2
+2022-02-06,breathwork,1
+2022-02-13,breathwork,1
+2022-02-20,breathwork,1
+2022-02-27,breathwork,1
+2022-03-06,breathwork,1
+2022-03-13,breathwork,1
+2022-03-20,breathwork,1
+2022-03-27,breathwork,1
+2022-04-03,breathwork,1
+2022-04-10,breathwork,1
+2022-04-17,breathwork,1
+2022-04-24,breathwork,1
+2022-05-01,breathwork,1
+2022-05-08,breathwork,2
+2022-05-15,breathwork,1
+2022-05-22,breathwork,1
+2022-05-29,breathwork,1
+2022-06-05,breathwork,1
+2022-06-12,breathwork,1
+2022-06-19,breathwork,1
+2022-06-26,breathwork,1
+2022-07-03,breathwork,1
+2022-07-10,breathwork,2
+2022-07-17,breathwork,1
+2022-07-24,breathwork,1
+2022-07-31,breathwork,1
+2022-08-07,breathwork,2
+2022-08-14,breathwork,1
+2022-08-21,breathwork,2
+2022-08-28,breathwork,2
+2022-09-04,breathwork,2
+2022-09-11,breathwork,1
+2022-09-18,breathwork,1
+2022-09-25,breathwork,2
+2022-10-02,breathwork,2
+2022-10-09,breathwork,2
+2022-10-16,breathwork,1
+2022-10-23,breathwork,1
+2022-10-30,breathwork,2
+2022-11-06,breathwork,2
+2022-11-13,breathwork,2
+2022-11-20,breathwork,2
+2022-11-27,breathwork,2
+2022-12-04,breathwork,2
+2022-12-11,breathwork,1
+2022-12-18,breathwork,2
+2022-12-25,breathwork,1
+2023-01-01,breathwork,2
+2023-01-08,breathwork,2
+2023-01-15,breathwork,2
+2023-01-22,breathwork,2
+2023-01-29,breathwork,2
+2023-02-05,breathwork,2
+2023-02-12,breathwork,2
+2023-02-19,breathwork,2
+2023-02-26,breathwork,2
+2023-03-05,breathwork,2
+2023-03-12,breathwork,2
+2023-03-19,breathwork,2
+2023-03-26,breathwork,2
+2023-04-02,breathwork,2
+2023-04-09,breathwork,2
+2023-04-16,breathwork,2
+2023-04-23,breathwork,2
+2023-04-30,breathwork,2
+2023-05-07,breathwork,2
+2023-05-14,breathwork,2
+2023-05-21,breathwork,2
+2023-05-28,breathwork,2
+2023-06-04,breathwork,2
+2023-06-11,breathwork,2
+2023-06-18,breathwork,2
+2023-06-25,breathwork,2
+2023-07-02,breathwork,2
+2023-07-09,breathwork,2
+2023-07-16,breathwork,2
+2023-07-23,breathwork,2
+2023-07-30,breathwork,2
+2023-08-06,breathwork,2
+2023-08-13,breathwork,2
+2023-08-20,breathwork,2
+2023-08-27,breathwork,2
+2023-09-03,breathwork,2
+2023-09-10,breathwork,2
+2023-09-17,breathwork,2
+2023-09-24,breathwork,2
+2023-10-01,breathwork,2
+2023-10-08,breathwork,2
+2023-10-15,breathwork,2
+2023-10-22,breathwork,2
+2023-10-29,breathwork,2
+2023-11-05,breathwork,2
+2023-11-12,breathwork,2
+2023-11-19,breathwork,2
+2023-11-26,breathwork,2
+2023-12-03,breathwork,2
+2023-12-10,breathwork,2
+2023-12-17,breathwork,2
+2023-12-24,breathwork,2
+2023-12-31,breathwork,2
+2024-01-07,breathwork,3
+2024-01-14,breathwork,3
+2024-01-21,breathwork,3
+2024-01-28,breathwork,3
+2024-02-04,breathwork,3
+2024-02-11,breathwork,2
+2024-02-18,breathwork,3
+2024-02-25,breathwork,3
+2024-03-03,breathwork,2
+2024-03-10,breathwork,3
+2024-03-17,breathwork,2
+2024-03-24,breathwork,3
+2024-03-31,breathwork,3
+2024-04-07,breathwork,2
+2024-04-14,breathwork,3
+2024-04-21,breathwork,3
+2024-04-28,breathwork,3
+2024-05-05,breathwork,3
+2024-05-12,breathwork,3
+2024-05-19,breathwork,2
+2024-05-26,breathwork,2
+2024-06-02,breathwork,2
+2024-06-09,breathwork,2
+2024-06-16,breathwork,3
+2024-06-23,breathwork,3
+2024-06-30,breathwork,2
+2024-07-07,breathwork,3
+2024-07-14,breathwork,3
+2024-07-21,breathwork,2
+2024-07-28,breathwork,3
+2024-08-04,breathwork,3
+2024-08-11,breathwork,3
+2024-08-18,breathwork,3
+2024-08-25,breathwork,3
+2024-09-01,breathwork,3
+2024-09-08,breathwork,2
+2024-09-15,breathwork,3
+2024-09-22,breathwork,3
+2024-09-29,breathwork,3
+2024-10-06,breathwork,2
+2024-10-13,breathwork,3
+2024-10-20,breathwork,3
+2024-10-27,breathwork,3
+2024-11-03,breathwork,3
+2024-11-10,breathwork,3
+2024-11-17,breathwork,3
+2024-11-24,breathwork,3
+2024-12-01,breathwork,3
+2024-12-08,breathwork,3
+2024-12-15,breathwork,2
+2024-12-22,breathwork,2
+2024-12-29,breathwork,3
+2025-01-05,breathwork,3
+2025-01-12,breathwork,3
+2025-01-19,breathwork,3
+2025-01-26,breathwork,3
+2025-02-02,breathwork,3
+2025-02-09,breathwork,3
+2025-02-16,breathwork,3
+2025-02-23,breathwork,3
+2025-03-02,breathwork,3
+2025-03-09,breathwork,3
+2025-03-16,breathwork,3
+2025-03-23,breathwork,3
+2025-03-30,breathwork,3
+2025-04-06,breathwork,3
+2025-04-13,breathwork,3
+2025-04-20,breathwork,3
+2025-04-27,breathwork,3
+2025-05-04,breathwork,3
+2025-05-11,breathwork,3
+2025-05-18,breathwork,3
+2025-05-25,breathwork,3
+2025-06-01,breathwork,3
+2025-06-08,breathwork,3
+2025-06-15,breathwork,3
+2025-06-22,breathwork,3
+2025-06-29,breathwork,3
+2025-07-06,breathwork,3
+2025-07-13,breathwork,3
+2025-07-20,breathwork,3
+2025-07-27,breathwork,3
+2020-07-26,guided meditation,6
+2020-08-02,guided meditation,6
+2020-08-09,guided meditation,6
+2020-08-16,guided meditation,6
+2020-08-23,guided meditation,6
+2020-08-30,guided meditation,6
+2020-09-06,guided meditation,6
+2020-09-13,guided meditation,6
+2020-09-20,guided meditation,5
+2020-09-27,guided meditation,5
+2020-10-04,guided meditation,6
+2020-10-11,guided meditation,5
+2020-10-18,guided meditation,5
+2020-10-25,guided meditation,5
+2020-11-01,guided meditation,5
+2020-11-08,guided meditation,5
+2020-11-15,guided meditation,5
+2020-11-22,guided meditation,5
+2020-11-29,guided meditation,5
+2020-12-06,guided meditation,5
+2020-12-13,guided meditation,5
+2020-12-20,guided meditation,5
+2020-12-27,guided meditation,5
+2021-01-03,guided meditation,6
+2021-01-10,guided meditation,6
+2021-01-17,guided meditation,5
+2021-01-24,guided meditation,6
+2021-01-31,guided meditation,5
+2021-02-07,guided meditation,5
+2021-02-14,guided meditation,5
+2021-02-21,guided meditation,6
+2021-02-28,guided meditation,5
+2021-03-07,guided meditation,5
+2021-03-14,guided meditation,5
+2021-03-21,guided meditation,5
+2021-03-28,guided meditation,5
+2021-04-04,guided meditation,5
+2021-04-11,guided meditation,5
+2021-04-18,guided meditation,5
+2021-04-25,guided meditation,5
+2021-05-02,guided meditation,5
+2021-05-09,guided meditation,5
+2021-05-16,guided meditation,5
+2021-05-23,guided meditation,5
+2021-05-30,guided meditation,4
+2021-06-06,guided meditation,5
+2021-06-13,guided meditation,4
+2021-06-20,guided meditation,5
+2021-06-27,guided meditation,4
+2021-07-04,guided meditation,4
+2021-07-11,guided meditation,4
+2021-07-18,guided meditation,4
+2021-07-25,guided meditation,5
+2021-08-01,guided meditation,4
+2021-08-08,guided meditation,5
+2021-08-15,guided meditation,5
+2021-08-22,guided meditation,4
+2021-08-29,guided meditation,5
+2021-09-05,guided meditation,4
+2021-09-12,guided meditation,5
+2021-09-19,guided meditation,4
+2021-09-26,guided meditation,4
+2021-10-03,guided meditation,5
+2021-10-10,guided meditation,5
+2021-10-17,guided meditation,4
+2021-10-24,guided meditation,5
+2021-10-31,guided meditation,4
+2021-11-07,guided meditation,4
+2021-11-14,guided meditation,4
+2021-11-21,guided meditation,4
+2021-11-28,guided meditation,4
+2021-12-05,guided meditation,4
+2021-12-12,guided meditation,4
+2021-12-19,guided meditation,4
+2021-12-26,guided meditation,4
+2022-01-02,guided meditation,5
+2022-01-09,guided meditation,4
+2022-01-16,guided meditation,4
+2022-01-23,guided meditation,4
+2022-01-30,guided meditation,5
+2022-02-06,guided meditation,4
+2022-02-13,guided meditation,4
+2022-02-20,guided meditation,4
+2022-02-27,guided meditation,4
+2022-03-06,guided meditation,4
+2022-03-13,guided meditation,4
+2022-03-20,guided meditation,4
+2022-03-27,guided meditation,4
+2022-04-03,guided meditation,4
+2022-04-10,guided meditation,4
+2022-04-17,guided meditation,4
+2022-04-24,guided meditation,4
+2022-05-01,guided meditation,4
+2022-05-08,guided meditation,4
+2022-05-15,guided meditation,4
+2022-05-22,guided meditation,4
+2022-05-29,guided meditation,4
+2022-06-05,guided meditation,3
+2022-06-12,guided meditation,4
+2022-06-19,guided meditation,4
+2022-06-26,guided meditation,4
+2022-07-03,guided meditation,4
+2022-07-10,guided meditation,4
+2022-07-17,guided meditation,4
+2022-07-24,guided meditation,4
+2022-07-31,guided meditation,4
+2022-08-07,guided meditation,4
+2022-08-14,guided meditation,4
+2022-08-21,guided meditation,4
+2022-08-28,guided meditation,3
+2022-09-04,guided meditation,4
+2022-09-11,guided meditation,4
+2022-09-18,guided meditation,4
+2022-09-25,guided meditation,4
+2022-10-02,guided meditation,4
+2022-10-09,guided meditation,4
+2022-10-16,guided meditation,4
+2022-10-23,guided meditation,4
+2022-10-30,guided meditation,4
+2022-11-06,guided meditation,4
+2022-11-13,guided meditation,4
+2022-11-20,guided meditation,3
+2022-11-27,guided meditation,4
+2022-12-04,guided meditation,4
+2022-12-11,guided meditation,3
+2022-12-18,guided meditation,3
+2022-12-25,guided meditation,3
+2023-01-01,guided meditation,4
+2023-01-08,guided meditation,4
+2023-01-15,guided meditation,4
+2023-01-22,guided meditation,4
+2023-01-29,guided meditation,4
+2023-02-05,guided meditation,4
+2023-02-12,guided meditation,4
+2023-02-19,guided meditation,4
+2023-02-26,guided meditation,4
+2023-03-05,guided meditation,4
+2023-03-12,guided meditation,4
+2023-03-19,guided meditation,4
+2023-03-26,guided meditation,4
+2023-04-02,guided meditation,4
+2023-04-09,guided meditation,3
+2023-04-16,guided meditation,4
+2023-04-23,guided meditation,3
+2023-04-30,guided meditation,3
+2023-05-07,guided meditation,3
+2023-05-14,guided meditation,3
+2023-05-21,guided meditation,3
+2023-05-28,guided meditation,3
+2023-06-04,guided meditation,3
+2023-06-11,guided meditation,3
+2023-06-18,guided meditation,3
+2023-06-25,guided meditation,3
+2023-07-02,guided meditation,3
+2023-07-09,guided meditation,3
+2023-07-16,guided meditation,3
+2023-07-23,guided meditation,3
+2023-07-30,guided meditation,3
+2023-08-06,guided meditation,3
+2023-08-13,guided meditation,3
+2023-08-20,guided meditation,3
+2023-08-27,guided meditation,3
+2023-09-03,guided meditation,3
+2023-09-10,guided meditation,3
+2023-09-17,guided meditation,3
+2023-09-24,guided meditation,3
+2023-10-01,guided meditation,3
+2023-10-08,guided meditation,3
+2023-10-15,guided meditation,3
+2023-10-22,guided meditation,3
+2023-10-29,guided meditation,3
+2023-11-05,guided meditation,3
+2023-11-12,guided meditation,3
+2023-11-19,guided meditation,3
+2023-11-26,guided meditation,3
+2023-12-03,guided meditation,3
+2023-12-10,guided meditation,3
+2023-12-17,guided meditation,3
+2023-12-24,guided meditation,3
+2023-12-31,guided meditation,3
+2024-01-07,guided meditation,3
+2024-01-14,guided meditation,3
+2024-01-21,guided meditation,3
+2024-01-28,guided meditation,3
+2024-02-04,guided meditation,3
+2024-02-11,guided meditation,3
+2024-02-18,guided meditation,3
+2024-02-25,guided meditation,3
+2024-03-03,guided meditation,3
+2024-03-10,guided meditation,3
+2024-03-17,guided meditation,3
+2024-03-24,guided meditation,3
+2024-03-31,guided meditation,3
+2024-04-07,guided meditation,3
+2024-04-14,guided meditation,3
+2024-04-21,guided meditation,3
+2024-04-28,guided meditation,3
+2024-05-05,guided meditation,3
+2024-05-12,guided meditation,3
+2024-05-19,guided meditation,3
+2024-05-26,guided meditation,3
+2024-06-02,guided meditation,3
+2024-06-09,guided meditation,3
+2024-06-16,guided meditation,3
+2024-06-23,guided meditation,3
+2024-06-30,guided meditation,3
+2024-07-07,guided meditation,3
+2024-07-14,guided meditation,3
+2024-07-21,guided meditation,3
+2024-07-28,guided meditation,3
+2024-08-04,guided meditation,3
+2024-08-11,guided meditation,3
+2024-08-18,guided meditation,3
+2024-08-25,guided meditation,3
+2024-09-01,guided meditation,3
+2024-09-08,guided meditation,3
+2024-09-15,guided meditation,3
+2024-09-22,guided meditation,3
+2024-09-29,guided meditation,3
+2024-10-06,guided meditation,3
+2024-10-13,guided meditation,3
+2024-10-20,guided meditation,3
+2024-10-27,guided meditation,3
+2024-11-03,guided meditation,3
+2024-11-10,guided meditation,3
+2024-11-17,guided meditation,3
+2024-11-24,guided meditation,3
+2024-12-01,guided meditation,3
+2024-12-08,guided meditation,3
+2024-12-15,guided meditation,3
+2024-12-22,guided meditation,2
+2024-12-29,guided meditation,3
+2025-01-05,guided meditation,3
+2025-01-12,guided meditation,3
+2025-01-19,guided meditation,3
+2025-01-26,guided meditation,3
+2025-02-02,guided meditation,3
+2025-02-09,guided meditation,3
+2025-02-16,guided meditation,3
+2025-02-23,guided meditation,3
+2025-03-02,guided meditation,3
+2025-03-09,guided meditation,3
+2025-03-16,guided meditation,3
+2025-03-23,guided meditation,3
+2025-03-30,guided meditation,3
+2025-04-06,guided meditation,3
+2025-04-13,guided meditation,3
+2025-04-20,guided meditation,3
+2025-04-27,guided meditation,3
+2025-05-04,guided meditation,3
+2025-05-11,guided meditation,3
+2025-05-18,guided meditation,3
+2025-05-25,guided meditation,3
+2025-06-01,guided meditation,3
+2025-06-08,guided meditation,3
+2025-06-15,guided meditation,3
+2025-06-22,guided meditation,3
+2025-06-29,guided meditation,3
+2025-07-06,guided meditation,3
+2025-07-13,guided meditation,4
+2025-07-20,guided meditation,4
+2025-07-27,guided meditation,4
+2020-07-26,yoga nidra,3
+2020-08-02,yoga nidra,3
+2020-08-09,yoga nidra,3
+2020-08-16,yoga nidra,3
+2020-08-23,yoga nidra,3
+2020-08-30,yoga nidra,3
+2020-09-06,yoga nidra,3
+2020-09-13,yoga nidra,3
+2020-09-20,yoga nidra,3
+2020-09-27,yoga nidra,3
+2020-10-04,yoga nidra,3
+2020-10-11,yoga nidra,3
+2020-10-18,yoga nidra,2
+2020-10-25,yoga nidra,3
+2020-11-01,yoga nidra,2
+2020-11-08,yoga nidra,3
+2020-11-15,yoga nidra,3
+2020-11-22,yoga nidra,2
+2020-11-29,yoga nidra,2
+2020-12-06,yoga nidra,2
+2020-12-13,yoga nidra,2
+2020-12-20,yoga nidra,2
+2020-12-27,yoga nidra,2
+2021-01-03,yoga nidra,3
+2021-01-10,yoga nidra,3
+2021-01-17,yoga nidra,3
+2021-01-24,yoga nidra,3
+2021-01-31,yoga nidra,3
+2021-02-07,yoga nidra,2
+2021-02-14,yoga nidra,2
+2021-02-21,yoga nidra,2
+2021-02-28,yoga nidra,3
+2021-03-07,yoga nidra,2
+2021-03-14,yoga nidra,3
+2021-03-21,yoga nidra,3
+2021-03-28,yoga nidra,2
+2021-04-04,yoga nidra,2
+2021-04-11,yoga nidra,2
+2021-04-18,yoga nidra,2
+2021-04-25,yoga nidra,2
+2021-05-02,yoga nidra,3
+2021-05-09,yoga nidra,2
+2021-05-16,yoga nidra,2
+2021-05-23,yoga nidra,2
+2021-05-30,yoga nidra,2
+2021-06-06,yoga nidra,2
+2021-06-13,yoga nidra,2
+2021-06-20,yoga nidra,2
+2021-06-27,yoga nidra,2
+2021-07-04,yoga nidra,3
+2021-07-11,yoga nidra,3
+2021-07-18,yoga nidra,3
+2021-07-25,yoga nidra,3
+2021-08-01,yoga nidra,2
+2021-08-08,yoga nidra,2
+2021-08-15,yoga nidra,3
+2021-08-22,yoga nidra,3
+2021-08-29,yoga nidra,3
+2021-09-05,yoga nidra,2
+2021-09-12,yoga nidra,2
+2021-09-19,yoga nidra,2
+2021-09-26,yoga nidra,3
+2021-10-03,yoga nidra,3
+2021-10-10,yoga nidra,3
+2021-10-17,yoga nidra,2
+2021-10-24,yoga nidra,2
+2021-10-31,yoga nidra,2
+2021-11-07,yoga nidra,2
+2021-11-14,yoga nidra,2
+2021-11-21,yoga nidra,2
+2021-11-28,yoga nidra,2
+2021-12-05,yoga nidra,3
+2021-12-12,yoga nidra,2
+2021-12-19,yoga nidra,2
+2021-12-26,yoga nidra,2
+2022-01-02,yoga nidra,2
+2022-01-09,yoga nidra,3
+2022-01-16,yoga nidra,2
+2022-01-23,yoga nidra,3
+2022-01-30,yoga nidra,3
+2022-02-06,yoga nidra,3
+2022-02-13,yoga nidra,2
+2022-02-20,yoga nidra,2
+2022-02-27,yoga nidra,3
+2022-03-06,yoga nidra,3
+2022-03-13,yoga nidra,3
+2022-03-20,yoga nidra,3
+2022-03-27,yoga nidra,2
+2022-04-03,yoga nidra,3
+2022-04-10,yoga nidra,3
+2022-04-17,yoga nidra,2
+2022-04-24,yoga nidra,3
+2022-05-01,yoga nidra,3
+2022-05-08,yoga nidra,3
+2022-05-15,yoga nidra,3
+2022-05-22,yoga nidra,2
+2022-05-29,yoga nidra,2
+2022-06-05,yoga nidra,3
+2022-06-12,yoga nidra,3
+2022-06-19,yoga nidra,3
+2022-06-26,yoga nidra,2
+2022-07-03,yoga nidra,2
+2022-07-10,yoga nidra,2
+2022-07-17,yoga nidra,3
+2022-07-24,yoga nidra,3
+2022-07-31,yoga nidra,3
+2022-08-07,yoga nidra,3
+2022-08-14,yoga nidra,3
+2022-08-21,yoga nidra,3
+2022-08-28,yoga nidra,3
+2022-09-04,yoga nidra,3
+2022-09-11,yoga nidra,3
+2022-09-18,yoga nidra,3
+2022-09-25,yoga nidra,3
+2022-10-02,yoga nidra,3
+2022-10-09,yoga nidra,3
+2022-10-16,yoga nidra,3
+2022-10-23,yoga nidra,3
+2022-10-30,yoga nidra,3
+2022-11-06,yoga nidra,3
+2022-11-13,yoga nidra,3
+2022-11-20,yoga nidra,3
+2022-11-27,yoga nidra,3
+2022-12-04,yoga nidra,3
+2022-12-11,yoga nidra,3
+2022-12-18,yoga nidra,3
+2022-12-25,yoga nidra,3
+2023-01-01,yoga nidra,3
+2023-01-08,yoga nidra,3
+2023-01-15,yoga nidra,4
+2023-01-22,yoga nidra,4
+2023-01-29,yoga nidra,3
+2023-02-05,yoga nidra,3
+2023-02-12,yoga nidra,4
+2023-02-19,yoga nidra,4
+2023-02-26,yoga nidra,4
+2023-03-05,yoga nidra,3
+2023-03-12,yoga nidra,3
+2023-03-19,yoga nidra,3
+2023-03-26,yoga nidra,3
+2023-04-02,yoga nidra,3
+2023-04-09,yoga nidra,3
+2023-04-16,yoga nidra,3
+2023-04-23,yoga nidra,3
+2023-04-30,yoga nidra,3
+2023-05-07,yoga nidra,3
+2023-05-14,yoga nidra,3
+2023-05-21,yoga nidra,3
+2023-05-28,yoga nidra,3
+2023-06-04,yoga nidra,3
+2023-06-11,yoga nidra,3
+2023-06-18,yoga nidra,3
+2023-06-25,yoga nidra,3
+2023-07-02,yoga nidra,3
+2023-07-09,yoga nidra,3
+2023-07-16,yoga nidra,3
+2023-07-23,yoga nidra,3
+2023-07-30,yoga nidra,3
+2023-08-06,yoga nidra,3
+2023-08-13,yoga nidra,3
+2023-08-20,yoga nidra,3
+2023-08-27,yoga nidra,3
+2023-09-03,yoga nidra,3
+2023-09-10,yoga nidra,3
+2023-09-17,yoga nidra,3
+2023-09-24,yoga nidra,3
+2023-10-01,yoga nidra,3
+2023-10-08,yoga nidra,3
+2023-10-15,yoga nidra,3
+2023-10-22,yoga nidra,3
+2023-10-29,yoga nidra,3
+2023-11-05,yoga nidra,3
+2023-11-12,yoga nidra,3
+2023-11-19,yoga nidra,3
+2023-11-26,yoga nidra,3
+2023-12-03,yoga nidra,3
+2023-12-10,yoga nidra,3
+2023-12-17,yoga nidra,3
+2023-12-24,yoga nidra,3
+2023-12-31,yoga nidra,3
+2024-01-07,yoga nidra,3
+2024-01-14,yoga nidra,3
+2024-01-21,yoga nidra,3
+2024-01-28,yoga nidra,4
+2024-02-04,yoga nidra,3
+2024-02-11,yoga nidra,3
+2024-02-18,yoga nidra,3
+2024-02-25,yoga nidra,3
+2024-03-03,yoga nidra,3
+2024-03-10,yoga nidra,3
+2024-03-17,yoga nidra,3
+2024-03-24,yoga nidra,3
+2024-03-31,yoga nidra,3
+2024-04-07,yoga nidra,3
+2024-04-14,yoga nidra,3
+2024-04-21,yoga nidra,3
+2024-04-28,yoga nidra,3
+2024-05-05,yoga nidra,3
+2024-05-12,yoga nidra,3
+2024-05-19,yoga nidra,3
+2024-05-26,yoga nidra,3
+2024-06-02,yoga nidra,3
+2024-06-09,yoga nidra,3
+2024-06-16,yoga nidra,3
+2024-06-23,yoga nidra,3
+2024-06-30,yoga nidra,3
+2024-07-07,yoga nidra,3
+2024-07-14,yoga nidra,3
+2024-07-21,yoga nidra,3
+2024-07-28,yoga nidra,3
+2024-08-04,yoga nidra,3
+2024-08-11,yoga nidra,3
+2024-08-18,yoga nidra,3
+2024-08-25,yoga nidra,3
+2024-09-01,yoga nidra,3
+2024-09-08,yoga nidra,3
+2024-09-15,yoga nidra,3
+2024-09-22,yoga nidra,4
+2024-09-29,yoga nidra,3
+2024-10-06,yoga nidra,3
+2024-10-13,yoga nidra,3
+2024-10-20,yoga nidra,3
+2024-10-27,yoga nidra,3
+2024-11-03,yoga nidra,3
+2024-11-10,yoga nidra,3
+2024-11-17,yoga nidra,3
+2024-11-24,yoga nidra,3
+2024-12-01,yoga nidra,3
+2024-12-08,yoga nidra,3
+2024-12-15,yoga nidra,3
+2024-12-22,yoga nidra,2
+2024-12-29,yoga nidra,3
+2025-01-05,yoga nidra,3
+2025-01-12,yoga nidra,3
+2025-01-19,yoga nidra,3
+2025-01-26,yoga nidra,3
+2025-02-02,yoga nidra,3
+2025-02-09,yoga nidra,3
+2025-02-16,yoga nidra,3
+2025-02-23,yoga nidra,3
+2025-03-02,yoga nidra,3
+2025-03-09,yoga nidra,3
+2025-03-16,yoga nidra,3
+2025-03-23,yoga nidra,3
+2025-03-30,yoga nidra,3
+2025-04-06,yoga nidra,3
+2025-04-13,yoga nidra,3
+2025-04-20,yoga nidra,3
+2025-04-27,yoga nidra,3
+2025-05-04,yoga nidra,3
+2025-05-11,yoga nidra,3
+2025-05-18,yoga nidra,3
+2025-05-25,yoga nidra,3
+2025-06-01,yoga nidra,3
+2025-06-08,yoga nidra,3
+2025-06-15,yoga nidra,3
+2025-06-22,yoga nidra,3
+2025-06-29,yoga nidra,3
+2025-07-06,yoga nidra,3
+2025-07-13,yoga nidra,3
+2025-07-20,yoga nidra,3
+2025-07-27,yoga nidra,3

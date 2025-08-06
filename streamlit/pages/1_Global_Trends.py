@@ -188,14 +188,13 @@ st.markdown(df_pct_styled.to_html(escape=False, index=False), unsafe_allow_html=
 
 st.markdown("---")
 
-# 🌟 Section 3 — Top Peak Dates
+# 🌟 Section 3 — Top Peak Dates by Keyword
 st.markdown("<h2 class='fade-in' style='color:#4B8BBE;'>🌟 Top Peak Dates by Keyword</h2>", unsafe_allow_html=True)
-
 st.markdown("""
 <div class='fade-in' style='background-color:#F9FAFB; padding: 1rem 1.5rem; border-left: 4px solid #4B8BBE; border-radius: 6px;'>
 <p>See when each keyword reached its highest level of global interest.</p>
 <ul style='margin-top: 0; padding-left: 1.2rem;'>
-  <li>📅 Pinpoint cultural events or awareness weeks driving spikes</li>
+  <li>📆 Pinpoint cultural events or awareness weeks driving spikes</li>
   <li>🌍 Spot time-specific behaviors in how people seek stillness</li>
   <li>🧠 Great for insights, storytelling, or campaign planning</li>
 </ul>
@@ -203,34 +202,81 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 📅 Event mapping
+# 🧹 Rename columns for clarity
+df_top_cleaned = df_top_peaks.rename(columns={
+    "keyword": "Search Term",
+    "date": "Peak Date",
+    "search_interest": "Interest Score"
+}).copy()
+
+# 🎯 Keep only top peak per keyword
+df_top_cleaned = df_top_cleaned.sort_values("Interest Score", ascending=False)
+df_top_cleaned = df_top_cleaned.drop_duplicates(subset="Search Term", keep="first")
+
+# 📅 Clean Peak Date
+df_top_cleaned["Peak Date"] = pd.to_datetime(df_top_cleaned["Peak Date"]).dt.date
+
+# 🧠 Add event mapping manually
 event_mapping = {
-    "2021-01-17": "🧘‍♂️ New Year's Resolution Spike",
-    "2020-09-06": "🎒 Back-to-School + Wellness Push",
-    "2020-07-26": "💎 Mid-Pandemic Anxiety Relief",
-    "2023-01-15": "🛌 Winter Sleep Trends + TikTok Surge",
-    "2024-01-07": "🧬 New Year Recovery + Biohacking"
+    "meditation": "🧘 New Year's Resolution Spike",
+    "mindfulness": "🧠 Back-to-School + Wellness Push",
+    "guided meditation": "🎧 Mid-Pandemic Anxiety Relief",
+    "yoga nidra": "🛌 Winter Sleep Trends + TikTok Surge",
+    "breathwork": "🌬️ New Year Recovery + Biohacking"
 }
+df_top_cleaned["Event"] = df_top_cleaned["Search Term"].map(event_mapping).fillna("—")
 
-# 🧹 Clean and enrich data
-df_top_peaks_cleaned = df_top_peaks.copy()
-df_top_peaks_cleaned["Peak Date"] = pd.to_datetime(df_top_peaks_cleaned["date"]).dt.date.astype(str)
-df_top_peaks_cleaned["Search Term"] = df_top_peaks_cleaned["keyword"]
-df_top_peaks_cleaned["Interest Score"] = df_top_peaks_cleaned["search_interest"]
-df_top_peaks_cleaned["Event"] = df_top_peaks_cleaned["Peak Date"].map(event_mapping)
-df_top_peaks_cleaned = df_top_peaks_cleaned[["Peak Date", "Search Term", "Interest Score", "Event"]]
+# 🔀 Reorder columns to place Interest Score at the end
+df_top_cleaned = df_top_cleaned[["Search Term", "Peak Date", "Event", "Interest Score"]]
 
-# 📊 Format styling
-styled_df = df_top_peaks_cleaned.style \
-    .set_properties(**{
-        "text-align": "left",
-        "font-size": "0.95rem"
-    }) \
-    .set_table_styles([
-        {"selector": "th", "props": [("text-align", "left"), ("font-size", "1rem")]},
-        {"selector": "td:nth-child(3)", "props": [("text-align", "center"), ("font-weight", "bold")]},  # Center + bold interest score
-    ]) \
-    .apply(lambda x: ['background-color: #F4F4F4' if i % 2 else '' for i in range(len(x))], axis=0)  # Alternating row shading
+# ✨ Style only the Interest Score column
+def format_interest(val):
+    return "font-weight: bold; text-align: center;" if pd.notnull(val) else ""
 
-# 🖼️ Display styled table
+styled_df = df_top_cleaned.style.applymap(format_interest, subset=["Interest Score"])
+
+# 📋 Display
 st.dataframe(styled_df, use_container_width=True, hide_index=True)
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+footer_html = """
+<div style="
+    margin-top: 3.5rem;
+    padding: 1.75rem 2rem 1.5rem 2rem;
+    border-radius: 12px;
+    background: linear-gradient(to left, #f9fafc, #f3f4f6);
+    border-right: 5px solid #4B8BBE;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    color: #333;
+">
+
+  <!-- Optional watermark icon -->
+  <img src="https://img.icons8.com/ios-glyphs/30/4B8BBE/search--v1.png" 
+       style="position: absolute; bottom: 12px; right: 14px; opacity: 0.08; width: 42px;" 
+       alt="Search Icon" />
+
+  <h4 style="margin: 0 0 0.8rem 0; color: #1F4E79;">📊 Understanding the Interest Score</h4>
+
+  <p style="margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+    Scores range from <strong>0 to 100</strong> and show how popular a search term was — <strong>relative to its own peak</strong>.
+  </p>
+
+  <ul style="margin: 0 0 0.5rem 1.25rem; padding-left: 0; font-size: 0.98rem; color: #444;">
+    <li><strong>100</strong> = Highest interest ever recorded</li>
+    <li><strong>50</strong> = Half as popular as peak</li>
+    <li><strong>0</strong> = Not enough data</li>
+  </ul>
+
+  <p style="font-size: 0.93rem; color: #666; font-style: italic; margin-top: 1rem;">
+    This score is normalized — not raw volume — helping you spot peaks, not totals.
+  </p>
+
+</div>
+"""
+
+st.html(footer_html, width="stretch")

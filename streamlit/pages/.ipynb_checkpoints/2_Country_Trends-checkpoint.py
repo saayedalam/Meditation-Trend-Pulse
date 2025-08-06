@@ -194,3 +194,47 @@ for keyword in df_top5["Keyword"].unique():
     
     with st.expander(f"📌 Top 5 Countries — {keyword.title()}"):
         st.markdown(df_subset_display.to_html(escape=False, index=False), unsafe_allow_html=True)
+
+
+st.markdown("<br>", unsafe_allow_html=True)
+
+footer_html = """
+<div style="
+    margin-top: 3.5rem;
+    padding: 1.75rem 2rem 1.5rem 2rem;
+    border-radius: 12px;
+    background: linear-gradient(to left, #f9fafc, #f3f4f6);
+    border-right: 5px solid #4B8BBE;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    color: #333;
+">
+
+  <!-- Optional watermark icon -->
+  <img src="https://img.icons8.com/ios-glyphs/30/4B8BBE/search--v1.png" 
+       style="position: absolute; bottom: 12px; right: 14px; opacity: 0.08; width: 42px;" 
+       alt="Search Icon" />
+
+  <h4 style="margin: 0 0 0.8rem 0; color: #1F4E79;">📊 Understanding the Interest Score</h4>
+
+  <p style="margin: 0 0 0.5rem 0; font-size: 1.05rem;">
+    Scores range from <strong>0 to 100</strong> and show how popular a search term was — <strong>relative to its own peak</strong>.
+  </p>
+
+  <ul style="margin: 0 0 0.5rem 1.25rem; padding-left: 0; font-size: 0.98rem; color: #444;">
+    <li><strong>100</strong> = Highest interest ever recorded</li>
+    <li><strong>50</strong> = Half as popular as peak</li>
+    <li><strong>0</strong> = Not enough data</li>
+  </ul>
+
+  <p style="font-size: 0.93rem; color: #666; font-style: italic; margin-top: 1rem;">
+    This score is normalized — not raw volume — helping you spot peaks, not totals.
+  </p>
+
+</div>
+"""
+
+st.html(footer_html, width="stretch")

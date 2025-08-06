@@ -1,12 +1,26 @@
-keyword,country,total_interest
-0,Ireland,5
-1,Australia,4
-2,New Zealand,3
-3,Switzerland,3
-4,Netherlands,3
-5,Canada,2
-6,United Kingdom,1
-7,Denmark,1
-8,Spain,1
-9,Iceland,1
-10,Sweden,1
+keyword,country,top5_count
+breathwork,Australia,1
+breathwork,Ireland,1
+breathwork,Netherlands,1
+breathwork,New Zealand,1
+breathwork,Switzerland,1
+guided meditation,Australia,1
+guided meditation,Canada,1
+guided meditation,Ireland,1
+guided meditation,New Zealand,1
+guided meditation,United Kingdom,1
+meditation,Australia,1
+meditation,Canada,1
+meditation,Ireland,1
+meditation,New Zealand,1
+meditation,Switzerland,1
+mindfulness,Australia,1
+mindfulness,Denmark,1
+mindfulness,Ireland,1
+mindfulness,Netherlands,1
+mindfulness,Spain,1
+yoga nidra,Iceland,1
+yoga nidra,Ireland,1
+yoga nidra,Netherlands,1
+yoga nidra,Sweden,1
+yoga nidra,Switzerland,1

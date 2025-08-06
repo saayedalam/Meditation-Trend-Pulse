@@ -14,13 +14,12 @@ last_updated = pd.to_datetime(df_trend_long['date']).max().strftime("%B %d, %Y")
 st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
 inject_base_css()
 
-# 🖼️ Banner image (short and relevant)
-st.markdown(f"""
-<div class='fade-in'>
-    <img class='banner' src='https://images.unsplash.com/photo-1517832207067-4db24a2ae47c?fit=crop&w=1500&q=80' alt='Meditation Banner'>
-    <p style='font-style: italic; color: gray; text-align:center; margin-top:0.5rem;'>“Calm mind brings inner strength and self‑confidence.” — Dalai Lama</p>
-</div>
-""", unsafe_allow_html=True)
+# 🖼️ Banner image (custom local image)
+current_dir = os.path.dirname(__file__)
+image_path = os.path.join(current_dir, "assets", "meditation_trend_pulse_banner.png")
+st.image(image_path, use_container_width=True)
+
+
 
 # ✨ Title and tagline
 st.markdown("""

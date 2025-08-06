@@ -58,5 +58,13 @@ def inject_base_css():
         object-fit: cover;
         border-radius: 10px;
     }
+
+    div[data-baseweb="select"] div[role="option"]:hover {
+    background-color: #f3f0ff !important;
+    }
+
+    th {
+    text-align: center !important;
+    }
     </style>
     """, unsafe_allow_html=True)

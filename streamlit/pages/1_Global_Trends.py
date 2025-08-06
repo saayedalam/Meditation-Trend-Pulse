@@ -188,13 +188,14 @@ st.markdown(df_pct_styled.to_html(escape=False, index=False), unsafe_allow_html=
 
 st.markdown("---")
 
-# 🌟 Section 3 — Top Peak Dates by Keyword
+# 🌟 Section 3 — Top Peak Dates
 st.markdown("<h2 class='fade-in' style='color:#4B8BBE;'>🌟 Top Peak Dates by Keyword</h2>", unsafe_allow_html=True)
+
 st.markdown("""
 <div class='fade-in' style='background-color:#F9FAFB; padding: 1rem 1.5rem; border-left: 4px solid #4B8BBE; border-radius: 6px;'>
 <p>See when each keyword reached its highest level of global interest.</p>
 <ul style='margin-top: 0; padding-left: 1.2rem;'>
-  <li>📆 Pinpoint cultural events or awareness weeks driving spikes</li>
+  <li>📅 Pinpoint cultural events or awareness weeks driving spikes</li>
   <li>🌍 Spot time-specific behaviors in how people seek stillness</li>
   <li>🧠 Great for insights, storytelling, or campaign planning</li>
 </ul>
@@ -202,31 +203,34 @@ st.markdown("""
 """, unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
-# 🧹 Rename columns for clarity
-df_top_cleaned = df_top_peaks.rename(columns={
-    "keyword": "Search Term",
-    "date": "Peak Date",
-    "search_interest": "Interest Score"
-}).copy()
-
-# 🎯 Keep only top peak per keyword (in case multiple appear)
-df_top_cleaned = df_top_cleaned.sort_values("Interest Score", ascending=False)
-df_top_cleaned = df_top_cleaned.drop_duplicates(subset="Search Term", keep="first")
-
-# 📅 Ensure Peak Date is datetime
-df_top_cleaned["Peak Date"] = pd.to_datetime(df_top_cleaned["Peak Date"]).dt.date
-
-# 🧠 Add event mapping manually
+# 📅 Event mapping
 event_mapping = {
-    "meditation": "🧘 New Year's Resolution Spike",
-    "mindfulness": "🧠 Back-to-School + Wellness Push",
-    "guided meditation": "🎧 Mid-Pandemic Anxiety Relief",
-    "yoga nidra": "🛌 Winter Sleep Trends + TikTok Surge",
-    "breathwork": "🌬️ New Year Recovery + Biohacking"
+    "2021-01-17": "🧘‍♂️ New Year's Resolution Spike",
+    "2020-09-06": "🎒 Back-to-School + Wellness Push",
+    "2020-07-26": "💎 Mid-Pandemic Anxiety Relief",
+    "2023-01-15": "🛌 Winter Sleep Trends + TikTok Surge",
+    "2024-01-07": "🧬 New Year Recovery + Biohacking"
 }
 
-# ➕ Add Event column
-df_top_cleaned["Event"] = df_top_cleaned["Search Term"].map(event_mapping).fillna("—")
+# 🧹 Clean and enrich data
+df_top_peaks_cleaned = df_top_peaks.copy()
+df_top_peaks_cleaned["Peak Date"] = pd.to_datetime(df_top_peaks_cleaned["date"]).dt.date.astype(str)
+df_top_peaks_cleaned["Search Term"] = df_top_peaks_cleaned["keyword"]
+df_top_peaks_cleaned["Interest Score"] = df_top_peaks_cleaned["search_interest"]
+df_top_peaks_cleaned["Event"] = df_top_peaks_cleaned["Peak Date"].map(event_mapping)
+df_top_peaks_cleaned = df_top_peaks_cleaned[["Peak Date", "Search Term", "Interest Score", "Event"]]
 
-# 📋 Show final table
-st.dataframe(df_top_cleaned, use_container_width=True, hide_index=True)
+# 📊 Format styling
+styled_df = df_top_peaks_cleaned.style \
+    .set_properties(**{
+        "text-align": "left",
+        "font-size": "0.95rem"
+    }) \
+    .set_table_styles([
+        {"selector": "th", "props": [("text-align", "left"), ("font-size", "1rem")]},
+        {"selector": "td:nth-child(3)", "props": [("text-align", "center"), ("font-weight", "bold")]},  # Center + bold interest score
+    ]) \
+    .apply(lambda x: ['background-color: #F4F4F4' if i % 2 else '' for i in range(len(x))], axis=0)  # Alternating row shading
+
+# 🖼️ Display styled table
+st.dataframe(styled_df, use_container_width=True, hide_index=True)

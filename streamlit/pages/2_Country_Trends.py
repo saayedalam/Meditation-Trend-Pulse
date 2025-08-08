@@ -5,14 +5,14 @@ import pandas as pd
 import os
 import pycountry
 import altair as alt
-from utils.ui import inject_base_css  # 🔄 Shared CSS styles (animations, theme)
+#from utils.ui import inject_base_css  # 🔄 Shared CSS styles (animations, theme)
 from datetime import datetime
 
 # 🔧 Page config
 st.set_page_config(page_title="Country Trends | Meditation Trend Pulse", layout="wide")
 
 # 🎨 Inject global styles
-inject_base_css()
+#inject_base_css()
 
 # Space
 def space(): 

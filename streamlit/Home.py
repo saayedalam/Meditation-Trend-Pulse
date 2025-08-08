@@ -3,7 +3,7 @@
 import streamlit as st
 import pandas as pd
 import os
-from utils.ui import inject_base_css  # 🔁 Reusable CSS/animation styles
+#from utils.ui import inject_base_css  # 🔁 Reusable CSS/animation styles
 
 # 📁 Load trend data to extract last updated date
 DATA_PATH = "../data/streamlit"
@@ -12,7 +12,7 @@ last_updated = pd.to_datetime(df_trend_long['date']).max().strftime("%B %d, %Y")
 
 # 🌐 Set Streamlit config and inject global styles
 st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
-inject_base_css()
+#inject_base_css()
 
 # 🖼️ Banner image (custom local image)
 current_dir = os.path.dirname(__file__)
@@ -108,9 +108,4 @@ Data Analyst • Python Enthusiast • Insight Explorer
 🔗 <a href='https://github.com/saayedalam' target='_blank'>GitHub</a> | 
 <a href='https://www.linkedin.com/in/saayedalam/' target='_blank'>LinkedIn</a>
 </p>
-""", unsafe_allow_html=True)
-
-# 💬 Floating FAQ button
-st.markdown("""
-<a class='floating-button' href='#' title='Need help navigating?'>💬 FAQ / Help</a>
 """, unsafe_allow_html=True)

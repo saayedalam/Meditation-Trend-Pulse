@@ -1,89 +1,63 @@
 # 📈 Global Trends Page — Meditation Trend Pulse
 
-import streamlit as st
-import pandas as pd
 import os
-import altair as alt
-from utils.ui import inject_base_css  # 🔄 Shared CSS styles (animations, theme)
 from datetime import datetime
 
-# 🔧 Page config
+import altair as alt
+import pandas as pd
+import streamlit as st
+
+# Import shared UI helpers and styles
+from utils.ui import inject_app_theme, page_header, render_card, space, CHAKRA_HEART
+
+# ─────────────────────────────────────────────────────────────
+# 🔧 Page configuration and global style injection
+# ─────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Global Trends | Meditation Trend Pulse", layout="wide")
+inject_app_theme()  # Inject baseline global styles and animations
 
-# 🎨 Inject custom styles
-inject_base_css()
-
-# Space
-def space(): 
-    st.markdown("<div style='margin-top: 2rem;'></div>", unsafe_allow_html=True)
-
-# 💾 Load Data
+# ─────────────────────────────────────────────────────────────
+# 📁 Data loading
+# ─────────────────────────────────────────────────────────────
 DATA_PATH = "../data/streamlit"
 df_trend_long = pd.read_csv(os.path.join(DATA_PATH, "global_trend_summary.csv"))
 df_pct_change = pd.read_csv(os.path.join(DATA_PATH, "trend_pct_change.csv"))
 df_top_peaks = pd.read_csv(os.path.join(DATA_PATH, "trend_top_peaks.csv"))
+
 df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 
-# 💡 Intro — Global Trends Overview
-intro_html = """
-<style>
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px) scale(0.97);}
-  to {opacity: 1; transform: translateY(0) scale(1);}
-}
-.fade-in-global {
-  animation: fadeUp 1s ease-out;
-}
-</style>
+# ─────────────────────────────────────────────────────────────
+# 🖼 Page header
+# ─────────────────────────────────────────────────────────────
+page_header(
+    title="📊 Global Trends in Meditation",
+    subtitle="A worldwide view of mindfulness, breathwork, and inner stillness over time",
+)
 
-<div class="fade-in-global" style="text-align: center; padding: 2.5rem 0; position: relative;">
-  <h1 style="font-size: 2.9rem; color: #1F4E79; margin-bottom: 0.2rem; font-weight: 700;">
-    📊 Global Trends in Meditation
-  </h1>
-  <h3 style="font-weight: 400; color: #666; font-size: 1.25rem; margin-top: 0;">
-    A worldwide view of mindfulness, breathwork, and inner stillness over time
-  </h3>
+space(1)  # Add vertical spacing after header
 
-  <br>
-
-  <div style="
-      display: inline-block;
-      background: linear-gradient(135deg, #fafaff, #f9f6ff, #f4f0fb);
-      padding: 2rem 2.5rem;
-      border-radius: 14px;
-      border-left: 6px solid #7C3AED;
-      text-align: left;
-      max-width: 820px;
-      margin-top: 1.5rem;
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
-      position: relative;
-      z-index: 1;
-  ">
-    <p style="font-size: 1.15rem; line-height: 1.75; color: #333;">
-      🌐 This page reveals the global rhythm of search interest in meditation-related topics — including <strong>mindfulness</strong>, <strong>breathwork</strong>, and <strong>guided meditation</strong>.
-    </p>
-    <p style="font-size: 1.1rem; line-height: 1.7; color: #333;">
-      Built with data from <strong>Google Trends</strong>, it captures long-term growth, seasonal shifts, and spikes tied to cultural events, crises, and collective curiosity.
-    </p>
-    <p style="font-size: 1.05rem; line-height: 1.6; color: #5B21B6;">
-      🎯 Use the tools below to filter keywords, adjust time windows, and surface the stories hidden in the trends.
-    </p>
-    <p style="font-size: 1rem; font-style: italic; color: #666; margin-top: 0.75rem;">
-      🧘 Whether you're a researcher, wellness coach, or mindful observer — this is your window into how the world is tuning inward.
-    </p>
-  </div>
-
-  <div style="margin-top: 1.75rem;">
-    <p style="font-size: 1rem; color: #888; font-style: italic;">
-      📈 “Since 2020, global search interest in meditation has risen across every continent.”
-    </p>
-  </div>
-</div>
+# ─────────────────────────────────────────────────────────────
+# 🟩 'What We Noticed' card with exact styled text
+# ─────────────────────────────────────────────────────────────
+body_html = """
+🌐 This page reveals the global rhythm of search interest in meditation-related topics — including <strong>mindfulness</strong>, <strong>breathwork</strong>, and <strong>guided meditation</strong>.<br/><br/>
+Built with data from <strong>Google Trends</strong>, it captures long-term growth, seasonal shifts, and spikes tied to cultural events, crises, and collective curiosity.<br/><br/>
+🎯 <span style="color:#5B21B6; font-weight: 600;">Use the tools below to filter keywords, adjust time windows, and surface the stories hidden in the trends.</span><br/><br/>
+🧘 <em>Whether you're a researcher, wellness coach, or mindful observer — this is your window into how the world is tuning inward.</em>
 """
 
-st.html(intro_html, width="stretch")
-space()
+render_card(
+    title_html="",  # no title, so no extra space
+    body_html=body_html,
+    color_hex=CHAKRA_HEART,
+    side="left",
+    center=False,
+)
 
+space(2)  # Additional spacing before next content
+# ─────────────────────────────────────────────────────────────
+# (Future sections like visualizations, filters, etc. go here)
+# ─────────────────────────────────────────────────────────────
 # 📊 Section 1 — Global Interest Over Time
 st.markdown("<h2 class='fade-in' style='color:#4B8BBE;'>📅 Global Search Interest Over Time</h2>", unsafe_allow_html=True)
 
@@ -358,3 +332,4 @@ st.html(footer_html, width="stretch")
 #Last updates
 now = datetime.now().strftime("%B %d, %Y")
 st.markdown(f"<p style='text-align:center; font-size: 0.85rem; color: #888;'>📅 Last updated: {now}</p>", unsafe_allow_html=True)
+

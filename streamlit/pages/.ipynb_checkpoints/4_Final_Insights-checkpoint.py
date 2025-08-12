@@ -18,6 +18,7 @@ from utils.ui import (
     CHAKRA_SACRAL,
     CHAKRA_ROOT,
     CHAKRA_CROWN,
+    CHAKRA_THROAT,
     render_site_footer,
     # context manager for card width
     card_width,
@@ -60,7 +61,7 @@ render_card(
         "🔄 Terms like <strong>guided meditation</strong> are often co‑searched with topics like <em>anxiety</em>, <em>meaning</em>, or <em>sleep</em>.<br/>"
         "⏳ These patterns reveal a universal desire for <strong>calm, clarity, and connection</strong>."
     ),
-    color_hex=CHAKRA_HEART,
+    color_hex=CHAKRA_ROOT,
     side="left",
     center=False
 )
@@ -74,7 +75,7 @@ render_card(
         "Whether you're new or returning, let this be your sign. Take one deep breath. Feel the present moment.<br/>"
         "Even <strong>2 minutes of stillness</strong> can reshape your day."
     ),
-    color_hex=CHAKRA_SOLAR_PLEXUS,
+    color_hex=CHAKRA_SACRAL,
     side="right",
     center=True
 )
@@ -84,7 +85,7 @@ render_card(
 render_card(
     title_html="📝 Reflect On Your Journey",
     body_html="What’s one insight, intention, or realization you’re taking away from this exploration?",
-    color_hex=CHAKRA_SACRAL,
+    color_hex=CHAKRA_SOLAR_PLEXUS,
     side="left",
     center=False
 )
@@ -127,7 +128,7 @@ space(0.5)
 render_card(
     title_html="💬 Closing Mantra",
     body_html='“The quieter you become, the more you can hear.” — Ram Dass',
-    color_hex=CHAKRA_ROOT,
+    color_hex=CHAKRA_HEART,
     side="right",
     center=True
 )
@@ -139,6 +140,6 @@ render_site_footer(
     github_url="https://github.com/saayedalam",
     linkedin_url="https://www.linkedin.com/in/saayedalam",
     portfolio_url="https://saayedalam.me",
-    accent_hex=CHAKRA_CROWN,             # violet accent for footer
+    accent_hex=CHAKRA_THROAT,             # violet accent for footer
     show_last_updated=LAST_UPDATED_STR
 )

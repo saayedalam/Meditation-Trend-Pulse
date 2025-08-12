@@ -238,23 +238,59 @@ def render_card(
 ) -> None:
     """
     Render a colored accent card with a soft gradient tint and border on one side.
-    Used for page headers and footers.
+    Supports either a solid hex color or a full CSS gradient string as background.
+
+    Args:
+        title_html: HTML string for the card title.
+        body_html: HTML string for the card body content.
+        color_hex: Either a hex color string (e.g., "#43A047") or a CSS gradient string (e.g., "linear-gradient(...)").
+        side: "left" or "right" border side for accent.
+        center: Whether text should be centered.
+
+    Usage:
+        - Pass a hex color string as before for solid color backgrounds.
+        - Pass a CSS gradient string to use a multi-color gradient background.
+
+    Example gradient string:
+        "linear-gradient(135deg, #E53935, #F57C00, #FBC02D, #43A047, #1E88E5, #5E35B1, #7C3AED)"
     """
     side_norm = (side or "left").lower().strip()
     if side_norm not in ("left", "right"):
         side_norm = "left"
 
     safe_body = body_html or ""
-
-    style = _panel_style(color_hex, side_norm, max_width=CARD_MAX_WIDTH, padding="1.5rem 2rem", border_px=6)
     text_align = "center" if center else "left"
     maxw = "740px" if center else "900px"
 
+    # Determine if color_hex is actually a CSS gradient string
+    is_gradient = isinstance(color_hex, str) and color_hex.strip().startswith("linear-gradient")
+
+    if is_gradient:
+        # Use gradient as background, set border color as transparent or use first color
+        # Extract first color for border from gradient string (optional, else transparent)
+        import re
+        match = re.search(r"#([0-9a-fA-F]{6})", color_hex)
+        border_color = match.group(0) if match else "transparent"
+
+        style = (
+            f"border-{side_norm}: 6px solid {border_color}; "
+            f"background: {color_hex}; "
+            f"max-width: {CARD_MAX_WIDTH}; padding: 1.5rem 2rem;"
+        )
+    else:
+        # Legacy solid color + gradient tint for background + border
+        rgb = hex_to_rgb(color_hex)
+        gradient_dir = "to right" if side_norm == "left" else "to left"
+        style = (
+            f"border-{side_norm}: 6px solid {color_hex}; "
+            f"background: linear-gradient({gradient_dir}, rgba({rgb},0.12), rgba({rgb},0.04)); "
+            f"max-width: {CARD_MAX_WIDTH}; padding: 1.5rem 2rem;"
+        )
+
     title_block = ""
     if title_html and title_html.strip():
-        title_block = f'<h3 style="color:{color_hex}; margin-bottom: 0.6rem;">{title_html}</h3>'
+        title_block = f'<h3 style="color:{color_hex if not is_gradient else border_color}; margin-bottom: 0.6rem;">{title_html}</h3>'
 
-    # Build HTML content carefully with no extra indentation inside triple quotes
     html_content = f"""<div class="chakra-card" style="{style} text-align:{text_align};">
 {title_block}
 <div style="font-size: 1.05rem; line-height: 1.8; color: #333; max-width: {maxw}; margin: 0 auto;">

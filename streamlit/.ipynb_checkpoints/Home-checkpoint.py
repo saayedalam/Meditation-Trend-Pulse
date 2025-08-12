@@ -1,43 +1,77 @@
-# 🏠 Homepage: Meditation Trend Pulse
+# 🏠 Home Page — Meditation Trend Pulse
 
-import streamlit as st
-import pandas as pd
 import os
-#from utils.ui import inject_base_css  # 🔁 Reusable CSS/animation styles
+from datetime import datetime
 
-# 📁 Load trend data to extract last updated date
+import pandas as pd
+import streamlit as st
+
+from utils.ui import (
+    inject_app_theme,
+    render_card,
+    page_header,
+    space,
+    CHAKRA_ROOT, CHAKRA_SACRAL, CHAKRA_SOLAR_PLEXUS,
+    CHAKRA_HEART, CHAKRA_THROAT, CHAKRA_THIRD_EYE, CHAKRA_CROWN,
+    hex_to_rgb,
+)
+
+# ─────────────────────────────────────────────────────────────
+# Page setup and style injection
+# ─────────────────────────────────────────────────────────────
+st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
+inject_app_theme()
+
+# ─────────────────────────────────────────────────────────────
+# Load Data and Compute Last Updated
+# ─────────────────────────────────────────────────────────────
 DATA_PATH = "../data/streamlit"
 df_trend_long = pd.read_csv(os.path.join(DATA_PATH, "global_trend_summary.csv"))
-last_updated = pd.to_datetime(df_trend_long['date']).max().strftime("%B %d, %Y")
+last_updated = pd.to_datetime(df_trend_long["date"]).max().strftime("%B %d, %Y")
 
-# 🌐 Set Streamlit config and inject global styles
-st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
-#inject_base_css()
 
-# 🖼️ Banner image (custom local image)
-current_dir = os.path.dirname(__file__)
-image_path = os.path.join(current_dir, "assets", "meditation_trend_pulse_banner.png")
-st.image(image_path, use_container_width=True)
 
 
 
 # ✨ Title and tagline
-st.markdown("""
-<div class="fade-in">
-    <h1 style='font-size: 2.5rem; color: #4B8BBE;'>Meditation Trend Pulse</h1>
-    <p style='font-size: 1.2rem;'>Explore how the world is tuning into stillness — from meditation to breathwork.</p>
-</div>
-""", unsafe_allow_html=True)
+def soft_rgba(hex_color: str, alpha: float = 0.15) -> str:
+    rgb = hex_to_rgb(hex_color)
+    return f"rgba({rgb}, {alpha})"
 
-# 📖 Project summary
-st.markdown("""
-<div class="fade-in">
-<p>Meditation Trend Pulse brings you an <strong>interactive, automated dashboard</strong> built with Python, Streamlit, and real Google Trends data.</p>
-<p>This app helps you explore how public interest in meditation, mindfulness, and related practices has evolved <strong>over time, across countries, and through search behavior</strong>.</p>
-</div>
-""", unsafe_allow_html=True)
+# Build soft rainbow gradient
+soft_rainbow_gradient = (
+    "linear-gradient(135deg, "
+    f"{soft_rgba(CHAKRA_ROOT)}, "
+    f"{soft_rgba(CHAKRA_SACRAL)}, "
+    f"{soft_rgba(CHAKRA_SOLAR_PLEXUS)}, "
+    f"{soft_rgba(CHAKRA_HEART)}, "
+    f"{soft_rgba(CHAKRA_THROAT)}, "
+    f"{soft_rgba(CHAKRA_THIRD_EYE)}, "
+    f"{soft_rgba(CHAKRA_CROWN)}"
+    ")"
+)
 
-st.markdown("---")
+page_header(
+    title="Meditation Trend Pulse",
+    subtitle="Explore how the world is tuning into stillness — from meditation to breathwork.",
+)
+space(1)
+
+intro_html = """
+Meditation Trend Pulse brings you an <strong>interactive, automated dashboard</strong> built with Python, Streamlit, and real Google Trends data.<br/><br/>
+This app helps you explore how public interest in meditation, mindfulness, and related practices has evolved <strong>over time, across countries, and through search behavior</strong>.
+"""
+
+render_card(
+    title_html="Overview",
+    body_html=intro_html,
+    color_hex=soft_rainbow_gradient,
+    side="left",
+    center=False,
+)
+
+space(2)
+
 
 # 📌 What You Can Explore — Cards layout
 st.markdown("<h2 class='fade-in' style='color:#4B8BBE;'>🌐 What You Can Explore</h2>", unsafe_allow_html=True)
@@ -108,9 +142,4 @@ Data Analyst • Python Enthusiast • Insight Explorer
 🔗 <a href='https://github.com/saayedalam' target='_blank'>GitHub</a> | 
 <a href='https://www.linkedin.com/in/saayedalam/' target='_blank'>LinkedIn</a>
 </p>
-""", unsafe_allow_html=True)
-
-# 💬 Floating FAQ button
-st.markdown("""
-<a class='floating-button' href='#' title='Need help navigating?'>💬 FAQ / Help</a>
 """, unsafe_allow_html=True)

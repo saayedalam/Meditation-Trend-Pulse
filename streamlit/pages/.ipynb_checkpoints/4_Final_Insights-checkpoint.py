@@ -93,10 +93,11 @@ render_card(
 # 🗒️ Journaling (card-width wrapper between Card 3 and Card 4)
 with card_width():
     journal_entry = st.text_area(
-        label="", 
+        label="Reflection notes", 
         placeholder="Type your reflection here...",
         height=150, 
-        key="final_insights_journal"
+        key="final_insights_journal",
+        label_visibility="visible",
     )
     col_save, col_clear = st.columns(2)
 

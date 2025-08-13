@@ -10,6 +10,7 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
+from utils.data_loader import read_data_csv
 from utils.ui import (
     inject_app_theme,
     page_header,
@@ -34,10 +35,9 @@ inject_app_theme()
 # ─────────────────────────────────────────────────────────────
 # Data loading
 # ─────────────────────────────────────────────────────────────
-DATA_PATH = "../data/streamlit"
-df_trend_long = pd.read_csv(os.path.join(DATA_PATH, "global_trend_summary.csv"))
-df_pct_change = pd.read_csv(os.path.join(DATA_PATH, "trend_pct_change.csv"))
-df_top_peaks = pd.read_csv(os.path.join(DATA_PATH, "trend_top_peaks.csv"))
+df_trend_long = read_data_csv("global_trend_summary.csv", parse_dates=["date"])
+df_pct_change = read_data_csv("trend_pct_change.csv")
+df_top_peaks  = read_data_csv("trend_top_peaks.csv")
 
 df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 

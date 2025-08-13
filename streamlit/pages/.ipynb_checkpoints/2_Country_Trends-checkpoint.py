@@ -79,7 +79,7 @@ render_section_card(
 )
 space()
 
-with st.expander("🔧 Adjust filters", expanded=False):
+with st.expander("🔧 Adjust Filters", expanded=False):
     col1, col2 = st.columns([2, 1])
     with col1:
         keywords = df_country["keyword"].unique().tolist()

@@ -44,9 +44,8 @@ space(1)
 intro_html = """
 🧭 This page explores what people frequently search <strong>with</strong> meditation-related keywords — offering insight into their intentions, challenges, and aspirations.<br/><br/>
 Powered by <strong>Google Trends’ related queries</strong>, the visuals below help you identify top co-searches, fast-rising phrases, and common themes across terms like mindfulness, breathwork, and yoga nidra.<br/><br/>
-🧵 Use the filters to explore <strong>top 10 related queries per keyword</strong>, <strong>rising searches</strong> over time, and <strong>shared queries</strong> across the full spectrum of interest.<br/><br/>
-💡 Great for researchers, product builders, teachers — or anyone curious about the emotional and practical drivers behind meditation searches.<br/><br/>
-📊 “Searches for 'how to meditate' often appear alongside phrases like ‘sleep better’, ‘calm anxiety’, and ‘meaning of life’.”
+🧵 <span style="color:#5B21B6; font-weight: 600;">Use the filters to explore <strong>top 10 related queries per keyword</strong>, <strong>rising searches</strong> over time, and <strong>shared queries</strong> across the full spectrum of interest.</span><br/><br/>
+💡 <em>Great for researchers, product builders, teachers — or anyone curious about the emotional and practical drivers behind meditation searches.</em>
 """
 
 render_card(

@@ -5,7 +5,7 @@ import streamlit as st
 # Page config must be the first Streamlit call
 st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
 
-from utils.ui import inject_app_theme, horizontal_rule
+from utils.ui import inject_app_theme
 from utils.home_ui import (
     render_home_header,
     render_home_intro_card,

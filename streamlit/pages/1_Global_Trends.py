@@ -231,7 +231,7 @@ df_top_cleaned["Event"] = df_top_cleaned["Search Term"].map(event_mapping).filln
 
 df_top_cleaned = df_top_cleaned[["Search Term", "Peak Date", "Event", "Interest Score"]]
 
-styled_df = df_top_cleaned.style.applymap(format_interest, subset=["Interest Score"])
+styled_df = df_top_cleaned.style.map(format_interest, subset=["Interest Score"])
 
 st.dataframe(styled_df, use_container_width=True, hide_index=True)
 

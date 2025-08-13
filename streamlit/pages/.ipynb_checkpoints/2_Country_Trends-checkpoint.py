@@ -46,8 +46,7 @@ intro_html = """
 🧘‍♀️ This page explores how people across the globe are turning to <strong>meditation, mindfulness, breathwork,</strong> and related practices — not just as trends, but as tools for peace and clarity.<br/><br/>
 Sourced from <strong>Google Trends</strong> and updated weekly, this dashboard helps you discover which countries are most engaged with these practices — and how interest is evolving over time.<br/><br/>
 🌐 Use the filters to explore <strong>top countries by search volume</strong>, view keyword-level breakdowns, and uncover meaningful regional patterns.<br/><br/>
-💡 Whether you're a teacher, entrepreneur, researcher, or simply curious — this tool gives you a peaceful window into global interest in stillness and self-awareness.<br/><br/>
-📊 “Search interest in meditation has grown by over <strong>250%</strong> worldwide since 2019.”
+💡 Whether you're a teacher, entrepreneur, researcher, or simply curious — this tool gives you a peaceful window into global interest in stillness and self-awareness.
 """
 
 render_card(

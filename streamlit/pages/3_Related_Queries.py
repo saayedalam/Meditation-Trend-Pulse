@@ -37,7 +37,7 @@ df_related_shared   = read_data_csv("related_queries_shared.csv")
 # ─────────────────────────────────────────────────────────────
 page_header(
     title="🔍 Related Search Queries",
-    subtitle="Discover what the world is searching for alongside mindfulness, breathwork, and meditation.",
+    subtitle="Discover what the world is searching for alongside mindfulness, breathwork, and meditation",
 )
 space(1)
 
@@ -45,7 +45,8 @@ intro_html = """
 🧭 This page explores what people frequently search <strong>with</strong> meditation-related keywords — offering insight into their intentions, challenges, and aspirations.<br/><br/>
 Powered by <strong>Google Trends’ related queries</strong>, the visuals below help you identify top co-searches, fast-rising phrases, and common themes across terms like mindfulness, breathwork, and yoga nidra.<br/><br/>
 🧵 Use the filters to explore <strong>top 10 related queries per keyword</strong>, <strong>rising searches</strong> over time, and <strong>shared queries</strong> across the full spectrum of interest.<br/><br/>
-💡 Great for researchers, product builders, teachers — or anyone curious about the emotional and practical drivers behind meditation searches.
+💡 Great for researchers, product builders, teachers — or anyone curious about the emotional and practical drivers behind meditation searches.<br/><br/>
+📊 “Searches for 'how to meditate' often appear alongside phrases like ‘sleep better’, ‘calm anxiety’, and ‘meaning of life’.”
 """
 
 render_card(

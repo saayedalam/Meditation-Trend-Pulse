@@ -93,60 +93,59 @@ def render_home_intro_card(
     )
 
     intro_html = f"""
-    <div style="background: linear-gradient(135deg, {chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
+<div style="background: linear-gradient(135deg, {chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
 
-      <!-- Topic tags -->
-      <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">
-        {pills_html}
+  <!-- Topic tags -->
+  <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">
+    {pills_html}
+  </div>
+
+  <!-- Descriptive text -->
+  <p style="font-size:1.08rem; line-height:1.85; margin:0.2rem 0 0.9rem 0; color:#2e2e2e;">
+    Meditation Trend Pulse is an <strong>interactive, automated dashboard</strong> that visualizes real search behavior around 
+    <strong>meditation</strong>, <strong>mindfulness</strong>, and <strong>breathwork</strong>. Explore long-term growth, seasonal patterns, 
+    and spikes tied to cultural moments.
+  </p>
+
+  <!-- Cards grid: 4 across -->
+  <div style="
+       display:grid;
+       grid-template-columns: repeat(4, minmax(220px, 1fr));
+       gap:12px;
+       width:100%;
+       max-width:1100px;
+       margin:0 auto;
+  ">
+    <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block;">
+      <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+        <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
+        <div style="font-size:0.96rem; color:#4b5563;">Peaks, seasonality, growth</div>
       </div>
+    </a>
 
-      <!-- Descriptive text -->
-      <p style="font-size:1.08rem; line-height:1.85; margin:0.2rem 0 0.9rem 0; color:#2e2e2e;">
-        Meditation Trend Pulse is an <strong>interactive, automated dashboard</strong> that visualizes real search behavior around 
-        <strong>meditation</strong>, <strong>mindfulness</strong>, and <strong>breathwork</strong>. Explore long‑term growth, seasonal patterns, 
-        and spikes tied to cultural moments.
-      </p>
-
-      <!-- Cards grid: widened and all four in one row on desktop -->
-      <div style="
-           display:grid;
-           grid-template-columns: repeat(4, minmax(220px, 1fr));
-           gap:12px;
-           width:100%;
-           max-width:1100px;   /* was 700px */
-           margin:0 auto;
-      ">
-        <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Peaks, seasonality, growth</div>
-          </div>
-        </a>
-
-        <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Top countries & comparisons</div>
-          </div>
-        </a>
-
-        <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
-            <div style="font-size:0.96rem; color:#4b5563;">What else people search</div>
-          </div>
-        </a>
-
-        <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Big takeaways & reflection</div>
-          </div>
-        </a>
+    <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block;">
+      <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+        <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
+        <div style="font-size:0.96rem; color:#4b5563;">Top countries & comparisons</div>
       </div>
-    </div>
-    """
-    intro_html = textwrap.dedent(intro_html).strip()
+    </a>
+
+    <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block;">
+      <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+        <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
+        <div style="font-size:0.96rem; color:#4b5563;">What else people search</div>
+      </div>
+    </a>
+
+    <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block;">
+      <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
+        <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
+        <div style="font-size:0.96rem; color:#4b5563;">Big takeaways & reflection</div>
+      </div>
+    </a>
+  </div>
+</div>
+""".strip()
 
     render_card(
         title_html="Overview",
@@ -155,8 +154,6 @@ def render_home_intro_card(
         side=None,
         center=True,
     )
-
-
 # ─────────────────────────────────────────────────────────────
 # 3) Author + links
 # ─────────────────────────────────────────────────────────────

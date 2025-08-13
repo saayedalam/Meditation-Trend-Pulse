@@ -353,22 +353,26 @@ def render_section_card(
 def render_centered_styled_table(df_html: str, max_width: str = "600px") -> None:
     """
     Render a styled DataFrame HTML table centered on the page with a max-width,
-    including hover effects for rows.
+    center-aligned headers, and hover effects for rows.
 
     Args:
         df_html (str): DataFrame rendered as HTML (with escape=False if needed).
         max_width (str): CSS max-width of the table container.
     """
     container_html = f"""
-    <div style="display: flex; justify-content: center; width: 100%; margin-top: 1rem; margin-bottom: 1rem;">
-      <div style="max-width: {max_width}; width: 100%;">
-        {df_html}
-      </div>
+    <div class="mtp-centered-table" style="display:flex; justify-content:center; width:100%; margin-top:1rem; margin-bottom:1rem;">
+      <div style="max-width:{max_width}; width:100%;">{df_html}</div>
     </div>
     """
-    hover_css = """
+
+    scoped_css = """
     <style>
-    table tr:hover {
+    /* Scope styles to this helper’s container only */
+    .mtp-centered-table table thead th {
+        text-align: center !important;
+        vertical-align: middle;
+    }
+    .mtp-centered-table table tr:hover {
         background-color: #f3f0ff !important;
         transition: background-color 0.3s ease;
     }
@@ -376,7 +380,7 @@ def render_centered_styled_table(df_html: str, max_width: str = "600px") -> None
     """
 
     st.markdown(container_html, unsafe_allow_html=True)
-    st.markdown(hover_css, unsafe_allow_html=True)
+    st.markdown(scoped_css, unsafe_allow_html=True)
 
 def style_percent_change(val: int | float) -> str:
     """

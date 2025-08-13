@@ -109,8 +109,8 @@ col3, col4 = st.columns(2)
 with col3:
     df_top_combined = (
         df_related_top10[df_related_top10["keyword"] == selected_keyword_combined]
-        .rename(columns={"related_query": "Related Query", "popularity_score": "Relevance Score"})
-        [["Related Query", "Relevance Score"]]
+        .rename(columns={"related_query": "Top Related Query", "popularity_score": "Relevance Score"})
+        [["Top Related Query", "Relevance Score"]]
     )
     df_top_combined["Relevance Score"] = pd.to_numeric(df_top_combined["Relevance Score"], errors="coerce").round(1)
     html_table = df_top_combined.to_html(index=False, escape=False)
@@ -119,8 +119,8 @@ with col3:
 with col4:
     df_rising_combined = (
         df_related_rising10[df_related_rising10["keyword"] == selected_keyword_combined]
-        .rename(columns={"related_query": "Related Query", "popularity_score": "Relevance Score"})
-        [["Related Query", "Relevance Score"]]
+        .rename(columns={"related_query": "Rising Related Query", "popularity_score": "Relevance Score"})
+        [["Rising Related Query", "Relevance Score"]]
     )
     df_rising_combined["Relevance Score"] = pd.to_numeric(df_rising_combined["Relevance Score"], errors="coerce").round(1)
     html_table = df_rising_combined.to_html(index=False, escape=False)

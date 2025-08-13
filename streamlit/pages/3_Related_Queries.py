@@ -1,11 +1,11 @@
 # 🔍 Related Queries Page — Meditation Trend Pulse
 
-import os
 from datetime import datetime
 
 import pandas as pd
 import streamlit as st
 
+from utils.data_loader import read_data_csv
 from utils.ui import (
     inject_app_theme,
     page_header,
@@ -28,10 +28,9 @@ inject_app_theme()
 # ─────────────────────────────────────────────────────────────
 # Load data
 # ─────────────────────────────────────────────────────────────
-DATA_PATH = "../data/streamlit"
-df_related_top10 = pd.read_csv(os.path.join(DATA_PATH, "related_queries_top10.csv"))
-df_related_rising10 = pd.read_csv(os.path.join(DATA_PATH, "related_queries_rising10.csv"))
-df_related_shared = pd.read_csv(os.path.join(DATA_PATH, "related_queries_shared.csv"))
+df_related_top10   = read_data_csv("related_queries_top10.csv")
+df_related_rising10 = read_data_csv("related_queries_rising10.csv")
+df_related_shared   = read_data_csv("related_queries_shared.csv")
 
 # ─────────────────────────────────────────────────────────────
 # Page header and overview card

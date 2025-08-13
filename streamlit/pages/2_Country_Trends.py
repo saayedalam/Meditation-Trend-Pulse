@@ -2,10 +2,10 @@
 
 import streamlit as st
 import pandas as pd
-import os
 from datetime import datetime
 import altair as alt
 
+from utils.data_loader import read_data_csv
 from utils.ui import (
     inject_app_theme,
     page_header,
@@ -29,10 +29,9 @@ inject_app_theme()
 # ─────────────────────────────────────────────────────────────
 # Data loading
 # ─────────────────────────────────────────────────────────────
-DATA_PATH = "../data/streamlit"
-df_country = pd.read_csv(os.path.join(DATA_PATH, "country_interest_summary.csv"))
-df_total = pd.read_csv(os.path.join(DATA_PATH, "country_total_interest_by_keyword.csv"))
-df_top5 = pd.read_csv(os.path.join(DATA_PATH, "country_top5_appearance_counts.csv"))
+df_country = read_data_csv("country_interest_summary.csv")
+df_total   = read_data_csv("country_total_interest_by_keyword.csv")
+df_top5    = read_data_csv("country_top5_appearance_counts.csv")
 
 # ─────────────────────────────────────────────────────────────
 # Page header + intro card

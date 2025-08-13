@@ -3,7 +3,6 @@ Global Trends Page — Meditation Trend Pulse
 Shows interactive charts and tables of global search interest data from Google Trends.
 """
 
-import os
 from datetime import datetime
 
 import altair as alt

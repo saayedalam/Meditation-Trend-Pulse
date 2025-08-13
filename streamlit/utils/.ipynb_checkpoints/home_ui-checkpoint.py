@@ -104,9 +104,10 @@ def render_home_intro_card(
       .home-grid {{
         display:grid;
         width: 100%;  
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
-        gap:10px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+        gap:12px;
         align-items:stretch;
+        justify-content: center;
       }}
       @media (max-width:860px) {{ .home-grid {{ grid-template-columns: repeat(3, minmax(165px,1fr)); }} }}
       @media (max-width:640px) {{ .home-grid {{ grid-template-columns: repeat(2, minmax(165px,1fr)); }} }}

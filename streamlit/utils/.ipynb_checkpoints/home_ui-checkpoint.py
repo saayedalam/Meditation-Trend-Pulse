@@ -78,77 +78,76 @@ def render_home_header(
 # ─────────────────────────────────────────────────────────────
 def render_home_intro_card(
     *,
-    topic_tags: Sequence[str] = ("Google Trends", "Python + Streamlit", "Altair Charts", "Weekly Updates"),
-) -> None:
+    topic_tags=("Google Trends", "Python + Streamlit", "Altair Charts", "Weekly Updates"),
+):
     chakra_hexes = [
         CHAKRA_ROOT, CHAKRA_SACRAL, CHAKRA_SOLAR_PLEXUS,
         CHAKRA_HEART, CHAKRA_THROAT, CHAKRA_THIRD_EYE, CHAKRA_CROWN
     ]
-    chakra_rgba_stops = ", ".join([f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes])  # soft
+    chakra_rgba_stops = ", ".join([f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes])
 
     pills_html = "".join(
-        f"""<span style="font-size:0.85rem; padding:0.28rem 0.55rem;
-                       border-radius:999px; background:#ffffffcc; color:#374151;">{t}</span>"""
+        f'<span style="font-size:0.85rem; padding:0.28rem 0.55rem; border-radius:999px; background:#ffffffcc; color:#374151;">{t}</span>'
         for t in topic_tags
     )
 
     intro_html = f"""
-    <div style="background: linear-gradient(135deg, {chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
-      <!-- Topic tags -->
-      <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">
-        {pills_html}
-      </div>
-
-      <!-- Descriptive text -->
-      <p style="font-size:1.08rem; line-height:1.85; margin:0.2rem 0 0.9rem 0; color:#2e2e2e;">
-        Meditation Trend Pulse is an <strong>interactive, automated dashboard</strong> that visualizes real search behavior around 
-        <strong>meditation</strong>, <strong>mindfulness</strong>, and <strong>breathwork</strong>. Explore long‑term growth, seasonal patterns, 
-        and spikes tied to cultural moments.
-      </p>
-
-      <!-- First row of cards -->
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; width:100%; max-width:700px; margin:0 auto;">
-        <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Peaks, seasonality, growth</div>
-          </div>
-        </a>
-        <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Top countries & comparisons</div>
-          </div>
-        </a>
-        <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
-            <div style="font-size:0.96rem; color:#4b5563;">What else people search</div>
-          </div>
-        </a>
-      </div>
-
-      <!-- Centered final insights card -->
-      <div style="margin-top:8px; max-width:220px; width:100%; margin-left:auto; margin-right:auto;">
-        <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block;">
-          <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
-            <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
-            <div style="font-size:0.96rem; color:#4b5563;">Big takeaways & reflection</div>
-          </div>
-        </a>
-      </div>
+<div style="background:linear-gradient(135deg,{chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
+  <div style="max-width:720px; margin:0 auto; text-align:center;">
+    <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">{pills_html}</div>
+    <p style="font-size:1.08rem; line-height:1.85; margin:0.2rem 0 0.9rem 0; color:#2e2e2e;">
+      Meditation Trend Pulse is an <strong>interactive, automated dashboard</strong> that visualizes real search behavior around
+      <strong>meditation</strong>, <strong>mindfulness</strong>, and <strong>breathwork</strong>. Explore long-term growth, seasonal patterns,
+      and spikes tied to cultural moments.
+    </p>
+    <style>
+      .home-grid {{
+        display:grid;
+        grid-template-columns: repeat(4, minmax(165px, 1fr));
+        gap:10px;
+        align-items:stretch;
+      }}
+      @media (max-width:860px) {{ .home-grid {{ grid-template-columns: repeat(3, minmax(165px,1fr)); }} }}
+      @media (max-width:640px) {{ .home-grid {{ grid-template-columns: repeat(2, minmax(165px,1fr)); }} }}
+      @media (max-width:420px) {{ .home-grid {{ grid-template-columns: 1fr; }} }}
+    </style>
+    <div class="home-grid">
+      <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block; height:100%;">
+        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
+          <div style="font-size:0.95rem; color:#4b5563;">Peaks, seasonality, growth</div>
+        </div>
+      </a>
+      <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block; height:100%;">
+        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
+          <div style="font-size:0.95rem; color:#4b5563;">Top countries & comparisons</div>
+        </div>
+      </a>
+      <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block; height:100%;">
+        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
+          <div style="font-size:0.95rem; color:#4b5563;">What else people search</div>
+        </div>
+      </a>
+      <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block; height:100%;">
+        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
+          <div style="font-size:0.95rem; color:#4b5563;">Big takeaways & reflection</div>
+        </div>
+      </a>
     </div>
-    """
-    intro_html = textwrap.dedent(intro_html).strip()
+  </div>
+</div>
+"""
 
     render_card(
         title_html="Overview",
         body_html=intro_html,
-        color_hex=CHAKRA_ROOT,   # outer tint only (no border when side=None)
+        color_hex=CHAKRA_ROOT,
         side=None,
         center=True,
     )
-
 
 # ─────────────────────────────────────────────────────────────
 # 3) Author + links

@@ -93,7 +93,7 @@ def render_home_intro_card(
 
     intro_html = f"""
 <div style="background:linear-gradient(135deg,{chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
-  <div style="max-width:720px; margin:0 auto; text-align:center;">
+  <div style="max-width:860px; margin:0 auto; text-align:center;">
     <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">{pills_html}</div>
     <p style="font-size:1.08rem; line-height:1.85; margin:0.2rem 0 0.9rem 0; color:#2e2e2e;">
       Meditation Trend Pulse is an <strong>interactive, automated dashboard</strong> that visualizes real search behavior around
@@ -102,16 +102,13 @@ def render_home_intro_card(
     </p>
     <style>
       .home-grid {{
-        display:grid;
-        width: 100%;  
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-        gap:12px;
-        align-items:stretch;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, min(180px, 1fr));
+        gap: 12px;
+        align-items: stretch;
         justify-content: center;
+        width: 100%;
       }}
-      @media (max-width:860px) {{ .home-grid {{ grid-template-columns: repeat(3, minmax(165px,1fr)); }} }}
-      @media (max-width:640px) {{ .home-grid {{ grid-template-columns: repeat(2, minmax(165px,1fr)); }} }}
-      @media (max-width:420px) {{ .home-grid {{ grid-template-columns: 1fr; }} }}
     </style>
     <div class="home-grid">
       <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block; height:100%;">
@@ -150,7 +147,6 @@ def render_home_intro_card(
         side=None,
         center=True,
     )
-
 # ─────────────────────────────────────────────────────────────
 # 3) Author + links
 # ─────────────────────────────────────────────────────────────

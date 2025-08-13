@@ -142,7 +142,7 @@ def render_home_intro_card(
 """
 
     render_card(
-        title_html="Overview",
+        title_html="Project Overview",
         body_html=intro_html,
         color_hex=CHAKRA_ROOT,
         side=None,

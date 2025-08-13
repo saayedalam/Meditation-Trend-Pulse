@@ -84,7 +84,7 @@ def render_home_intro_card(
         CHAKRA_ROOT, CHAKRA_SACRAL, CHAKRA_SOLAR_PLEXUS,
         CHAKRA_HEART, CHAKRA_THROAT, CHAKRA_THIRD_EYE, CHAKRA_CROWN
     ]
-    chakra_rgba_stops = ", ".join([f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes])  # soft
+    chakra_rgba_stops = ", ".join([f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes])
 
     pills_html = "".join(
         f"""<span style="font-size:0.85rem; padding:0.28rem 0.55rem;
@@ -94,6 +94,7 @@ def render_home_intro_card(
 
     intro_html = f"""
     <div style="background: linear-gradient(135deg, {chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
+
       <!-- Topic tags -->
       <div style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin:-0.15rem 0 0.8rem 0;">
         {pills_html}
@@ -106,30 +107,36 @@ def render_home_intro_card(
         and spikes tied to cultural moments.
       </p>
 
-      <!-- First row of cards -->
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; width:100%; max-width:700px; margin:0 auto;">
+      <!-- Cards grid: widened and all four in one row on desktop -->
+      <div style="
+           display:grid;
+           grid-template-columns: repeat(4, minmax(220px, 1fr));
+           gap:12px;
+           width:100%;
+           max-width:1100px;   /* was 700px */
+           margin:0 auto;
+      ">
         <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block;">
           <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
             <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
             <div style="font-size:0.96rem; color:#4b5563;">Peaks, seasonality, growth</div>
           </div>
         </a>
+
         <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block;">
           <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
             <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
             <div style="font-size:0.96rem; color:#4b5563;">Top countries & comparisons</div>
           </div>
         </a>
+
         <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block;">
           <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
             <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
             <div style="font-size:0.96rem; color:#4b5563;">What else people search</div>
           </div>
         </a>
-      </div>
 
-      <!-- Centered final insights card -->
-      <div style="margin-top:8px; max-width:220px; width:100%; margin-left:auto; margin-right:auto;">
         <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block;">
           <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.85rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
             <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
@@ -144,7 +151,7 @@ def render_home_intro_card(
     render_card(
         title_html="Overview",
         body_html=intro_html,
-        color_hex=CHAKRA_ROOT,   # outer tint only (no border when side=None)
+        color_hex=CHAKRA_ROOT,
         side=None,
         center=True,
     )

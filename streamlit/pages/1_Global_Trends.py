@@ -45,7 +45,7 @@ df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 # ─────────────────────────────────────────────────────────────
 page_header(
     title="📊 Global Trends in Meditation",
-    subtitle="A worldwide view of mindfulness, breathwork, and inner stillness over time",
+    subtitle="A worldwide view of mindfulness, breathwork, and inner stillness over time.",
 )
 space(1)
 
@@ -166,9 +166,9 @@ render_section_card(
     icon="📋",
     content_paragraph="This table shows how global interest in each search term has changed over the past 5 years, based on Google Trends data.",
     content_list=[
-        "🟢 <strong>Positive %</strong> means global interest increased",
-        "🔴 <strong>Negative %</strong> means global interest declined",
-        "💡 Use this view to identify which practices are gaining traction — and which are fading",
+        "🟢 <strong>Positive %</strong> means global interest increased.",
+        "🔴 <strong>Negative %</strong> means global interest declined.",
+        "💡 Use this view to identify which practices are gaining traction — and which are fading.",
     ],
     gradient_color=CHAKRA_HEART,
 )
@@ -202,9 +202,9 @@ render_section_card(
     icon="📅",
     content_paragraph="See when each keyword reached its highest level of global interest.",
     content_list=[
-        "📆 Pinpoint cultural events or awareness weeks driving spikes",
-        "🌍 Spot time-specific behaviors in how people seek stillness",
-        "🧠 Great for insights, storytelling, or campaign planning",
+        "📆 Pinpoint cultural events or awareness weeks driving spikes.",
+        "🌍 Spot time-specific behaviors in how people seek stillness.",
+        "🧠 Great for insights, storytelling, or campaign planning.",
     ],
     gradient_color=CHAKRA_HEART,
 )

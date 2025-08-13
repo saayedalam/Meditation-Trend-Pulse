@@ -90,7 +90,7 @@ render_section_card(
 
 space()
 
-with st.expander("🔧 ADJUST FILTERS", expanded=False):
+with st.expander("🔧 Adjust Filters ", expanded=False):
     col1, col2 = st.columns([2, 2])
 
     with col1:

@@ -41,12 +41,7 @@ CHAKRAS = [
 # ========== 🎨 Base Theme ==========
 def inject_app_theme() -> None:
     """
-    Inject base CSS styles for all pages:
-    - Fade-in animation (respects prefers-reduced-motion)
-    - Card base styling (rounded corners, shadow, max width)
-    - Consistent font stack for readability
-    - .mtp-card-wrap helper to align widgets to card width and center
-    - Unified card style for visual sections (.chakra-card-section)
+    Inject base CSS styles for all pages and (once per page load) collapse the sidebar.
     """
     st.markdown(
         f"""
@@ -82,19 +77,13 @@ def inject_app_theme() -> None:
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
                          Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji",
                          "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-            background: #fff; /* ensures readability */
+            background: #fff;
         }}
 
-        /* Card links styling */
-        .chakra-card a {{
-            color: #4B8BBE;
-            text-decoration: none;
-        }}
-        .chakra-card a:hover {{
-            text-decoration: underline;
-        }}
+        .chakra-card a {{ color: #4B8BBE; text-decoration: none; }}
+        .chakra-card a:hover {{ text-decoration: underline; }}
 
-        /* Wrapper to constrain widgets to card width and center */
+        /* Constrain widgets to card width */
         .mtp-card-wrap {{
             max-width: {CARD_MAX_WIDTH};
             margin-left: auto;
@@ -123,7 +112,7 @@ def inject_app_theme() -> None:
             margin-right: auto;
         }}
 
-        /* Unified card style for visual sections (used in Global Trends, Country, Related Queries, etc.) */
+        /* Unified info cards */
         .chakra-card-section {{
             padding: 1.25rem 1.5rem;
             border-radius: 10px;
@@ -133,21 +122,38 @@ def inject_app_theme() -> None:
             max-width: 900px;
             margin: 1rem auto 2rem auto;
         }}
-
-        /* Paragraph styling inside unified cards */
-        .chakra-card-section p {{
-            font-size: 1.05rem;
-        }}
-
-        /* List styling inside unified cards */
-        .chakra-card-section ul {{
-            margin-top: 0;
-            padding-left: 1.2rem;
-        }}
+        .chakra-card-section p {{ font-size: 1.05rem; }}
+        .chakra-card-section ul {{ margin-top: 0; padding-left: 1.2rem; }}
         </style>
         """,
         unsafe_allow_html=True,
     )
+
+    # Collapse the sidebar once per session-state per page render
+    if "_mtp_sidebar_collapsed" not in st.session_state:
+        st.session_state["_mtp_sidebar_collapsed"] = True
+        st.markdown(
+            """
+            <script>
+            (function() {
+              const doc = window.parent.document;
+              function collapse() {
+                const sidebar = doc.querySelector('section[data-testid="stSidebar"]');
+                const toggle  = doc.querySelector('button[aria-label="Close sidebar"]')
+                              || doc.querySelector('button[aria-label="Open sidebar"]');
+                // If the sidebar is visible and the button would close it, click once
+                if (sidebar && sidebar.offsetWidth > 0 && toggle && toggle.getAttribute('aria-label') === 'Close sidebar') {
+                  toggle.click();
+                }
+              }
+              // Try a couple times to catch initial layout
+              setTimeout(collapse, 60);
+              setTimeout(collapse, 350);
+            })();
+            </script>
+            """,
+            unsafe_allow_html=True,
+        )
 
 # ========== 📏 Spacing ==========
 def space(rem: float = 2.0) -> None:
@@ -238,59 +244,49 @@ def render_card(
 ) -> None:
     """
     Render a colored accent card with a soft gradient tint and border on one side.
-    Supports either a solid hex color or a full CSS gradient string as background.
+    Supports solid hex colors (e.g., "#43A047") for background accent.
+    Pass side=None or "none" for no border.
 
     Args:
         title_html: HTML string for the card title.
         body_html: HTML string for the card body content.
-        color_hex: Either a hex color string (e.g., "#43A047") or a CSS gradient string (e.g., "linear-gradient(...)").
-        side: "left" or "right" border side for accent.
+        color_hex: Hex color string for the accent (e.g., "#43A047").
+        side: "left", "right", or None/"none" for no border.
         center: Whether text should be centered.
-
-    Usage:
-        - Pass a hex color string as before for solid color backgrounds.
-        - Pass a CSS gradient string to use a multi-color gradient background.
-
-    Example gradient string:
-        "linear-gradient(135deg, #E53935, #F57C00, #FBC02D, #43A047, #1E88E5, #5E35B1, #7C3AED)"
     """
-    side_norm = (side or "left").lower().strip()
-    if side_norm not in ("left", "right"):
-        side_norm = "left"
+    # Normalize side
+    if side is None or str(side).lower().strip() == "none":
+        side_norm = None
+    else:
+        side_norm = str(side).lower().strip()
+        if side_norm not in ("left", "right"):
+            side_norm = "left"
 
     safe_body = body_html or ""
     text_align = "center" if center else "left"
     maxw = "740px" if center else "900px"
 
-    # Determine if color_hex is actually a CSS gradient string
-    is_gradient = isinstance(color_hex, str) and color_hex.strip().startswith("linear-gradient")
-
-    if is_gradient:
-        # Use gradient as background, set border color as transparent or use first color
-        # Extract first color for border from gradient string (optional, else transparent)
-        import re
-        match = re.search(r"#([0-9a-fA-F]{6})", color_hex)
-        border_color = match.group(0) if match else "transparent"
-
-        style = (
-            f"border-{side_norm}: 6px solid {border_color}; "
-            f"background: {color_hex}; "
-            f"max-width: {CARD_MAX_WIDTH}; padding: 1.5rem 2rem;"
-        )
-    else:
-        # Legacy solid color + gradient tint for background + border
-        rgb = hex_to_rgb(color_hex)
+    # Build style
+    rgb = hex_to_rgb(color_hex)
+    if side_norm:
         gradient_dir = "to right" if side_norm == "left" else "to left"
-        style = (
-            f"border-{side_norm}: 6px solid {color_hex}; "
-            f"background: linear-gradient({gradient_dir}, rgba({rgb},0.12), rgba({rgb},0.04)); "
-            f"max-width: {CARD_MAX_WIDTH}; padding: 1.5rem 2rem;"
-        )
+        border_style = f"border-{side_norm}: 6px solid {color_hex}; "
+        bg_style = f"background: linear-gradient({gradient_dir}, rgba({rgb},0.12), rgba({rgb},0.04)); "
+    else:
+        border_style = ""
+        bg_style = f"background: rgba({rgb},0.04); "  # faint tint only
 
+    style = (
+        f"{border_style}{bg_style}"
+        f"max-width: {CARD_MAX_WIDTH}; padding: 1.5rem 2rem;"
+    )
+
+    # Title block
     title_block = ""
     if title_html and title_html.strip():
-        title_block = f'<h3 style="color:{color_hex if not is_gradient else border_color}; margin-bottom: 0.6rem;">{title_html}</h3>'
+        title_block = f'<h3 style="color:{color_hex}; margin-bottom: 0.6rem;">{title_html}</h3>'
 
+    # Final HTML card
     html_content = f"""<div class="chakra-card" style="{style} text-align:{text_align};">
 {title_block}
 <div style="font-size: 1.05rem; line-height: 1.8; color: #333; max-width: {maxw}; margin: 0 auto;">

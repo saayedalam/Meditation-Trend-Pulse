@@ -15,8 +15,6 @@ from utils.ui import (
     render_section_header,
     render_section_card,
     render_centered_styled_table,
-    style_percent_change,
-    format_interest,
     render_custom_footer,
     CHAKRA_THROAT,
     get_flag_emoji,

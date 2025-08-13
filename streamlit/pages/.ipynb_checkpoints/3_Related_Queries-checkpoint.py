@@ -142,9 +142,9 @@ render_section_card(
     icon="💬",
     content_paragraph="This section highlights <strong>search queries that appear under multiple keywords</strong>.",
     content_list=[
-        "♻️ Helps uncover universal themes and overlapping intent across meditation-related terms",
-        "🧠 Great for identifying high-impact queries with broad relevance",
-        "🔽 Sorted by number of keyword appearances for clarity",
+        "♻️ Helps uncover universal themes and overlapping intent across meditation-related terms.",
+        "🧠 Great for identifying high-impact queries with broad relevance.",
+        "🔽 Sorted by number of keyword appearances for clarity.",
     ],
     gradient_color=CHAKRA_THIRD_EYE,
 )

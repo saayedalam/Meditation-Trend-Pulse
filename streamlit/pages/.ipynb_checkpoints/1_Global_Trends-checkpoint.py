@@ -44,7 +44,7 @@ df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 # Page header + intro card
 # ─────────────────────────────────────────────────────────────
 page_header(
-    title="📊 Global Trends in Meditation",
+    title="Global Trends in Meditation",
     subtitle="A worldwide view of mindfulness, breathwork, and inner stillness over time.",
 )
 space(1)

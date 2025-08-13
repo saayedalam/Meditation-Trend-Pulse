@@ -36,7 +36,7 @@ df_related_shared   = read_data_csv("related_queries_shared.csv")
 # Page header and overview card
 # ─────────────────────────────────────────────────────────────
 page_header(
-    title="🔍 Related Search Queries",
+    title="Related Search Queries",
     subtitle="Discover what the world is searching for alongside mindfulness, breathwork, and meditation",
 )
 space(1)

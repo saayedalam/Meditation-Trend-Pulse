@@ -37,7 +37,7 @@ df_top5    = read_data_csv("country_top5_appearance_counts.csv")
 # Page header + intro card
 # ─────────────────────────────────────────────────────────────
 page_header(
-    title="🌍 Country-Level Meditation Trends",
+    title="Country-Level Meditation Trends",
     subtitle="A calming look into how the world connects through stillness, breath, and awareness",
 )
 space(1)

@@ -8,13 +8,14 @@ Planned extensions:
 - Related Queries
 - Other datasets...
 
-This script is intended to be run monthly to append fresh data from Google Trends.
+This script is intended to be run once per day. If already run today, it will skip.
 """
 
 import pandas as pd
 from datetime import datetime
 from pytrends.request import TrendReq
 import os
+import sys
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
@@ -28,10 +29,28 @@ KEYWORDS = ["meditation", "mindfulness", "breathwork", "guided meditation", "yog
 # Paths
 DATA_DIR = os.path.join("data", "streamlit")
 GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
+RUN_TRACK_FILE = ".last_run_date"
 
 # Pytrends setup
 pytrends = TrendReq(hl='en-US', tz=360)
 
+# ─────────────────────────────────────────────────────────────
+# HELPER FUNCTIONS
+# ─────────────────────────────────────────────────────────────
+
+def already_ran_today():
+    """Return True if the script has already run today, based on the timestamp file."""
+    if os.path.exists(RUN_TRACK_FILE):
+        with open(RUN_TRACK_FILE, "r") as f:
+            last_run = f.read().strip()
+            if last_run == datetime.today().strftime("%Y-%m-%d"):
+                return True
+    return False
+
+def mark_today_as_ran():
+    """Update the run tracking file with today's date."""
+    with open(RUN_TRACK_FILE, "w") as f:
+        f.write(datetime.today().strftime("%Y-%m-%d"))
 
 # ─────────────────────────────────────────────────────────────
 # FUNCTION: Pull last 5 years of weekly data for consistency
@@ -58,7 +77,6 @@ def pull_full_weekly_data(keywords: list) -> pd.DataFrame:
     df_full = pd.concat(all_results, ignore_index=True)
     df_full["date"] = pd.to_datetime(df_full["date"])
     return df_full
-
 
 # ─────────────────────────────────────────────────────────────
 # FUNCTION: Update global_trend_summary.csv (latest Sunday only)
@@ -96,8 +114,30 @@ def update_global_trend_dataset():
 
 
 # ─────────────────────────────────────────────────────────────
+# FUNCTION: Remove stray launchd logs if present
+# ─────────────────────────────────────────────────────────────
+
+def clean_launchd_logs(log_dir: str):
+    """
+    Deletes unnecessary launchd log files if they exist.
+    """
+    for fname in ["launchd_stdout.log", "launchd_stderr.log"]:
+        fpath = os.path.join(log_dir, fname)
+        if os.path.exists(fpath):
+            try:
+                os.remove(fpath)
+            except Exception as e:
+                print(f"⚠️ Could not delete {fname}: {e}")
+                
+# ─────────────────────────────────────────────────────────────
 # MAIN EXECUTION
 # ─────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
+    if already_ran_today():
+        print("⏳ Already ran today. Exiting.")
+        sys.exit()
+
     update_global_trend_dataset()
+    mark_today_as_ran()
+    clean_launchd_logs(os.path.join("logs"))

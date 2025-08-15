@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# ──────────────────────────────────────────────
+# 🧠 Automation: Run update script + manage logs
+# ──────────────────────────────────────────────
+
+# Set project root
+cd /Users/saayedalam/Documents/data_portfolio/meditation-trend-pulse || exit
+
+# Make sure logs folder exists
+mkdir -p logs
+
+# Generate monthly log filename (e.g. update_log_2025_08.txt)
+LOG_FILE="logs/update_log_$(date '+%Y_%m').txt"
+
+# Write header for this run
+{
+  echo ""
+  echo "────────────────────────────────────────────"
+  echo "🕒 Update Run — $(date '+%Y-%m-%d %H:%M:%S')"
+  echo "────────────────────────────────────────────"
+} >> "$LOG_FILE"
+
+# Run Python update script and append output
+python3 automation/update_all_datasets.py >> "$LOG_FILE" 2>&1
+
+# Cleanup: Delete logs older than 6 months
+find logs/ -name "update_log_*.txt" -mtime +180 -delete
+
+# ──────────────────────────────────────────────
+# 🔁 GitHub Auto Commit & Push (if file changed)
+# ──────────────────────────────────────────────
+
+# Check if global_trend_summary.csv has been modified
+if git diff --quiet data/streamlit/global_trend_summary.csv; then
+  echo "📂 No changes to commit to GitHub." >> "$LOG_FILE"
+else
+  git add data/streamlit/global_trend_summary.csv
+  git commit -m "🔄 Auto update: global_trend_summary.csv on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
+  git push origin main >> "$LOG_FILE" 2>&1
+  echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"
+fi

@@ -240,5 +240,5 @@ space()
 # ─────────────────────────────────────────────────────────────
 # Footer — Interest Score Explanation + last updated
 # ─────────────────────────────────────────────────────────────
-now = datetime.now().strftime("%B %d, %Y")
-render_custom_footer(show_last_updated=now, color_hex=CHAKRA_HEART)
+latest_date = df_trend_long["date"].max().strftime("%B %d, %Y")
+render_custom_footer(show_last_updated=latest_date, color_hex=CHAKRA_HEART)

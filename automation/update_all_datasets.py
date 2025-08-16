@@ -81,7 +81,6 @@ def pull_full_weekly_data(keywords: list) -> pd.DataFrame:
 # ─────────────────────────────────────────────────────────────
 # FUNCTION: Update global_trend_summary.csv (latest Sunday only)
 # ─────────────────────────────────────────────────────────────
-
 def update_global_trend_dataset():
     print("🔄 Updating global_trend_summary.csv...")
 
@@ -89,28 +88,31 @@ def update_global_trend_dataset():
     df_existing = pd.read_csv(GLOBAL_TREND_PATH, parse_dates=["date"])
     latest_existing_date = df_existing["date"].max()
 
-    # Pull latest 5-year weekly data for all keywords
+    # Pull full 5-year weekly data
     df_full = pull_full_weekly_data(KEYWORDS)
     if df_full.empty:
         print("⚠️ No new data retrieved from Google Trends.")
         return
 
-    # Filter only the latest full week from Google Trends
+    # Get the latest available week from pulled data
     latest_available_date = df_full["date"].max()
     df_latest = df_full[df_full["date"] == latest_available_date]
 
     if latest_available_date <= latest_existing_date:
-        print("✅ No new data to append. Dataset already up to date.")
-        return
+        print(f"🔁 Replacing data for {latest_available_date.date()} (may have changed)...")
+    else:
+        print(f"➕ Appending new week: {latest_available_date.date()}")
 
-    # Append and deduplicate
+    # Drop any existing rows for the latest date (to avoid duplication or outdated values)
+    df_existing = df_existing[df_existing["date"] != latest_available_date]
+
+    # Append the new latest week
     df_combined = pd.concat([df_existing, df_latest], ignore_index=True)
-    df_combined.drop_duplicates(subset=["date", "keyword"], inplace=True)
     df_combined = df_combined.sort_values(["date", "keyword"]).reset_index(drop=True)
 
     # Save to file
     df_combined.to_csv(GLOBAL_TREND_PATH, index=False)
-    print(f"✅ Appended data for {latest_available_date.date()} to global_trend_summary.csv")
+    print(f"✅ global_trend_summary.csv updated with {latest_available_date.date()}")
 
 
 # ─────────────────────────────────────────────────────────────

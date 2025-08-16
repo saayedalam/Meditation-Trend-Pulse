@@ -2,3 +2,7 @@
 logs/
 data/raw/
 *.log
+
+# Ignore sensitive or user-specific Streamlit files
+.streamlit/secrets.toml
+.streamlit/credentials.toml

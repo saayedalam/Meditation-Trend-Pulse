@@ -6,3 +6,7 @@ data/raw/
 # Ignore sensitive or user-specific Streamlit files
 .streamlit/secrets.toml
 .streamlit/credentials.toml
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]

@@ -1,12 +1,12 @@
+# Jupyter and log files
 .ipynb_checkpoints/
 logs/
-data/raw/
 *.log
 
-# Ignore sensitive or user-specific Streamlit files
+# Streamlit secrets
 .streamlit/secrets.toml
 .streamlit/credentials.toml
 
-# Ignore Python cache files
+# Python cache files
 __pycache__/
 *.py[cod]

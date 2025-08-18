@@ -211,26 +211,26 @@ render_section_card(
 
 space()
 
+# Clean + show Top Peaks (no Event column)
+
 df_top_cleaned = df_top_peaks.rename(
     columns={"keyword": "Search Term", "date": "Peak Date", "search_interest": "Interest Score"}
 ).copy()
 
-df_top_cleaned = df_top_cleaned.sort_values("Interest Score", ascending=False)
-df_top_cleaned = df_top_cleaned.drop_duplicates(subset="Search Term", keep="first")
+# sort by score, keep the single top row per term
+df_top_cleaned = (
+    df_top_cleaned
+    .sort_values("Interest Score", ascending=False)
+    .drop_duplicates(subset="Search Term", keep="first")
+)
 
+# pretty date for display
 df_top_cleaned["Peak Date"] = pd.to_datetime(df_top_cleaned["Peak Date"]).dt.date
 
-event_mapping = {
-    "meditation": "🧘 New Year's Resolution Spike",
-    "mindfulness": "🧠 Back-to-School + Wellness Push",
-    "guided meditation": "🎧 Mid-Pandemic Anxiety Relief",
-    "yoga nidra": "🛌 Winter Sleep Trends + TikTok Surge",
-    "breathwork": "🌬️ New Year Recovery + Biohacking",
-}
-df_top_cleaned["Event"] = df_top_cleaned["Search Term"].map(event_mapping).fillna("—")
+# columns to display (Event removed)
+df_top_cleaned = df_top_cleaned[["Search Term", "Peak Date", "Interest Score"]]
 
-df_top_cleaned = df_top_cleaned[["Search Term", "Peak Date", "Event", "Interest Score"]]
-
+# style score
 styled_df = df_top_cleaned.style.map(format_interest, subset=["Interest Score"])
 
 st.dataframe(styled_df, use_container_width=True, hide_index=True)

@@ -32,11 +32,17 @@ find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 # 🔁 GitHub Auto Commit & Push (if file changed)
 # ──────────────────────────────────────────────
 
-# If either CSV changed, commit both for consistency
-if git diff --quiet -- data/streamlit/global_trend_summary.csv data/streamlit/trend_pct_change.csv; then
+# If any CSV changed, commit all three for consistency
+if git diff --quiet -- \
+  data/streamlit/global_trend_summary.csv \
+  data/streamlit/trend_pct_change.csv \
+  data/streamlit/trend_top_peaks.csv; then
   echo "📂 No changes to commit to GitHub." >> "$LOG_FILE"
 else
-  git add data/streamlit/global_trend_summary.csv data/streamlit/trend_pct_change.csv
+  git add \
+    data/streamlit/global_trend_summary.csv \
+    data/streamlit/trend_pct_change.csv \
+    data/streamlit/trend_top_peaks.csv
   git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
   git push origin main >> "$LOG_FILE" 2>&1
   echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"

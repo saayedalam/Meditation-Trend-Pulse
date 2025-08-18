@@ -45,7 +45,8 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "data", "streamlit"))
 
 GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
-TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv")   # <-- NEW
+TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv") 
+TREND_TOP_PEAKS_PATH = os.path.join(DATA_DIR, "trend_top_peaks.csv")
 RUN_TRACK_FILE   = os.path.join(SCRIPT_DIR, ".last_run_date")
 
 # Create data dir if missing
@@ -201,6 +202,33 @@ def update_global_trend_dataset() -> None:
     print(f"✅ Overwrote global_trend_summary.csv with window {start} → {end}")
     print(f"✅ Rebuilt trend_pct_change.csv")
 
+
+def rebuild_trend_top_peaks() -> None:
+    """
+    Build top 3 peak rows per keyword from the current global_trend_summary.csv
+    and save to trend_top_peaks.csv.
+    """
+    if not os.path.exists(GLOBAL_TREND_PATH):
+        print("⚠️ Cannot build top peaks: global_trend_summary.csv not found.")
+        return
+
+    df = pd.read_csv(GLOBAL_TREND_PATH, parse_dates=["date"])
+    if df.empty:
+        print("⚠️ Cannot build top peaks: global_trend_summary.csv is empty.")
+        return
+
+    # Sort by keyword then descending interest, take top 3 per keyword
+    df_top = (
+        df.sort_values(["keyword", "search_interest"], ascending=[True, False])
+          .groupby("keyword", as_index=False, sort=False)
+          .head(3)
+          .sort_values(["keyword", "search_interest"], ascending=[True, False])
+          .reset_index(drop=True)
+    )
+
+    df_top.to_csv(TREND_TOP_PEAKS_PATH, index=False)
+    print("✅ Rebuilt trend_top_peaks.csv")
+
 # ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
@@ -212,6 +240,7 @@ if __name__ == "__main__":
 
     try:
         update_global_trend_dataset()
+        rebuild_trend_top_peaks()
         mark_today_as_ran()
     except Exception as ex:
         # Non-zero exit helps schedulers alert you

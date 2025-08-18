@@ -2,6 +2,7 @@
 Script to update all datasets in the Meditation Trend Pulse project.
 Currently updates:
 - Global Trends dataset (global_trend_summary.csv)
+- Percent change dataset (trend_pct_change.csv)
 
 Planned extensions:
 - Country Trends
@@ -39,19 +40,18 @@ KEYWORDS: List[str] = [
 ]
 
 # Resolve paths robustly:
-# - Prefer env var MTP_DATA_DIR if set
-# - Otherwise use ../data/streamlit relative to this script
+# Paths (always write into ../data/streamlit relative to this script)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_DATA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "data", "streamlit"))
-DATA_DIR = os.environ.get("MTP_DATA_DIR", DEFAULT_DATA_DIR)
+DATA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "data", "streamlit"))
 
 GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
-RUN_TRACK_FILE = os.path.join(SCRIPT_DIR, ".last_run_date")
+TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv")   # <-- NEW
+RUN_TRACK_FILE   = os.path.join(SCRIPT_DIR, ".last_run_date")
 
 # Create data dir if missing
 os.makedirs(DATA_DIR, exist_ok=True)
 
-# Pytrends client with sane timeouts + built-in retry/backoff
+# Pytrends client with sane timeouts
 pytrends = TrendReq(
     hl="en-US",
     tz=360,
@@ -140,40 +140,66 @@ def load_existing_or_empty(csv_path: str) -> pd.DataFrame:
     return pd.read_csv(csv_path, parse_dates=["date"])
 
 
+def write_trend_pct_change(df_long: pd.DataFrame) -> None:
+    """
+    Build trend_pct_change.csv from the long global df (date, keyword, search_interest).
+    % change = (last - first) / first * 100 for each keyword over the full 5-year window.
+    """
+    if df_long.empty:
+        return
+
+    wide = (
+        df_long.pivot(index="date", columns="keyword", values="search_interest")
+              .sort_index()
+    )
+
+    # Use forward/back fill to avoid leading NaN issues before first non-null.
+    filled = wide.ffill().bfill()
+
+    # First/last values by keyword across the 5-year window
+    first = filled.iloc[0]
+    last  = filled.iloc[-1]
+
+    pct = ((last - first) / first) * 100.0
+    out = (
+        pct.rename("percent_change")
+           .reset_index()
+           .rename(columns={"keyword": "keyword"})
+           .loc[:, ["keyword", "percent_change"]]
+    )
+    out["percent_change"] = out["percent_change"].round(2)
+    out.to_csv(TREND_PCT_PATH, index=False)
+
 # ─────────────────────────────────────────────────────────────
-# TASK: Update global_trend_summary.csv (latest Sunday only)
+# TASK: Update datasets
 # ─────────────────────────────────────────────────────────────
 
 def update_global_trend_dataset() -> None:
     print("🔄 Updating global_trend_summary.csv...")
 
-    df_existing = load_existing_or_empty(GLOBAL_TREND_PATH)
-    latest_existing_date = pd.Timestamp.min if df_existing.empty else df_existing["date"].max()
-
+    # Pull a fresh 5‑year weekly window for all keywords
     df_full = pull_full_weekly_data(KEYWORDS)
     if df_full.empty:
         print("⚠️ No data retrieved from Google Trends. Keeping existing file unchanged.")
         return
 
-    latest_available_date = df_full["date"].max()
-    df_latest = df_full[df_full["date"] == latest_available_date]
-
-    if latest_available_date <= latest_existing_date:
-        print(f"🔁 Replacing data for {latest_available_date.date()} (Google may revise weekly values).")
-        df_existing = df_existing[df_existing["date"] != latest_available_date]
-    else:
-        print(f"➕ Appending new week: {latest_available_date.date()}")
-
-    df_combined = (
-        pd.concat([df_existing, df_latest], ignore_index=True)
-          .sort_values(["date", "keyword"])
-          .reset_index(drop=True)
+    # Clean & order
+    df_full = (
+        df_full.dropna(subset=["date"])
+               .sort_values(["date", "keyword"])
+               .reset_index(drop=True)
     )
 
-    df_combined.to_csv(GLOBAL_TREND_PATH, index=False)
-    print(f"✅ global_trend_summary.csv updated with {latest_available_date.date()}")
+    # OVERWRITE the file (no appends, no splicing)
+    df_full.to_csv(GLOBAL_TREND_PATH, index=False)
 
+    # NEW: also refresh the percent-change file
+    write_trend_pct_change(df_full)
 
+    start = df_full["date"].min().date()
+    end   = df_full["date"].max().date()
+    print(f"✅ Overwrote global_trend_summary.csv with window {start} → {end}")
+    print(f"✅ Rebuilt trend_pct_change.csv")
 
 # ─────────────────────────────────────────────────────────────
 # MAIN

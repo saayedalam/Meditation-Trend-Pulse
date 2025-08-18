@@ -1,9 +1,15 @@
 # 🏠 Homepage: Meditation Trend Pulse
 
 import streamlit as st
+import datetime  
 
 # Page config must be the first Streamlit call
 st.set_page_config(page_title="Meditation Trend Pulse", layout="wide")
+
+# Heartbeat: log when ?ping=1 is present (for UptimeRobot)
+params = st.experimental_get_query_params()
+if "ping" in params:  # e.g., https://.../?ping=1
+    print(f"✅ Ping received at {datetime.datetime.now().isoformat(timespec='seconds')}")
 
 from utils.ui import inject_app_theme
 from utils.home_ui import (

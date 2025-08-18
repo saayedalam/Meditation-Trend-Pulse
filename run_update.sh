@@ -1,11 +1,12 @@
 #!/bin/bash
+set -euo pipefail
 
 # ──────────────────────────────────────────────
 # 🧠 Automation: Run update script + manage logs
 # ──────────────────────────────────────────────
 
 # Set project root
-cd /Users/saayedalam/Documents/data_portfolio/meditation-trend-pulse || exit
+cd /Users/saayedalam/Documents/data_portfolio/meditation-trend-pulse || exit 1
 
 # Make sure logs folder exists
 mkdir -p logs
@@ -25,18 +26,18 @@ LOG_FILE="logs/update_log_$(date '+%Y_%m').txt"
 python3 -u automation/update_all_datasets.py >> "$LOG_FILE" 2>&1
 
 # Cleanup: Delete logs older than 6 months
-find logs/ -name "update_log_*.txt" -mtime +180 -delete
+find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 
 # ──────────────────────────────────────────────
 # 🔁 GitHub Auto Commit & Push (if file changed)
 # ──────────────────────────────────────────────
 
-# Check if global_trend_summary.csv has been modified
-if git diff --quiet data/streamlit/global_trend_summary.csv; then
+# If either CSV changed, commit both for consistency
+if git diff --quiet -- data/streamlit/global_trend_summary.csv data/streamlit/trend_pct_change.csv; then
   echo "📂 No changes to commit to GitHub." >> "$LOG_FILE"
 else
-  git add data/streamlit/global_trend_summary.csv
-  git commit -m "🔄 Auto update: global_trend_summary.csv on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
+  git add data/streamlit/global_trend_summary.csv data/streamlit/trend_pct_change.csv
+  git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
   git push origin main >> "$LOG_FILE" 2>&1
   echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"
 fi

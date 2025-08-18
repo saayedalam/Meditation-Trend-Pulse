@@ -22,7 +22,7 @@ LOG_FILE="logs/update_log_$(date '+%Y_%m').txt"
 } >> "$LOG_FILE"
 
 # Run Python update script and append output
-python3 automation/update_all_datasets.py >> "$LOG_FILE" 2>&1
+python3 -u automation/update_all_datasets.py >> "$LOG_FILE" 2>&1
 
 # Cleanup: Delete logs older than 6 months
 find logs/ -name "update_log_*.txt" -mtime +180 -delete

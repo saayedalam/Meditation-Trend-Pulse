@@ -32,6 +32,8 @@ inject_app_theme()
 df_country = read_data_csv("country_interest_summary.csv")
 df_total   = read_data_csv("country_total_interest_by_keyword.csv")
 df_top5    = read_data_csv("country_top5_appearance_counts.csv")
+df_trend_long = read_data_csv("global_trend_summary.csv", parse_dates=["date"])
+df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 
 # ─────────────────────────────────────────────────────────────
 # Page header + intro card
@@ -214,5 +216,5 @@ space()
 # ─────────────────────────────────────────────────────────────
 # Footer — Interest Score Explanation + last updated
 # ─────────────────────────────────────────────────────────────
-now = datetime.now().strftime("%B %d, %Y")
-render_custom_footer(show_last_updated=now, color_hex=CHAKRA_THROAT)
+latest_date = df_trend_long["date"].max().strftime("%B %d, %Y")
+render_custom_footer(show_last_updated=latest_date, color_hex=CHAKRA_THROAT)

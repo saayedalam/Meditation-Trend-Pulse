@@ -47,6 +47,7 @@ DATA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "data", "streamlit"))
 GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
 TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv") 
 TREND_TOP_PEAKS_PATH = os.path.join(DATA_DIR, "trend_top_peaks.csv")
+COUNTRY_TREND_PATH = os.path.join(DATA_DIR, "country_interest_summary.csv")
 RUN_TRACK_FILE   = os.path.join(SCRIPT_DIR, ".last_run_date")
 
 # Create data dir if missing
@@ -240,10 +241,53 @@ def rebuild_trend_top_peaks() -> None:
     df_top.to_csv(TREND_TOP_PEAKS_PATH, index=False)
     print("✅ Rebuilt trend_top_peaks.csv")
 
+
+def update_country_interest_dataset() -> None:
+    """
+    Pulls Google Trends region-level interest for each keyword over past 5 years.
+    Cleans and combines into long-form country_interest_summary.csv
+    """
+    print("🌍 Updating country_interest_summary.csv...")
+
+    frames = []
+
+    for kw in KEYWORDS:
+        try:
+            pytrends.build_payload([kw], timeframe="today 5-y", geo="")
+            df_region = pytrends.interest_by_region()
+
+            if df_region.empty:
+                continue
+
+            df_kw = (
+                df_region.reset_index()[["geoName", kw]]
+                         .rename(columns={"geoName": "country", kw: "search_interest"})
+                         .query("search_interest > 0")
+                         .assign(keyword=kw)
+            )
+            frames.append(df_kw)
+            _sleep_with_jitter(0.5)
+
+        except Exception as e:
+            print(f"⚠️ Skipped {kw} due to error: {e}")
+
+    if not frames:
+        print("⚠️ No country-level data retrieved. Skipping file update.")
+        return
+
+    df_all = pd.concat(frames, ignore_index=True)
+    df_all = df_all.drop_duplicates()
+    df_all = df_all[["country", "keyword", "search_interest"]]
+
+    # 🔁 Rename to match Streamlit app expectations
+    df_all = df_all.rename(columns={"search_interest": "interest"})
+
+    df_all.to_csv(COUNTRY_TREND_PATH, index=False)
+    print(f"✅ Wrote {COUNTRY_TREND_PATH} with shape {df_all.shape}")
+
 # ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
-
 if __name__ == "__main__":
     if already_ran_today():
         print("⏳ Already ran today. Exiting.")
@@ -252,8 +296,8 @@ if __name__ == "__main__":
     try:
         update_global_trend_dataset()
         rebuild_trend_top_peaks()
+        update_country_interest_dataset()  # ← ✅ Add this line
         mark_today_as_ran()
     except Exception as ex:
-        # Non-zero exit helps schedulers alert you
         print(f"❌ Fatal error: {ex}")
         sys.exit(1)

@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "⚡️ Running update script via launchd on $(date)" >> ~/Desktop/launchd_test.log
 set -euo pipefail
 
 # ──────────────────────────────────────────────
@@ -34,11 +35,12 @@ find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 # 🔁 GitHub Auto Commit & Push (if file changed)
 # ──────────────────────────────────────────────
 # Only commit if new weekly data was added (based on script log output)
-if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
+if grep -q -e "✅ Overwrote global_trend_summary.csv" -e "✅ Wrote .*country_interest_summary.csv" "$LOG_FILE"; then
   git add \
     data/streamlit/global_trend_summary.csv \
     data/streamlit/trend_pct_change.csv \
-    data/streamlit/trend_top_peaks.csv
+    data/streamlit/trend_top_peaks.csv \
+    data/streamlit/country_interest_summary.csv
   git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
   git push origin main >> "$LOG_FILE" 2>&1
   echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"

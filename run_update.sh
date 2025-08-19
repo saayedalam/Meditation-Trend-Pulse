@@ -4,6 +4,8 @@ set -euo pipefail
 # ──────────────────────────────────────────────
 # 🧠 Automation: Run update script + manage logs
 # ──────────────────────────────────────────────
+# Activate virtual environment
+source /Users/saayedalam/jupyterlab-env/bin/activate
 
 # Set project root
 cd /Users/saayedalam/Documents/data_portfolio/meditation-trend-pulse || exit 1
@@ -31,14 +33,8 @@ find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 # ──────────────────────────────────────────────
 # 🔁 GitHub Auto Commit & Push (if file changed)
 # ──────────────────────────────────────────────
-
-# If any CSV changed, commit all three for consistency
-if git diff --quiet -- \
-  data/streamlit/global_trend_summary.csv \
-  data/streamlit/trend_pct_change.csv \
-  data/streamlit/trend_top_peaks.csv; then
-  echo "📂 No changes to commit to GitHub." >> "$LOG_FILE"
-else
+# Only commit if new weekly data was added (based on script log output)
+if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
   git add \
     data/streamlit/global_trend_summary.csv \
     data/streamlit/trend_pct_change.csv \
@@ -46,4 +42,6 @@ else
   git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
   git push origin main >> "$LOG_FILE" 2>&1
   echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"
+else
+  echo "📂 No new weekly data — skipping GitHub push." >> "$LOG_FILE"
 fi

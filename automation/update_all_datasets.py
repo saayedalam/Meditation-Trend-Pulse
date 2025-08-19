@@ -191,7 +191,18 @@ def update_global_trend_dataset() -> None:
                .reset_index(drop=True)
     )
 
-    # OVERWRITE the file (no appends, no splicing)
+    # Load existing file to compare
+    df_existing = load_existing_or_empty(GLOBAL_TREND_PATH)
+
+    if not df_existing.empty:
+        last_existing = df_existing["date"].max()
+        last_new = df_full["date"].max()
+
+        if last_existing == last_new:
+            print(f"⏭️ No new weekly data (latest date = {last_new.date()}). Skipping overwrite.")
+            return
+
+    # OVERWRITE the file (only if new week is available)
     df_full.to_csv(GLOBAL_TREND_PATH, index=False)
 
     # NEW: also refresh the percent-change file

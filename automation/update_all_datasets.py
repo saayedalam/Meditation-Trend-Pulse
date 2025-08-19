@@ -6,6 +6,8 @@ Updates the following datasets:
 - ✅ trend_pct_change.csv: 5-year percent change (only if global data updates)
 - ✅ trend_top_peaks.csv: top 3 peaks per keyword (only if global data updates)
 - ✅ country_interest_summary.csv: latest country-level interest (only if content has changed)
+- ✅ country_total_interest_by_keyword.csv: total interest by country & keyword (if country data updated)
+- ✅ country_top5_appearance_counts.csv: count of Top 5 appearances across keywords (if country data updated)
 
 ⏳ Script is designed to run once per day. If already run today, it will exit.
 """
@@ -46,6 +48,8 @@ GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
 TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv") 
 TREND_TOP_PEAKS_PATH = os.path.join(DATA_DIR, "trend_top_peaks.csv")
 COUNTRY_TREND_PATH = os.path.join(DATA_DIR, "country_interest_summary.csv")
+COUNTRY_TOTAL_INTEREST_PATH = os.path.join(DATA_DIR, "country_total_interest_by_keyword.csv")
+COUNTRY_TOP5_COUNTS_PATH = os.path.join(DATA_DIR, "country_top5_appearance_counts.csv")
 RUN_TRACK_FILE   = os.path.join(SCRIPT_DIR, ".last_run_date")
 
 # Create data dir if missing
@@ -283,9 +287,68 @@ def update_country_interest_dataset() -> bool:
     print(f"✅ Wrote {COUNTRY_TREND_PATH} with shape {df_all.shape}")
     return True
 
-# ─────────────────────────────────────────────────────────────
-# MAIN
-# ─────────────────────────────────────────────────────────────
+# Purpose: Add automation for country_total_interest_by_keyword.csv (Dataset 2 of Country Page)
+
+def update_country_total_interest_dataset() -> bool:
+    """
+    Builds a dataset that sums country-level interest by keyword.
+    Only runs if COUNTRY_TREND_PATH has changed (and exists).
+    """
+    print("🌍 Building country_total_interest_by_keyword.csv...")
+
+    if not os.path.exists(COUNTRY_TREND_PATH):
+        print("⚠️ Cannot build total interest: country_interest_summary.csv not found.")
+        return False
+
+    df = pd.read_csv(COUNTRY_TREND_PATH)
+    if df.empty:
+        print("⚠️ country_interest_summary.csv is empty. Skipping.")
+        return False
+
+    df_total = (
+        df.groupby(["country", "keyword"], as_index=False)
+          .agg(total_interest=("interest", "sum"))
+          .sort_values(["keyword", "total_interest"], ascending=[True, False])
+    )
+
+    df_total.to_csv(COUNTRY_TOTAL_INTEREST_PATH, index=False)
+    print(f"✅ Wrote {COUNTRY_TOTAL_INTEREST_PATH} with shape {df_total.shape}")
+    return True
+
+def update_country_top5_counts_dataset() -> bool:
+    """
+    Builds dataset of countries that appear most frequently in the Top 5 
+    (by interest) across keywords. Based on country_interest_summary.csv.
+    """
+    print("🌍 Building country_top5_appearance_counts.csv...")
+
+    if not os.path.exists(COUNTRY_TREND_PATH):
+        print("⚠️ Cannot build Top 5 counts: country_interest_summary.csv not found.")
+        return False
+
+    df = pd.read_csv(COUNTRY_TREND_PATH)
+    if df.empty:
+        print("⚠️ country_interest_summary.csv is empty. Skipping.")
+        return False
+
+    # Clean
+    df["keyword"] = df["keyword"].astype(str).str.strip().str.lower()
+    df["country"] = df["country"].astype(str).str.strip()
+
+    # Get top 5 rows per keyword
+    df_top5 = (
+        df.sort_values("interest", ascending=False)
+          .groupby("keyword")
+          .head(5)
+          .groupby(["keyword", "country"])
+          .size()
+          .reset_index(name="top5_count")
+    )
+
+    df_top5.to_csv(COUNTRY_TOP5_COUNTS_PATH, index=False)
+    print(f"✅ Wrote {COUNTRY_TOP5_COUNTS_PATH} with shape {df_top5.shape}")
+    return True
+    
 # ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
@@ -298,7 +361,13 @@ if __name__ == "__main__":
         updated = update_global_trend_dataset()
         if updated:
             rebuild_trend_top_peaks()
-            update_country_interest_dataset()
+            country_updated = update_country_interest_dataset()
+
+            if country_updated:
+                update_country_total_interest_dataset()
+                update_country_top5_counts_dataset()
+            else:
+                print("🛑 Skipping total interest update (no new country data).")
         else:
             print("🛑 Skipping country update (no new global data).")
 

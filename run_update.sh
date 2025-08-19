@@ -35,10 +35,6 @@ find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 # ✅ Git Auto Commit ONLY if Global Dataset Updated
 # ──────────────────────────────────────────────
 
-# ──────────────────────────────────────────────
-# 🔁 GitHub Auto Commit & Push (if file changed)
-# ──────────────────────────────────────────────
-
 # Check if global dataset was updated in this run
 if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
   echo "📈 New global dataset detected — committing updated files..." >> "$LOG_FILE"
@@ -47,7 +43,9 @@ if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
     data/streamlit/global_trend_summary.csv \
     data/streamlit/trend_pct_change.csv \
     data/streamlit/trend_top_peaks.csv \
-    data/streamlit/country_interest_summary.csv
+    data/streamlit/country_interest_summary.csv \
+    data/streamlit/country_total_interest_by_keyword.csv \
+    data/streamlit/country_top5_appearance_counts.csv   # ✅ NEW LINE
 
   # Only commit if any file actually changed
   if git diff --cached --quiet; then

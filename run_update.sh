@@ -37,7 +37,7 @@ find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 
 # Check if global dataset was updated in this run
 if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
-  echo "📈 New global dataset detected — committing updated files..." >> "$LOG_FILE"
+  echo "📤 Checking if any dataset was updated..." >> "$LOG_FILE"
 
   git add \
     data/streamlit/global_trend_summary.csv \
@@ -45,11 +45,10 @@ if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
     data/streamlit/trend_top_peaks.csv \
     data/streamlit/country_interest_summary.csv \
     data/streamlit/country_total_interest_by_keyword.csv \
-    data/streamlit/country_top5_appearance_counts.csv   # ✅ NEW LINE
+    data/streamlit/country_top5_appearance_counts.csv   # ✅ Add more as needed
 
-  # Only commit if any file actually changed
   if git diff --cached --quiet; then
-    echo "📁 No data files were modified — skipping commit." >> "$LOG_FILE"
+    echo "✅ Update script completed — no dataset changes detected." >> "$LOG_FILE"
   else
     git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
     git push origin main >> "$LOG_FILE" 2>&1

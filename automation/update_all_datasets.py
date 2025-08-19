@@ -1,15 +1,13 @@
 """
-Script to update all datasets in the Meditation Trend Pulse project.
-Currently updates:
-- Global Trends dataset (global_trend_summary.csv)
-- Percent change dataset (trend_pct_change.csv)
+Automation script for Meditation Trend Pulse data pipeline.
 
-Planned extensions:
-- Country Trends
-- Related Queries
-- Other datasets...
+Updates the following datasets:
+- ✅ global_trend_summary.csv: weekly interest over time (Google Trends)
+- ✅ trend_pct_change.csv: 5-year percent change (only if global data updates)
+- ✅ trend_top_peaks.csv: top 3 peaks per keyword (only if global data updates)
+- ✅ country_interest_summary.csv: latest country-level interest (only if content has changed)
 
-This script is intended to be run once per day. If already run today, it will skip.
+⏳ Script is designed to run once per day. If already run today, it will exit.
 """
 
 from __future__ import annotations
@@ -176,43 +174,36 @@ def write_trend_pct_change(df_long: pd.DataFrame) -> None:
 # TASK: Update datasets
 # ─────────────────────────────────────────────────────────────
 
-def update_global_trend_dataset() -> None:
+def update_global_trend_dataset() -> bool:
     print("🔄 Updating global_trend_summary.csv...")
 
-    # Pull a fresh 5‑year weekly window for all keywords
     df_full = pull_full_weekly_data(KEYWORDS)
     if df_full.empty:
         print("⚠️ No data retrieved from Google Trends. Keeping existing file unchanged.")
-        return
+        return False
 
-    # Clean & order
     df_full = (
         df_full.dropna(subset=["date"])
                .sort_values(["date", "keyword"])
                .reset_index(drop=True)
     )
 
-    # Load existing file to compare
     df_existing = load_existing_or_empty(GLOBAL_TREND_PATH)
-
     if not df_existing.empty:
         last_existing = df_existing["date"].max()
         last_new = df_full["date"].max()
-
         if last_existing == last_new:
             print(f"⏭️ No new weekly data (latest date = {last_new.date()}). Skipping overwrite.")
-            return
+            return False
 
-    # OVERWRITE the file (only if new week is available)
     df_full.to_csv(GLOBAL_TREND_PATH, index=False)
-
-    # NEW: also refresh the percent-change file
     write_trend_pct_change(df_full)
 
     start = df_full["date"].min().date()
     end   = df_full["date"].max().date()
     print(f"✅ Overwrote global_trend_summary.csv with window {start} → {end}")
     print(f"✅ Rebuilt trend_pct_change.csv")
+    return True
 
 
 def rebuild_trend_top_peaks() -> None:
@@ -242,10 +233,11 @@ def rebuild_trend_top_peaks() -> None:
     print("✅ Rebuilt trend_top_peaks.csv")
 
 
-def update_country_interest_dataset() -> None:
+def update_country_interest_dataset() -> bool:
     """
     Pulls Google Trends region-level interest for each keyword over past 5 years.
-    Cleans and combines into long-form country_interest_summary.csv
+    Cleans and combines into long-form country_interest_summary.csv.
+    Only writes if the data has changed.
     """
     print("🌍 Updating country_interest_summary.csv...")
 
@@ -273,18 +265,27 @@ def update_country_interest_dataset() -> None:
 
     if not frames:
         print("⚠️ No country-level data retrieved. Skipping file update.")
-        return
+        return False
 
     df_all = pd.concat(frames, ignore_index=True)
     df_all = df_all.drop_duplicates()
     df_all = df_all[["country", "keyword", "search_interest"]]
-
-    # 🔁 Rename to match Streamlit app expectations
     df_all = df_all.rename(columns={"search_interest": "interest"})
+
+    # Check if new content is different from existing file
+    if os.path.exists(COUNTRY_TREND_PATH):
+        df_existing = pd.read_csv(COUNTRY_TREND_PATH)
+        if df_existing.equals(df_all):
+            print("⏭️ No change in country data. Skipping overwrite.")
+            return False
 
     df_all.to_csv(COUNTRY_TREND_PATH, index=False)
     print(f"✅ Wrote {COUNTRY_TREND_PATH} with shape {df_all.shape}")
+    return True
 
+# ─────────────────────────────────────────────────────────────
+# MAIN
+# ─────────────────────────────────────────────────────────────
 # ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
@@ -294,9 +295,13 @@ if __name__ == "__main__":
         sys.exit(0)
 
     try:
-        update_global_trend_dataset()
-        rebuild_trend_top_peaks()
-        update_country_interest_dataset()  # ← ✅ Add this line
+        updated = update_global_trend_dataset()
+        if updated:
+            rebuild_trend_top_peaks()
+            update_country_interest_dataset()
+        else:
+            print("🛑 Skipping country update (no new global data).")
+
         mark_today_as_ran()
     except Exception as ex:
         print(f"❌ Fatal error: {ex}")

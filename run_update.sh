@@ -1,10 +1,10 @@
 #!/bin/bash
-echo "⚡️ Running update script via launchd on $(date)" >> ~/Desktop/launchd_test.log
 set -euo pipefail
 
 # ──────────────────────────────────────────────
 # 🧠 Automation: Run update script + manage logs
 # ──────────────────────────────────────────────
+
 # Activate virtual environment
 source /Users/saayedalam/jupyterlab-env/bin/activate
 
@@ -32,18 +32,31 @@ LOG_FILE="logs/update_log_$(date '+%Y_%m').txt"
 find logs/ -name "update_log_*.txt" -mtime +180 -delete || true
 
 # ──────────────────────────────────────────────
+# ✅ Git Auto Commit ONLY if Global Dataset Updated
+# ──────────────────────────────────────────────
+
+# ──────────────────────────────────────────────
 # 🔁 GitHub Auto Commit & Push (if file changed)
 # ──────────────────────────────────────────────
-# Only commit if new weekly data was added (based on script log output)
-if grep -q -e "✅ Overwrote global_trend_summary.csv" -e "✅ Wrote .*country_interest_summary.csv" "$LOG_FILE"; then
+
+# Check if global dataset was updated in this run
+if grep -q "✅ Overwrote global_trend_summary.csv" "$LOG_FILE"; then
+  echo "📈 New global dataset detected — committing updated files..." >> "$LOG_FILE"
+
   git add \
     data/streamlit/global_trend_summary.csv \
     data/streamlit/trend_pct_change.csv \
     data/streamlit/trend_top_peaks.csv \
     data/streamlit/country_interest_summary.csv
-  git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
-  git push origin main >> "$LOG_FILE" 2>&1
-  echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"
+
+  # Only commit if any file actually changed
+  if git diff --cached --quiet; then
+    echo "📁 No data files were modified — skipping commit." >> "$LOG_FILE"
+  else
+    git commit -m "🔄 Auto update: datasets on $(date +'%Y-%m-%d')" >> "$LOG_FILE" 2>&1
+    git push origin main >> "$LOG_FILE" 2>&1
+    echo "🚀 Changes pushed to GitHub." >> "$LOG_FILE"
+  fi
 else
-  echo "📂 No new weekly data — skipping GitHub push." >> "$LOG_FILE"
+  echo "📂 No new global dataset — skipping GitHub push." >> "$LOG_FILE"
 fi

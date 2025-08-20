@@ -1,12 +1,25 @@
-# Jupyter and log files
+# ──────────────────────────────────────────────
+# Jupyter notebooks & logs
+# ──────────────────────────────────────────────
 .ipynb_checkpoints/
 logs/
 *.log
 
-# Streamlit secrets
+# ──────────────────────────────────────────────
+# Streamlit configuration (local secrets/credentials)
+# ──────────────────────────────────────────────
 .streamlit/secrets.toml
 .streamlit/credentials.toml
 
-# Python cache files
+# ──────────────────────────────────────────────
+# Python cache / build artifacts
+# ──────────────────────────────────────────────
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+
+# ──────────────────────────────────────────────
+# Automation state tracking
+# ──────────────────────────────────────────────
+.last_run_date

@@ -31,6 +31,8 @@ inject_app_theme()
 df_related_top10   = read_data_csv("related_queries_top10.csv")
 df_related_rising10 = read_data_csv("related_queries_rising10.csv")
 df_related_shared   = read_data_csv("related_queries_shared.csv")
+df_trend_long = read_data_csv("global_trend_summary.csv", parse_dates=["date"])
+df_trend_long["date"] = pd.to_datetime(df_trend_long["date"])
 
 # ─────────────────────────────────────────────────────────────
 # Page header and overview card
@@ -169,5 +171,5 @@ space()
 # ─────────────────────────────────────────────────────────────
 # Footer with last updated timestamp
 # ─────────────────────────────────────────────────────────────
-now = datetime.now().strftime("%B %d, %Y")
-render_custom_footer(show_last_updated=now, color_hex=CHAKRA_THIRD_EYE)
+latest_date = df_trend_long["date"].max().strftime("%B %d, %Y")
+render_custom_footer(show_last_updated=latest_date, color_hex=CHAKRA_THIRD_EYE)

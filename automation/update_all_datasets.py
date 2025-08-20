@@ -8,6 +8,9 @@ Updates the following datasets:
 - ✅ country_interest_summary.csv: latest country-level interest (only if content has changed)
 - ✅ country_total_interest_by_keyword.csv: total interest by country & keyword (if country data updated)
 - ✅ country_top5_appearance_counts.csv: count of Top 5 appearances across keywords (if country data updated)
+- ✅ related_queries_top10.csv: Top 10 related queries for each keyword (only if global data updates)
+- ✅ related_queries_rising10.csv: Rising Top 10 related queries for each keyword (only if global data updates)
+- ✅ related_queries_shared.csv: Queries appearing under 2+ keywords (only if global data updates)
 
 ⏳ Script is designed to run once per day. If already run today, it will exit.
 """
@@ -45,12 +48,15 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.normpath(os.path.join(SCRIPT_DIR, "..", "data", "streamlit"))
 
 GLOBAL_TREND_PATH = os.path.join(DATA_DIR, "global_trend_summary.csv")
-TREND_PCT_PATH   = os.path.join(DATA_DIR, "trend_pct_change.csv") 
+TREND_PCT_PATH = os.path.join(DATA_DIR, "trend_pct_change.csv")
 TREND_TOP_PEAKS_PATH = os.path.join(DATA_DIR, "trend_top_peaks.csv")
 COUNTRY_TREND_PATH = os.path.join(DATA_DIR, "country_interest_summary.csv")
 COUNTRY_TOTAL_INTEREST_PATH = os.path.join(DATA_DIR, "country_total_interest_by_keyword.csv")
 COUNTRY_TOP5_COUNTS_PATH = os.path.join(DATA_DIR, "country_top5_appearance_counts.csv")
-RUN_TRACK_FILE   = os.path.join(SCRIPT_DIR, ".last_run_date")
+RELATED_TOP10_PATH = os.path.join(DATA_DIR, "related_queries_top10.csv")
+RELATED_RISING10_PATH = os.path.join(DATA_DIR, "related_queries_rising10.csv")
+RELATED_SHARED_PATH = os.path.join(DATA_DIR, "related_queries_shared.csv")
+RUN_TRACK_FILE = os.path.join(SCRIPT_DIR, ".last_run_date")
 
 # Create data dir if missing
 os.makedirs(DATA_DIR, exist_ok=True)
@@ -86,6 +92,7 @@ def _sleep_with_jitter(base: float) -> None:
     time.sleep(base + random.uniform(0.1, 0.6))
 
 
+# (kept for now; no longer used by global fetch, but harmless if left)
 def fetch_interest_over_time_single_keyword(kw: str, timeframe: str = "today 5-y") -> pd.DataFrame:
     """
     Robust fetch for a single keyword with manual retries around the pytrends call.
@@ -96,22 +103,18 @@ def fetch_interest_over_time_single_keyword(kw: str, timeframe: str = "today 5-y
         try:
             pytrends.build_payload([kw], timeframe=timeframe)
             df = pytrends.interest_over_time()
-
             if df is None or df.empty:
                 raise RuntimeError("Empty dataframe from Google Trends")
-
             out = (
                 df.reset_index()[["date", kw]]
                   .rename(columns={kw: "search_interest"})
                   .assign(keyword=kw)[["date", "keyword", "search_interest"]]
             )
             return out
-
         except Exception as e:
             if attempt == max_attempts:
                 print(f"❌ {kw}: failed after {max_attempts} attempts ({e})")
                 return pd.DataFrame(columns=["date", "keyword", "search_interest"])
-
             backoff = (2 ** attempt) * 0.6 + random.uniform(0, 0.8)
             print(f"⚠️  {kw}: attempt {attempt}/{max_attempts} failed ({e}); retrying in {backoff:.1f}s...")
             time.sleep(backoff)
@@ -119,23 +122,39 @@ def fetch_interest_over_time_single_keyword(kw: str, timeframe: str = "today 5-y
 
 def pull_full_weekly_data(keywords: List[str]) -> pd.DataFrame:
     """
-    Pulls 5 years of weekly data for all keywords (robust).
-    Returns a long df: [date, keyword, search_interest]
+    Single-call version:
+    Builds one pytrends payload for ALL keywords at once (today 5-y),
+    then returns a long df: [date, keyword, search_interest].
     """
-    frames = []
-    for kw in keywords:
-        df = fetch_interest_over_time_single_keyword(kw, timeframe="today 5-y")
-        if not df.empty:
-            frames.append(df)
-        _sleep_with_jitter(0.5)  # be polite between keywords
+    max_attempts = 6
+    for attempt in range(1, max_attempts + 1):
+        try:
+            pytrends.build_payload(keywords, timeframe="today 5-y", geo="")
+            df = pytrends.interest_over_time()
+            if df is None or df.empty:
+                raise RuntimeError("Empty dataframe from Google Trends")
 
-    if not frames:
-        return pd.DataFrame(columns=["date", "keyword", "search_interest"])
+            df = df.drop(columns=["isPartial"], errors="ignore").reset_index()
+            long_df = (
+                df.melt(id_vars=["date"], value_vars=keywords,
+                        var_name="keyword", value_name="search_interest")
+                  .dropna(subset=["date"])
+            )
+            long_df["date"] = pd.to_datetime(long_df["date"], errors="coerce")
+            long_df = (
+                long_df.dropna(subset=["date"])
+                       .sort_values(["date", "keyword"])
+                       .reset_index(drop=True)
+            )
+            return long_df
 
-    out = pd.concat(frames, ignore_index=True)
-    out["date"] = pd.to_datetime(out["date"], errors="coerce")
-    out = out.dropna(subset=["date"]).sort_values(["date", "keyword"])
-    return out
+        except Exception as e:
+            if attempt == max_attempts:
+                print(f"❌ global weekly fetch: failed after {max_attempts} attempts ({e})")
+                return pd.DataFrame(columns=["date", "keyword", "search_interest"])
+            backoff = (2 ** attempt) * 0.6 + random.uniform(0, 0.8)
+            print(f"⚠️  global weekly fetch: attempt {attempt}/{max_attempts} failed ({e}); retrying in {backoff:.1f}s...")
+            time.sleep(backoff)
 
 
 def load_existing_or_empty(csv_path: str) -> pd.DataFrame:
@@ -156,15 +175,11 @@ def write_trend_pct_change(df_long: pd.DataFrame) -> None:
         df_long.pivot(index="date", columns="keyword", values="search_interest")
               .sort_index()
     )
-
-    # Use forward/back fill to avoid leading NaN issues before first non-null.
     filled = wide.ffill().bfill()
-
-    # First/last values by keyword across the 5-year window
     first = filled.iloc[0]
-    last  = filled.iloc[-1]
-
+    last = filled.iloc[-1]
     pct = ((last - first) / first) * 100.0
+
     out = (
         pct.rename("percent_change")
            .reset_index()
@@ -204,7 +219,7 @@ def update_global_trend_dataset() -> bool:
     write_trend_pct_change(df_full)
 
     start = df_full["date"].min().date()
-    end   = df_full["date"].max().date()
+    end = df_full["date"].max().date()
     print(f"✅ Overwrote global_trend_summary.csv with window {start} → {end}")
     print(f"✅ Rebuilt trend_pct_change.csv")
     return True
@@ -224,7 +239,6 @@ def rebuild_trend_top_peaks() -> None:
         print("⚠️ Cannot build top peaks: global_trend_summary.csv is empty.")
         return
 
-    # Sort by keyword then descending interest, take top 3 per keyword
     df_top = (
         df.sort_values(["keyword", "search_interest"], ascending=[True, False])
           .groupby("keyword", as_index=False, sort=False)
@@ -232,7 +246,6 @@ def rebuild_trend_top_peaks() -> None:
           .sort_values(["keyword", "search_interest"], ascending=[True, False])
           .reset_index(drop=True)
     )
-
     df_top.to_csv(TREND_TOP_PEAKS_PATH, index=False)
     print("✅ Rebuilt trend_top_peaks.csv")
 
@@ -246,15 +259,12 @@ def update_country_interest_dataset() -> bool:
     print("🌍 Updating country_interest_summary.csv...")
 
     frames = []
-
     for kw in KEYWORDS:
         try:
             pytrends.build_payload([kw], timeframe="today 5-y", geo="")
             df_region = pytrends.interest_by_region()
-
             if df_region.empty:
                 continue
-
             df_kw = (
                 df_region.reset_index()[["geoName", kw]]
                          .rename(columns={"geoName": "country", kw: "search_interest"})
@@ -263,7 +273,6 @@ def update_country_interest_dataset() -> bool:
             )
             frames.append(df_kw)
             _sleep_with_jitter(0.5)
-
         except Exception as e:
             print(f"⚠️ Skipped {kw} due to error: {e}")
 
@@ -276,7 +285,6 @@ def update_country_interest_dataset() -> bool:
     df_all = df_all[["country", "keyword", "search_interest"]]
     df_all = df_all.rename(columns={"search_interest": "interest"})
 
-    # Check if new content is different from existing file
     if os.path.exists(COUNTRY_TREND_PATH):
         df_existing = pd.read_csv(COUNTRY_TREND_PATH)
         if df_existing.equals(df_all):
@@ -287,7 +295,6 @@ def update_country_interest_dataset() -> bool:
     print(f"✅ Wrote {COUNTRY_TREND_PATH} with shape {df_all.shape}")
     return True
 
-# Purpose: Add automation for country_total_interest_by_keyword.csv (Dataset 2 of Country Page)
 
 def update_country_total_interest_dataset() -> bool:
     """
@@ -310,10 +317,10 @@ def update_country_total_interest_dataset() -> bool:
           .agg(total_interest=("interest", "sum"))
           .sort_values(["keyword", "total_interest"], ascending=[True, False])
     )
-
     df_total.to_csv(COUNTRY_TOTAL_INTEREST_PATH, index=False)
     print(f"✅ Wrote {COUNTRY_TOTAL_INTEREST_PATH} with shape {df_total.shape}")
     return True
+
 
 def update_country_top5_counts_dataset() -> bool:
     """
@@ -331,11 +338,9 @@ def update_country_top5_counts_dataset() -> bool:
         print("⚠️ country_interest_summary.csv is empty. Skipping.")
         return False
 
-    # Clean
     df["keyword"] = df["keyword"].astype(str).str.strip().str.lower()
     df["country"] = df["country"].astype(str).str.strip()
 
-    # Get top 5 rows per keyword
     df_top5 = (
         df.sort_values("interest", ascending=False)
           .groupby("keyword")
@@ -344,11 +349,159 @@ def update_country_top5_counts_dataset() -> bool:
           .size()
           .reset_index(name="top5_count")
     )
-
     df_top5.to_csv(COUNTRY_TOP5_COUNTS_PATH, index=False)
     print(f"✅ Wrote {COUNTRY_TOP5_COUNTS_PATH} with shape {df_top5.shape}")
     return True
-    
+
+
+def fetch_all_related_queries() -> pd.DataFrame:
+    """
+    Returns a DataFrame with columns:
+    [keyword, related_query, query_type, popularity_score]
+    Aggregates both 'top' and 'rising' buckets for each keyword with retries.
+    """
+    rows = []
+    for kw in KEYWORDS:
+        max_attempts = 6
+        for attempt in range(1, max_attempts + 1):
+            try:
+                pytrends.build_payload([kw], timeframe="today 5-y", geo="")
+                rq = pytrends.related_queries()
+                bucket = rq.get(kw, {}) if isinstance(rq, dict) else {}
+
+                for qtype in ("top", "rising"):
+                    df_q = bucket.get(qtype) if isinstance(bucket, dict) else None
+                    if isinstance(df_q, pd.DataFrame) and not df_q.empty:
+                        tmp = (
+                            df_q.dropna(subset=["query"])
+                                .assign(
+                                    keyword=kw,
+                                    related_query=lambda d: d["query"].astype(str).str.strip(),
+                                    query_type=qtype,
+                                    popularity_score=pd.to_numeric(df_q.get("value", pd.Series(dtype=float)), errors="coerce"),
+                                )[["keyword", "related_query", "query_type", "popularity_score"]]
+                                .drop_duplicates(subset=["keyword", "related_query", "query_type"])
+                        )
+                        rows.extend(tmp.to_dict(orient="records"))
+                break  # success -> stop retrying this kw
+            except Exception as e:
+                if attempt == max_attempts:
+                    print(f"❌ related_queries {kw}: failed after {max_attempts} attempts ({e})")
+                else:
+                    backoff = (2 ** attempt) * 0.5 + random.uniform(0, 0.8)
+                    print(f"⚠️  related_queries {kw}: attempt {attempt}/{max_attempts} failed ({e}); retrying in {backoff:.1f}s...")
+                    time.sleep(backoff)
+        _sleep_with_jitter(0.5)
+
+    if not rows:
+        return pd.DataFrame(columns=["keyword", "related_query", "query_type", "popularity_score"])
+    return pd.DataFrame(rows)
+
+
+def update_related_queries_top10(df_all: pd.DataFrame | None = None) -> bool:
+    """Build Dataset 1 — related_queries_top10.csv (can reuse provided df_all)."""
+    print("🔎 Building related_queries_top10.csv...")
+    if df_all is None:
+        df_all = fetch_all_related_queries()
+    if df_all.empty:
+        print("⚠️ No related query data retrieved. Skipping file update.")
+        return False
+
+    df_top10 = (
+        df_all[df_all["query_type"] == "top"]
+        .sort_values(["keyword", "popularity_score"], ascending=[True, False])
+        .groupby("keyword", as_index=False)
+        .head(10)
+        .reset_index(drop=True)
+    )
+
+    if os.path.exists(RELATED_TOP10_PATH):
+        try:
+            existing = pd.read_csv(RELATED_TOP10_PATH)
+            if list(existing.columns) == list(df_top10.columns) and existing.equals(df_top10[existing.columns]):
+                print("⏭️ No change in related top10 data. Skipping overwrite.")
+                return False
+        except Exception:
+            pass
+
+    df_top10.to_csv(RELATED_TOP10_PATH, index=False)
+    print(f"✅ Wrote {RELATED_TOP10_PATH} with shape {df_top10.shape}")
+    return True
+
+
+def update_related_queries_rising10(df_all: pd.DataFrame) -> bool:
+    """Build Dataset 2 — related_queries_rising10.csv (requires df_all from the same fetch)."""
+    print("🔎 Building related_queries_rising10.csv...")
+    if df_all is None or df_all.empty:
+        print("⚠️ No rising related query data retrieved. Skipping file update.")
+        return False
+
+    df_rising10 = (
+        df_all[df_all["query_type"] == "rising"]
+        .sort_values(["keyword", "popularity_score"], ascending=[True, False])
+        .groupby("keyword", as_index=False)
+        .head(10)
+        .reset_index(drop=True)
+    )
+
+    if os.path.exists(RELATED_RISING10_PATH):
+        try:
+            existing = pd.read_csv(RELATED_RISING10_PATH)
+            if list(existing.columns) == list(df_rising10.columns) and existing.equals(df_rising10[existing.columns]):
+                print("⏭️ No change in related rising10 data. Skipping overwrite.")
+                return False
+        except Exception:
+            pass
+
+    df_rising10.to_csv(RELATED_RISING10_PATH, index=False)
+    print(f"✅ Wrote {RELATED_RISING10_PATH} with shape {df_rising10.shape}")
+    return True
+
+def update_related_queries_shared(df_all: pd.DataFrame) -> bool:
+    """
+    Build Dataset 3 — related_queries_shared.csv from the already-fetched df_all.
+    Schema: [keyword, related_query, query_type, popularity_score, num_keywords]
+    Only writes if content changed.
+    """
+    print("🔎 Building related_queries_shared.csv...")
+    if df_all is None or df_all.empty:
+        print("⚠️ No related query data available. Skipping file update.")
+        return False
+
+    # Count how many distinct keywords each related_query appears under
+    shared_counts = (
+        df_all.groupby("related_query")["keyword"]
+              .nunique()
+              .rename("num_keywords")
+              .reset_index()
+    )
+
+    # Merge back to get full rows and include num_keywords
+    merged = (
+        df_all.merge(shared_counts, on="related_query", how="inner")
+              .sort_values(by=["num_keywords", "related_query", "keyword"], ascending=[False, True, True])
+              .reset_index(drop=True)
+    )
+
+    # Match your dataset: keep only queries that appear under 2+ keywords
+    out = (
+        merged.loc[merged["num_keywords"] >= 2,
+                   ["keyword", "related_query", "query_type", "popularity_score", "num_keywords"]]
+    )
+
+    # Only write if changed
+    if os.path.exists(RELATED_SHARED_PATH):
+        try:
+            existing = pd.read_csv(RELATED_SHARED_PATH)
+            if list(existing.columns) == list(out.columns) and existing.equals(out[existing.columns]):
+                print("⏭️ No change in related shared data. Skipping overwrite.")
+                return False
+        except Exception:
+            pass
+
+    out.to_csv(RELATED_SHARED_PATH, index=False)
+    print(f"✅ Wrote {RELATED_SHARED_PATH} with shape {out.shape}")
+    return True
 # ─────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────
@@ -368,6 +521,15 @@ if __name__ == "__main__":
                 update_country_top5_counts_dataset()
             else:
                 print("🛑 Skipping total interest update (no new country data).")
+
+            # NEW: build related queries datasets from one fetch
+            df_related_all = fetch_all_related_queries()
+            if not df_related_all.empty:
+                update_related_queries_top10(df_related_all)
+                update_related_queries_rising10(df_related_all)
+                update_related_queries_shared(df_related_all)
+            else:
+                print("⚠️ Skipping related queries: empty fetch.")
         else:
             print("🛑 Skipping country update (no new global data).")
 

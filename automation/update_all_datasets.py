@@ -598,6 +598,7 @@ if __name__ == "__main__":
         else:
             # If global didn't update, everything downstream is intentionally skipped
             print("🛑 Skipping country update (no new global data).")
+            print("🛑 Skipping related update (no new global data).")
 
         # Mark that we ran today (even if nothing updated) to avoid repeated cron work
         mark_today_as_ran()

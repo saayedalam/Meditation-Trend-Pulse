@@ -1,187 +1,184 @@
 country,keyword,interest
 Argentina,meditation,2
-Australia,meditation,96
-Austria,meditation,45
+Australia,meditation,95
+Austria,meditation,46
 Bangladesh,meditation,10
-Belgium,meditation,24
-Brazil,meditation,1
+Belgium,meditation,25
+Brazil,meditation,2
 Canada,meditation,72
 Colombia,meditation,2
 Czechia,meditation,7
-Denmark,meditation,46
+Denmark,meditation,45
 Egypt,meditation,5
 Finland,meditation,12
-France,meditation,39
-Germany,meditation,40
-Ghana,meditation,30
+France,meditation,38
+Germany,meditation,41
+Ghana,meditation,31
 Greece,meditation,11
 Hong Kong,meditation,18
 Hungary,meditation,8
-India,meditation,34
+India,meditation,35
 Indonesia,meditation,3
 Iran,meditation,3
 Ireland,meditation,100
-Israel,meditation,13
+Israel,meditation,14
 Italy,meditation,5
 Japan,meditation,1
-Kenya,meditation,25
-Malaysia,meditation,14
+Kenya,meditation,26
+Malaysia,meditation,15
 Mexico,meditation,3
-Nepal,meditation,48
+Nepal,meditation,50
 Netherlands,meditation,16
-New Zealand,meditation,63
-Nigeria,meditation,15
+New Zealand,meditation,65
+Nigeria,meditation,16
 Norway,meditation,17
 Pakistan,meditation,14
-Philippines,meditation,17
+Philippines,meditation,18
 Poland,meditation,3
 Portugal,meditation,13
-Romania,meditation,8
+Romania,meditation,9
 Russia,meditation,3
 Saudi Arabia,meditation,4
-Singapore,meditation,35
-South Africa,meditation,36
-South Korea,meditation,8
+Singapore,meditation,37
+South Africa,meditation,37
+South Korea,meditation,9
 Spain,meditation,6
-Sri Lanka,meditation,36
-Sweden,meditation,35
-Switzerland,meditation,60
-Taiwan,meditation,4
+Sri Lanka,meditation,37
+Sweden,meditation,36
+Switzerland,meditation,61
+Taiwan,meditation,5
 Thailand,meditation,7
 Türkiye,meditation,2
 Ukraine,meditation,2
-United Arab Emirates,meditation,24
-United Kingdom,meditation,50
-United States,meditation,47
+United Arab Emirates,meditation,25
+United Kingdom,meditation,51
+United States,meditation,50
 Vietnam,meditation,7
-Argentina,mindfulness,47
+Argentina,mindfulness,50
 Australia,mindfulness,74
-Austria,mindfulness,9
+Austria,mindfulness,8
 Bangladesh,mindfulness,6
 Belgium,mindfulness,35
 Bolivia,mindfulness,18
 Brazil,mindfulness,20
-Canada,mindfulness,48
-Chile,mindfulness,52
-Colombia,mindfulness,38
-Costa Rica,mindfulness,32
+Canada,mindfulness,49
+Chile,mindfulness,53
+Colombia,mindfulness,39
+Costa Rica,mindfulness,31
 Croatia,mindfulness,20
 Czechia,mindfulness,19
-Denmark,mindfulness,92
+Denmark,mindfulness,94
 Dominican Republic,mindfulness,17
 Ecuador,mindfulness,33
 Egypt,mindfulness,6
 Finland,mindfulness,47
 France,mindfulness,5
 Germany,mindfulness,7
-Greece,mindfulness,14
+Greece,mindfulness,13
 Guatemala,mindfulness,21
 Hong Kong,mindfulness,46
-Hungary,mindfulness,24
+Hungary,mindfulness,25
 India,mindfulness,10
-Indonesia,mindfulness,11
+Indonesia,mindfulness,12
 Iran,mindfulness,3
 Ireland,mindfulness,100
 Israel,mindfulness,14
-Italy,mindfulness,44
+Italy,mindfulness,45
 Japan,mindfulness,1
 Kenya,mindfulness,17
 Malaysia,mindfulness,15
 Mexico,mindfulness,34
-Netherlands,mindfulness,75
-New Zealand,mindfulness,63
+Netherlands,mindfulness,74
+New Zealand,mindfulness,65
 Nigeria,mindfulness,8
 Norway,mindfulness,43
 Pakistan,mindfulness,14
-Peru,mindfulness,34
-Philippines,mindfulness,21
+Peru,mindfulness,35
+Philippines,mindfulness,22
 Poland,mindfulness,18
 Portugal,mindfulness,47
 Puerto Rico,mindfulness,40
 Romania,mindfulness,17
-Russia,mindfulness,4
+Russia,mindfulness,5
 Saudi Arabia,mindfulness,4
-Singapore,mindfulness,51
+Singapore,mindfulness,52
 South Africa,mindfulness,19
-South Korea,mindfulness,14
-Spain,mindfulness,71
-Sri Lanka,mindfulness,23
-Sweden,mindfulness,58
+South Korea,mindfulness,15
+Spain,mindfulness,70
+Sri Lanka,mindfulness,25
+Sweden,mindfulness,55
 Switzerland,mindfulness,20
 Taiwan,mindfulness,7
 Thailand,mindfulness,8
-Türkiye,mindfulness,11
+Türkiye,mindfulness,12
 Ukraine,mindfulness,3
 United Arab Emirates,mindfulness,19
 United Kingdom,mindfulness,65
-United States,mindfulness,40
-Uruguay,mindfulness,52
+United States,mindfulness,39
+Uruguay,mindfulness,50
 Venezuela,mindfulness,22
 Vietnam,mindfulness,10
-Argentina,breathwork,3
+Argentina,breathwork,2
 Australia,breathwork,100
 Austria,breathwork,32
-Bangladesh,breathwork,3
-Belgium,breathwork,26
-Brazil,breathwork,3
-Canada,breathwork,45
-Chile,breathwork,3
-Colombia,breathwork,3
-Costa Rica,breathwork,31
-Croatia,breathwork,9
+Bangladesh,breathwork,2
+Belgium,breathwork,25
+Brazil,breathwork,2
+Canada,breathwork,42
+Chile,breathwork,2
+Colombia,breathwork,2
+Costa Rica,breathwork,32
 Czechia,breathwork,10
-Denmark,breathwork,39
+Denmark,breathwork,38
 Egypt,breathwork,4
-Estonia,breathwork,28
-Finland,breathwork,12
+Finland,breathwork,11
 France,breathwork,14
 Germany,breathwork,26
-Greece,breathwork,17
+Greece,breathwork,16
 Hong Kong,breathwork,10
-Hungary,breathwork,6
-India,breathwork,3
-Indonesia,breathwork,6
-Ireland,breathwork,71
-Israel,breathwork,9
+Hungary,breathwork,5
+India,breathwork,2
+Indonesia,breathwork,5
+Ireland,breathwork,75
+Israel,breathwork,8
 Italy,breathwork,4
-Malaysia,breathwork,6
-Mexico,breathwork,6
+Malaysia,breathwork,5
+Mexico,breathwork,5
 Morocco,breathwork,7
-Netherlands,breathwork,48
-New Zealand,breathwork,70
-Norway,breathwork,28
+Netherlands,breathwork,50
+New Zealand,breathwork,67
+Norway,breathwork,26
 Pakistan,breathwork,4
-Peru,breathwork,3
+Peru,breathwork,2
 Philippines,breathwork,4
-Poland,breathwork,3
-Portugal,breathwork,23
-Romania,breathwork,9
-Russia,breathwork,3
+Poland,breathwork,2
+Portugal,breathwork,22
+Romania,breathwork,8
+Russia,breathwork,2
 Saudi Arabia,breathwork,1
-Singapore,breathwork,20
-South Africa,breathwork,21
-South Korea,breathwork,12
+Singapore,breathwork,19
+South Africa,breathwork,20
+South Korea,breathwork,11
 Spain,breathwork,10
-Sweden,breathwork,43
-Switzerland,breathwork,57
-Taiwan,breathwork,3
-Thailand,breathwork,9
+Sweden,breathwork,38
+Switzerland,breathwork,52
+Taiwan,breathwork,2
+Thailand,breathwork,10
 Türkiye,breathwork,1
 Ukraine,breathwork,1
-United Arab Emirates,breathwork,18
-United Kingdom,breathwork,43
-United States,breathwork,34
+United Arab Emirates,breathwork,17
+United Kingdom,breathwork,42
+United States,breathwork,30
 Vietnam,breathwork,7
 Argentina,guided meditation,1
-Australia,guided meditation,97
+Australia,guided meditation,91
 Belgium,guided meditation,5
-Canada,guided meditation,61
+Canada,guided meditation,59
 Denmark,guided meditation,11
 Egypt,guided meditation,1
 France,guided meditation,1
 Germany,guided meditation,1
 Greece,guided meditation,4
-Hong Kong,guided meditation,5
 India,guided meditation,5
 Ireland,guided meditation,100
 Israel,guided meditation,5
@@ -189,52 +186,51 @@ Italy,guided meditation,1
 Malaysia,guided meditation,3
 Mexico,guided meditation,1
 Netherlands,guided meditation,7
-New Zealand,guided meditation,55
-Norway,guided meditation,9
-Pakistan,guided meditation,2
+New Zealand,guided meditation,51
+Norway,guided meditation,8
+Pakistan,guided meditation,1
 Philippines,guided meditation,3
 Poland,guided meditation,1
-Portugal,guided meditation,6
+Portugal,guided meditation,7
 Romania,guided meditation,3
 Russia,guided meditation,1
 Singapore,guided meditation,10
 South Africa,guided meditation,23
 South Korea,guided meditation,3
 Spain,guided meditation,3
-Sweden,guided meditation,9
+Sweden,guided meditation,8
 Switzerland,guided meditation,6
-Taiwan,guided meditation,1
 Thailand,guided meditation,1
-United Arab Emirates,guided meditation,9
-United Kingdom,guided meditation,45
-United States,guided meditation,44
+United Arab Emirates,guided meditation,8
+United Kingdom,guided meditation,44
+United States,guided meditation,42
 Vietnam,guided meditation,2
 Argentina,yoga nidra,11
-Australia,yoga nidra,29
+Australia,yoga nidra,30
 Austria,yoga nidra,15
-Belgium,yoga nidra,19
-Brazil,yoga nidra,2
-Canada,yoga nidra,25
+Belgium,yoga nidra,18
+Brazil,yoga nidra,1
+Canada,yoga nidra,24
 Chile,yoga nidra,3
 Colombia,yoga nidra,4
 Croatia,yoga nidra,8
 Czechia,yoga nidra,4
-Denmark,yoga nidra,21
+Denmark,yoga nidra,20
 Finland,yoga nidra,7
 France,yoga nidra,17
-Germany,yoga nidra,16
+Germany,yoga nidra,15
 Greece,yoga nidra,7
 Hong Kong,yoga nidra,5
 Hungary,yoga nidra,3
 Iceland,yoga nidra,100
-India,yoga nidra,8
+India,yoga nidra,9
 Indonesia,yoga nidra,1
 Ireland,yoga nidra,40
 Israel,yoga nidra,3
 Italy,yoga nidra,9
 Malaysia,yoga nidra,2
 Mexico,yoga nidra,2
-Netherlands,yoga nidra,53
+Netherlands,yoga nidra,55
 New Zealand,yoga nidra,28
 Norway,yoga nidra,25
 Peru,yoga nidra,1
@@ -248,14 +244,14 @@ Singapore,yoga nidra,7
 South Africa,yoga nidra,6
 South Korea,yoga nidra,2
 Spain,yoga nidra,16
-Sweden,yoga nidra,35
-Switzerland,yoga nidra,39
+Sweden,yoga nidra,33
+Switzerland,yoga nidra,41
 Taiwan,yoga nidra,1
 Thailand,yoga nidra,1
 Türkiye,yoga nidra,1
 United Arab Emirates,yoga nidra,5
 United Kingdom,yoga nidra,20
 United States,yoga nidra,13
-Uruguay,yoga nidra,15
+Uruguay,yoga nidra,16
 Venezuela,yoga nidra,2
 Vietnam,yoga nidra,2

@@ -132,7 +132,7 @@ render_card(
     title_html="💬 Closing Mantra",
     body_html='“The quieter you become, the more you can hear.” — Ram Dass',
     color_hex=CHAKRA_HEART,
-    side="right",
+    side="left",
     center=True
 )
 

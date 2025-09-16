@@ -1,33 +1,28 @@
 date,keyword,search_interest
-2020-09-06,breathwork,1
-2020-09-06,guided meditation,5
-2020-09-06,meditation,96
-2020-09-06,mindfulness,26
-2020-09-06,yoga nidra,3
 2020-09-13,breathwork,1
 2020-09-13,guided meditation,6
-2020-09-13,meditation,96
+2020-09-13,meditation,93
 2020-09-13,mindfulness,25
 2020-09-13,yoga nidra,3
 2020-09-20,breathwork,1
-2020-09-20,guided meditation,6
-2020-09-20,meditation,95
+2020-09-20,guided meditation,5
+2020-09-20,meditation,92
 2020-09-20,mindfulness,26
 2020-09-20,yoga nidra,3
 2020-09-27,breathwork,1
-2020-09-27,guided meditation,6
-2020-09-27,meditation,92
+2020-09-27,guided meditation,5
+2020-09-27,meditation,91
 2020-09-27,mindfulness,23
 2020-09-27,yoga nidra,3
 2020-10-04,breathwork,1
 2020-10-04,guided meditation,5
-2020-10-04,meditation,92
-2020-10-04,mindfulness,24
+2020-10-04,meditation,93
+2020-10-04,mindfulness,23
 2020-10-04,yoga nidra,3
 2020-10-11,breathwork,1
 2020-10-11,guided meditation,5
-2020-10-11,meditation,93
-2020-10-11,mindfulness,22
+2020-10-11,meditation,87
+2020-10-11,mindfulness,21
 2020-10-11,yoga nidra,3
 2020-10-18,breathwork,1
 2020-10-18,guided meditation,5
@@ -36,53 +31,53 @@ date,keyword,search_interest
 2020-10-18,yoga nidra,2
 2020-10-25,breathwork,1
 2020-10-25,guided meditation,5
-2020-10-25,meditation,86
+2020-10-25,meditation,83
 2020-10-25,mindfulness,21
 2020-10-25,yoga nidra,3
 2020-11-01,breathwork,1
 2020-11-01,guided meditation,5
-2020-11-01,meditation,78
-2020-11-01,mindfulness,20
+2020-11-01,meditation,77
+2020-11-01,mindfulness,19
 2020-11-01,yoga nidra,2
 2020-11-08,breathwork,1
 2020-11-08,guided meditation,5
-2020-11-08,meditation,88
-2020-11-08,mindfulness,21
+2020-11-08,meditation,87
+2020-11-08,mindfulness,20
 2020-11-08,yoga nidra,3
 2020-11-15,breathwork,1
 2020-11-15,guided meditation,5
-2020-11-15,meditation,87
+2020-11-15,meditation,88
 2020-11-15,mindfulness,21
 2020-11-15,yoga nidra,3
 2020-11-22,breathwork,1
 2020-11-22,guided meditation,5
-2020-11-22,meditation,82
-2020-11-22,mindfulness,19
+2020-11-22,meditation,81
+2020-11-22,mindfulness,20
 2020-11-22,yoga nidra,2
 2020-11-29,breathwork,1
 2020-11-29,guided meditation,5
-2020-11-29,meditation,88
+2020-11-29,meditation,87
 2020-11-29,mindfulness,21
 2020-11-29,yoga nidra,2
 2020-12-06,breathwork,1
 2020-12-06,guided meditation,5
-2020-12-06,meditation,85
+2020-12-06,meditation,84
 2020-12-06,mindfulness,19
 2020-12-06,yoga nidra,2
 2020-12-13,breathwork,1
 2020-12-13,guided meditation,5
-2020-12-13,meditation,80
+2020-12-13,meditation,84
 2020-12-13,mindfulness,19
 2020-12-13,yoga nidra,2
 2020-12-20,breathwork,1
 2020-12-20,guided meditation,5
-2020-12-20,meditation,84
-2020-12-20,mindfulness,15
+2020-12-20,meditation,85
+2020-12-20,mindfulness,14
 2020-12-20,yoga nidra,2
 2020-12-27,breathwork,1
 2020-12-27,guided meditation,5
-2020-12-27,meditation,93
-2020-12-27,mindfulness,18
+2020-12-27,meditation,92
+2020-12-27,mindfulness,17
 2020-12-27,yoga nidra,2
 2021-01-03,breathwork,1
 2021-01-03,guided meditation,6
@@ -91,133 +86,133 @@ date,keyword,search_interest
 2021-01-03,yoga nidra,3
 2021-01-10,breathwork,1
 2021-01-10,guided meditation,6
-2021-01-10,meditation,96
-2021-01-10,mindfulness,21
+2021-01-10,meditation,95
+2021-01-10,mindfulness,20
 2021-01-10,yoga nidra,3
 2021-01-17,breathwork,1
 2021-01-17,guided meditation,5
-2021-01-17,meditation,97
-2021-01-17,mindfulness,21
+2021-01-17,meditation,98
+2021-01-17,mindfulness,22
 2021-01-17,yoga nidra,3
 2021-01-24,breathwork,1
 2021-01-24,guided meditation,6
-2021-01-24,meditation,96
+2021-01-24,meditation,95
 2021-01-24,mindfulness,21
 2021-01-24,yoga nidra,3
 2021-01-31,breathwork,1
 2021-01-31,guided meditation,6
-2021-01-31,meditation,93
+2021-01-31,meditation,94
 2021-01-31,mindfulness,22
 2021-01-31,yoga nidra,3
 2021-02-07,breathwork,1
 2021-02-07,guided meditation,5
-2021-02-07,meditation,88
+2021-02-07,meditation,87
 2021-02-07,mindfulness,21
 2021-02-07,yoga nidra,2
 2021-02-14,breathwork,1
 2021-02-14,guided meditation,5
-2021-02-14,meditation,87
+2021-02-14,meditation,85
 2021-02-14,mindfulness,21
 2021-02-14,yoga nidra,2
 2021-02-21,breathwork,1
 2021-02-21,guided meditation,6
-2021-02-21,meditation,93
+2021-02-21,meditation,89
 2021-02-21,mindfulness,22
 2021-02-21,yoga nidra,2
 2021-02-28,breathwork,1
 2021-02-28,guided meditation,5
-2021-02-28,meditation,95
-2021-02-28,mindfulness,21
+2021-02-28,meditation,90
+2021-02-28,mindfulness,22
 2021-02-28,yoga nidra,3
 2021-03-07,breathwork,1
 2021-03-07,guided meditation,5
-2021-03-07,meditation,87
+2021-03-07,meditation,88
 2021-03-07,mindfulness,21
 2021-03-07,yoga nidra,2
 2021-03-14,breathwork,1
 2021-03-14,guided meditation,5
-2021-03-14,meditation,87
-2021-03-14,mindfulness,20
+2021-03-14,meditation,84
+2021-03-14,mindfulness,21
 2021-03-14,yoga nidra,3
 2021-03-21,breathwork,1
 2021-03-21,guided meditation,5
-2021-03-21,meditation,88
-2021-03-21,mindfulness,20
+2021-03-21,meditation,86
+2021-03-21,mindfulness,21
 2021-03-21,yoga nidra,3
 2021-03-28,breathwork,1
 2021-03-28,guided meditation,5
-2021-03-28,meditation,87
+2021-03-28,meditation,85
 2021-03-28,mindfulness,19
 2021-03-28,yoga nidra,2
 2021-04-04,breathwork,1
 2021-04-04,guided meditation,5
-2021-04-04,meditation,88
+2021-04-04,meditation,84
 2021-04-04,mindfulness,20
 2021-04-04,yoga nidra,2
 2021-04-11,breathwork,1
 2021-04-11,guided meditation,5
-2021-04-11,meditation,84
-2021-04-11,mindfulness,21
-2021-04-11,yoga nidra,3
+2021-04-11,meditation,88
+2021-04-11,mindfulness,20
+2021-04-11,yoga nidra,2
 2021-04-18,breathwork,2
 2021-04-18,guided meditation,5
 2021-04-18,meditation,85
-2021-04-18,mindfulness,21
+2021-04-18,mindfulness,22
 2021-04-18,yoga nidra,2
 2021-04-25,breathwork,1
 2021-04-25,guided meditation,5
-2021-04-25,meditation,86
+2021-04-25,meditation,88
 2021-04-25,mindfulness,20
 2021-04-25,yoga nidra,2
 2021-05-02,breathwork,1
 2021-05-02,guided meditation,5
-2021-05-02,meditation,87
-2021-05-02,mindfulness,21
-2021-05-02,yoga nidra,3
+2021-05-02,meditation,88
+2021-05-02,mindfulness,20
+2021-05-02,yoga nidra,2
 2021-05-09,breathwork,1
 2021-05-09,guided meditation,5
-2021-05-09,meditation,88
-2021-05-09,mindfulness,20
+2021-05-09,meditation,87
+2021-05-09,mindfulness,21
 2021-05-09,yoga nidra,2
 2021-05-16,breathwork,1
 2021-05-16,guided meditation,5
-2021-05-16,meditation,89
+2021-05-16,meditation,87
 2021-05-16,mindfulness,20
 2021-05-16,yoga nidra,2
 2021-05-23,breathwork,1
 2021-05-23,guided meditation,5
-2021-05-23,meditation,84
+2021-05-23,meditation,85
 2021-05-23,mindfulness,20
 2021-05-23,yoga nidra,2
 2021-05-30,breathwork,1
 2021-05-30,guided meditation,4
-2021-05-30,meditation,82
+2021-05-30,meditation,81
 2021-05-30,mindfulness,19
 2021-05-30,yoga nidra,2
 2021-06-06,breathwork,1
 2021-06-06,guided meditation,5
-2021-06-06,meditation,85
+2021-06-06,meditation,84
 2021-06-06,mindfulness,19
 2021-06-06,yoga nidra,2
 2021-06-13,breathwork,1
 2021-06-13,guided meditation,4
-2021-06-13,meditation,78
+2021-06-13,meditation,79
 2021-06-13,mindfulness,18
 2021-06-13,yoga nidra,2
 2021-06-20,breathwork,1
 2021-06-20,guided meditation,5
-2021-06-20,meditation,80
-2021-06-20,mindfulness,18
+2021-06-20,meditation,83
+2021-06-20,mindfulness,19
 2021-06-20,yoga nidra,2
 2021-06-27,breathwork,1
 2021-06-27,guided meditation,4
-2021-06-27,meditation,76
+2021-06-27,meditation,75
 2021-06-27,mindfulness,17
 2021-06-27,yoga nidra,2
 2021-07-04,breathwork,1
 2021-07-04,guided meditation,4
-2021-07-04,meditation,78
-2021-07-04,mindfulness,18
+2021-07-04,meditation,77
+2021-07-04,mindfulness,17
 2021-07-04,yoga nidra,3
 2021-07-11,breathwork,1
 2021-07-11,guided meditation,4
@@ -226,117 +221,117 @@ date,keyword,search_interest
 2021-07-11,yoga nidra,3
 2021-07-18,breathwork,1
 2021-07-18,guided meditation,4
-2021-07-18,meditation,81
+2021-07-18,meditation,79
 2021-07-18,mindfulness,17
 2021-07-18,yoga nidra,3
 2021-07-25,breathwork,1
 2021-07-25,guided meditation,5
 2021-07-25,meditation,80
-2021-07-25,mindfulness,17
+2021-07-25,mindfulness,16
 2021-07-25,yoga nidra,3
 2021-08-01,breathwork,1
 2021-08-01,guided meditation,4
-2021-08-01,meditation,75
-2021-08-01,mindfulness,17
+2021-08-01,meditation,77
+2021-08-01,mindfulness,16
 2021-08-01,yoga nidra,2
 2021-08-08,breathwork,1
 2021-08-08,guided meditation,5
-2021-08-08,meditation,80
+2021-08-08,meditation,78
 2021-08-08,mindfulness,17
 2021-08-08,yoga nidra,2
 2021-08-15,breathwork,1
 2021-08-15,guided meditation,5
-2021-08-15,meditation,76
-2021-08-15,mindfulness,18
-2021-08-15,yoga nidra,2
+2021-08-15,meditation,79
+2021-08-15,mindfulness,17
+2021-08-15,yoga nidra,3
 2021-08-22,breathwork,1
 2021-08-22,guided meditation,4
-2021-08-22,meditation,77
-2021-08-22,mindfulness,18
+2021-08-22,meditation,76
+2021-08-22,mindfulness,17
 2021-08-22,yoga nidra,3
 2021-08-29,breathwork,1
 2021-08-29,guided meditation,5
-2021-08-29,meditation,78
+2021-08-29,meditation,75
 2021-08-29,mindfulness,18
 2021-08-29,yoga nidra,3
 2021-09-05,breathwork,1
 2021-09-05,guided meditation,4
-2021-09-05,meditation,81
-2021-09-05,mindfulness,19
+2021-09-05,meditation,80
+2021-09-05,mindfulness,18
 2021-09-05,yoga nidra,2
 2021-09-12,breathwork,1
 2021-09-12,guided meditation,5
-2021-09-12,meditation,84
-2021-09-12,mindfulness,20
+2021-09-12,meditation,83
+2021-09-12,mindfulness,19
 2021-09-12,yoga nidra,2
 2021-09-19,breathwork,1
 2021-09-19,guided meditation,4
-2021-09-19,meditation,84
+2021-09-19,meditation,83
 2021-09-19,mindfulness,19
 2021-09-19,yoga nidra,2
 2021-09-26,breathwork,1
 2021-09-26,guided meditation,4
-2021-09-26,meditation,83
+2021-09-26,meditation,81
 2021-09-26,mindfulness,19
 2021-09-26,yoga nidra,3
 2021-10-03,breathwork,1
 2021-10-03,guided meditation,5
-2021-10-03,meditation,84
-2021-10-03,mindfulness,19
+2021-10-03,meditation,83
+2021-10-03,mindfulness,20
 2021-10-03,yoga nidra,3
 2021-10-10,breathwork,1
 2021-10-10,guided meditation,5
 2021-10-10,meditation,80
 2021-10-10,mindfulness,19
-2021-10-10,yoga nidra,3
+2021-10-10,yoga nidra,2
 2021-10-17,breathwork,1
 2021-10-17,guided meditation,4
-2021-10-17,meditation,79
+2021-10-17,meditation,82
 2021-10-17,mindfulness,19
 2021-10-17,yoga nidra,2
 2021-10-24,breathwork,1
 2021-10-24,guided meditation,5
 2021-10-24,meditation,79
-2021-10-24,mindfulness,17
+2021-10-24,mindfulness,19
 2021-10-24,yoga nidra,2
 2021-10-31,breathwork,1
 2021-10-31,guided meditation,4
-2021-10-31,meditation,80
-2021-10-31,mindfulness,19
+2021-10-31,meditation,75
+2021-10-31,mindfulness,18
 2021-10-31,yoga nidra,2
 2021-11-07,breathwork,1
 2021-11-07,guided meditation,4
-2021-11-07,meditation,80
-2021-11-07,mindfulness,20
+2021-11-07,meditation,84
+2021-11-07,mindfulness,19
 2021-11-07,yoga nidra,2
 2021-11-14,breathwork,1
 2021-11-14,guided meditation,4
-2021-11-14,meditation,83
-2021-11-14,mindfulness,20
+2021-11-14,meditation,89
+2021-11-14,mindfulness,19
 2021-11-14,yoga nidra,2
 2021-11-21,breathwork,1
 2021-11-21,guided meditation,4
 2021-11-21,meditation,74
-2021-11-21,mindfulness,17
+2021-11-21,mindfulness,18
 2021-11-21,yoga nidra,2
 2021-11-28,breathwork,1
 2021-11-28,guided meditation,4
-2021-11-28,meditation,76
-2021-11-28,mindfulness,18
+2021-11-28,meditation,75
+2021-11-28,mindfulness,17
 2021-11-28,yoga nidra,2
 2021-12-05,breathwork,1
 2021-12-05,guided meditation,4
-2021-12-05,meditation,82
+2021-12-05,meditation,77
 2021-12-05,mindfulness,18
-2021-12-05,yoga nidra,3
+2021-12-05,yoga nidra,2
 2021-12-12,breathwork,1
 2021-12-12,guided meditation,4
-2021-12-12,meditation,78
-2021-12-12,mindfulness,17
+2021-12-12,meditation,77
+2021-12-12,mindfulness,16
 2021-12-12,yoga nidra,2
 2021-12-19,breathwork,1
 2021-12-19,guided meditation,4
-2021-12-19,meditation,74
+2021-12-19,meditation,72
 2021-12-19,mindfulness,13
 2021-12-19,yoga nidra,2
 2021-12-26,breathwork,1
@@ -346,37 +341,37 @@ date,keyword,search_interest
 2021-12-26,yoga nidra,2
 2022-01-02,breathwork,1
 2022-01-02,guided meditation,5
-2022-01-02,meditation,91
-2022-01-02,mindfulness,20
+2022-01-02,meditation,90
+2022-01-02,mindfulness,19
 2022-01-02,yoga nidra,2
 2022-01-09,breathwork,1
 2022-01-09,guided meditation,4
-2022-01-09,meditation,86
+2022-01-09,meditation,84
 2022-01-09,mindfulness,20
-2022-01-09,yoga nidra,3
+2022-01-09,yoga nidra,2
 2022-01-16,breathwork,1
 2022-01-16,guided meditation,4
 2022-01-16,meditation,77
-2022-01-16,mindfulness,21
+2022-01-16,mindfulness,20
 2022-01-16,yoga nidra,2
 2022-01-23,breathwork,1
 2022-01-23,guided meditation,4
-2022-01-23,meditation,84
+2022-01-23,meditation,82
 2022-01-23,mindfulness,23
 2022-01-23,yoga nidra,3
 2022-01-30,breathwork,1
 2022-01-30,guided meditation,5
-2022-01-30,meditation,87
-2022-01-30,mindfulness,23
+2022-01-30,meditation,88
+2022-01-30,mindfulness,22
 2022-01-30,yoga nidra,3
 2022-02-06,breathwork,1
 2022-02-06,guided meditation,4
-2022-02-06,meditation,84
-2022-02-06,mindfulness,22
+2022-02-06,meditation,81
+2022-02-06,mindfulness,21
 2022-02-06,yoga nidra,3
 2022-02-13,breathwork,1
 2022-02-13,guided meditation,4
-2022-02-13,meditation,84
+2022-02-13,meditation,81
 2022-02-13,mindfulness,22
 2022-02-13,yoga nidra,2
 2022-02-20,breathwork,1
@@ -386,13 +381,13 @@ date,keyword,search_interest
 2022-02-20,yoga nidra,2
 2022-02-27,breathwork,1
 2022-02-27,guided meditation,4
-2022-02-27,meditation,83
-2022-02-27,mindfulness,21
+2022-02-27,meditation,81
+2022-02-27,mindfulness,20
 2022-02-27,yoga nidra,3
 2022-03-06,breathwork,1
 2022-03-06,guided meditation,4
-2022-03-06,meditation,81
-2022-03-06,mindfulness,21
+2022-03-06,meditation,79
+2022-03-06,mindfulness,20
 2022-03-06,yoga nidra,3
 2022-03-13,breathwork,1
 2022-03-13,guided meditation,4
@@ -401,37 +396,37 @@ date,keyword,search_interest
 2022-03-13,yoga nidra,3
 2022-03-20,breathwork,1
 2022-03-20,guided meditation,4
-2022-03-20,meditation,80
-2022-03-20,mindfulness,20
+2022-03-20,meditation,79
+2022-03-20,mindfulness,21
 2022-03-20,yoga nidra,3
 2022-03-27,breathwork,1
 2022-03-27,guided meditation,4
-2022-03-27,meditation,77
+2022-03-27,meditation,79
 2022-03-27,mindfulness,22
 2022-03-27,yoga nidra,2
 2022-04-03,breathwork,1
 2022-04-03,guided meditation,4
-2022-04-03,meditation,73
-2022-04-03,mindfulness,21
+2022-04-03,meditation,76
+2022-04-03,mindfulness,22
 2022-04-03,yoga nidra,3
 2022-04-10,breathwork,1
 2022-04-10,guided meditation,4
-2022-04-10,meditation,79
+2022-04-10,meditation,77
 2022-04-10,mindfulness,19
 2022-04-10,yoga nidra,3
 2022-04-17,breathwork,1
 2022-04-17,guided meditation,4
-2022-04-17,meditation,72
-2022-04-17,mindfulness,19
+2022-04-17,meditation,77
+2022-04-17,mindfulness,20
 2022-04-17,yoga nidra,2
 2022-04-24,breathwork,1
 2022-04-24,guided meditation,4
-2022-04-24,meditation,80
+2022-04-24,meditation,76
 2022-04-24,mindfulness,21
 2022-04-24,yoga nidra,3
 2022-05-01,breathwork,1
 2022-05-01,guided meditation,4
-2022-05-01,meditation,76
+2022-05-01,meditation,74
 2022-05-01,mindfulness,20
 2022-05-01,yoga nidra,3
 2022-05-08,breathwork,1
@@ -441,8 +436,8 @@ date,keyword,search_interest
 2022-05-08,yoga nidra,3
 2022-05-15,breathwork,1
 2022-05-15,guided meditation,4
-2022-05-15,meditation,76
-2022-05-15,mindfulness,19
+2022-05-15,meditation,80
+2022-05-15,mindfulness,20
 2022-05-15,yoga nidra,3
 2022-05-22,breathwork,1
 2022-05-22,guided meditation,4
@@ -451,13 +446,13 @@ date,keyword,search_interest
 2022-05-22,yoga nidra,2
 2022-05-29,breathwork,1
 2022-05-29,guided meditation,4
-2022-05-29,meditation,73
-2022-05-29,mindfulness,18
+2022-05-29,meditation,71
+2022-05-29,mindfulness,17
 2022-05-29,yoga nidra,2
 2022-06-05,breathwork,1
-2022-06-05,guided meditation,4
-2022-06-05,meditation,74
-2022-06-05,mindfulness,19
+2022-06-05,guided meditation,3
+2022-06-05,meditation,76
+2022-06-05,mindfulness,18
 2022-06-05,yoga nidra,3
 2022-06-12,breathwork,1
 2022-06-12,guided meditation,4
@@ -466,67 +461,67 @@ date,keyword,search_interest
 2022-06-12,yoga nidra,3
 2022-06-19,breathwork,1
 2022-06-19,guided meditation,4
-2022-06-19,meditation,80
-2022-06-19,mindfulness,18
+2022-06-19,meditation,76
+2022-06-19,mindfulness,17
 2022-06-19,yoga nidra,3
 2022-06-26,breathwork,1
 2022-06-26,guided meditation,4
-2022-06-26,meditation,76
-2022-06-26,mindfulness,18
+2022-06-26,meditation,73
+2022-06-26,mindfulness,17
 2022-06-26,yoga nidra,2
 2022-07-03,breathwork,1
 2022-07-03,guided meditation,4
 2022-07-03,meditation,75
-2022-07-03,mindfulness,18
+2022-07-03,mindfulness,17
 2022-07-03,yoga nidra,2
 2022-07-10,breathwork,2
 2022-07-10,guided meditation,4
-2022-07-10,meditation,77
+2022-07-10,meditation,74
 2022-07-10,mindfulness,18
-2022-07-10,yoga nidra,3
+2022-07-10,yoga nidra,2
 2022-07-17,breathwork,1
 2022-07-17,guided meditation,4
-2022-07-17,meditation,75
+2022-07-17,meditation,76
 2022-07-17,mindfulness,17
 2022-07-17,yoga nidra,3
 2022-07-24,breathwork,2
 2022-07-24,guided meditation,4
-2022-07-24,meditation,73
+2022-07-24,meditation,75
 2022-07-24,mindfulness,16
 2022-07-24,yoga nidra,3
 2022-07-31,breathwork,1
 2022-07-31,guided meditation,4
-2022-07-31,meditation,73
-2022-07-31,mindfulness,17
+2022-07-31,meditation,74
+2022-07-31,mindfulness,16
 2022-07-31,yoga nidra,3
 2022-08-07,breathwork,2
 2022-08-07,guided meditation,4
-2022-08-07,meditation,77
-2022-08-07,mindfulness,17
+2022-08-07,meditation,76
+2022-08-07,mindfulness,16
 2022-08-07,yoga nidra,3
 2022-08-14,breathwork,2
 2022-08-14,guided meditation,4
-2022-08-14,meditation,74
+2022-08-14,meditation,75
 2022-08-14,mindfulness,17
 2022-08-14,yoga nidra,3
-2022-08-21,breathwork,2
+2022-08-21,breathwork,1
 2022-08-21,guided meditation,4
-2022-08-21,meditation,77
-2022-08-21,mindfulness,19
+2022-08-21,meditation,79
+2022-08-21,mindfulness,17
 2022-08-21,yoga nidra,3
-2022-08-28,breathwork,2
+2022-08-28,breathwork,1
 2022-08-28,guided meditation,3
-2022-08-28,meditation,73
+2022-08-28,meditation,77
 2022-08-28,mindfulness,18
 2022-08-28,yoga nidra,3
 2022-09-04,breathwork,2
 2022-09-04,guided meditation,4
-2022-09-04,meditation,76
-2022-09-04,mindfulness,19
+2022-09-04,meditation,74
+2022-09-04,mindfulness,18
 2022-09-04,yoga nidra,3
 2022-09-11,breathwork,1
 2022-09-11,guided meditation,4
-2022-09-11,meditation,79
+2022-09-11,meditation,77
 2022-09-11,mindfulness,20
 2022-09-11,yoga nidra,3
 2022-09-18,breathwork,1
@@ -535,49 +530,49 @@ date,keyword,search_interest
 2022-09-18,mindfulness,19
 2022-09-18,yoga nidra,3
 2022-09-25,breathwork,2
-2022-09-25,guided meditation,4
-2022-09-25,meditation,74
-2022-09-25,mindfulness,20
+2022-09-25,guided meditation,3
+2022-09-25,meditation,77
+2022-09-25,mindfulness,19
 2022-09-25,yoga nidra,3
 2022-10-02,breathwork,2
 2022-10-02,guided meditation,4
-2022-10-02,meditation,75
+2022-10-02,meditation,74
 2022-10-02,mindfulness,20
 2022-10-02,yoga nidra,3
 2022-10-09,breathwork,2
 2022-10-09,guided meditation,4
 2022-10-09,meditation,80
-2022-10-09,mindfulness,21
+2022-10-09,mindfulness,20
 2022-10-09,yoga nidra,3
 2022-10-16,breathwork,1
 2022-10-16,guided meditation,4
-2022-10-16,meditation,75
+2022-10-16,meditation,77
 2022-10-16,mindfulness,20
 2022-10-16,yoga nidra,3
 2022-10-23,breathwork,2
 2022-10-23,guided meditation,4
-2022-10-23,meditation,78
-2022-10-23,mindfulness,20
+2022-10-23,meditation,77
+2022-10-23,mindfulness,18
 2022-10-23,yoga nidra,3
 2022-10-30,breathwork,2
 2022-10-30,guided meditation,4
-2022-10-30,meditation,78
+2022-10-30,meditation,77
 2022-10-30,mindfulness,19
 2022-10-30,yoga nidra,3
 2022-11-06,breathwork,2
 2022-11-06,guided meditation,4
-2022-11-06,meditation,79
+2022-11-06,meditation,81
 2022-11-06,mindfulness,21
 2022-11-06,yoga nidra,3
 2022-11-13,breathwork,2
 2022-11-13,guided meditation,4
-2022-11-13,meditation,82
-2022-11-13,mindfulness,23
+2022-11-13,meditation,81
+2022-11-13,mindfulness,21
 2022-11-13,yoga nidra,3
 2022-11-20,breathwork,2
 2022-11-20,guided meditation,3
-2022-11-20,meditation,72
-2022-11-20,mindfulness,18
+2022-11-20,meditation,73
+2022-11-20,mindfulness,17
 2022-11-20,yoga nidra,3
 2022-11-27,breathwork,2
 2022-11-27,guided meditation,4
@@ -585,13 +580,13 @@ date,keyword,search_interest
 2022-11-27,mindfulness,19
 2022-11-27,yoga nidra,3
 2022-12-04,breathwork,2
-2022-12-04,guided meditation,4
-2022-12-04,meditation,79
-2022-12-04,mindfulness,19
+2022-12-04,guided meditation,3
+2022-12-04,meditation,76
+2022-12-04,mindfulness,18
 2022-12-04,yoga nidra,3
 2022-12-11,breathwork,1
 2022-12-11,guided meditation,3
-2022-12-11,meditation,76
+2022-12-11,meditation,75
 2022-12-11,mindfulness,18
 2022-12-11,yoga nidra,3
 2022-12-18,breathwork,2
@@ -606,98 +601,98 @@ date,keyword,search_interest
 2022-12-25,yoga nidra,3
 2023-01-01,breathwork,2
 2023-01-01,guided meditation,4
-2023-01-01,meditation,91
+2023-01-01,meditation,87
 2023-01-01,mindfulness,18
 2023-01-01,yoga nidra,3
 2023-01-08,breathwork,2
 2023-01-08,guided meditation,4
 2023-01-08,meditation,86
-2023-01-08,mindfulness,21
+2023-01-08,mindfulness,20
 2023-01-08,yoga nidra,3
 2023-01-15,breathwork,2
 2023-01-15,guided meditation,4
-2023-01-15,meditation,79
-2023-01-15,mindfulness,20
+2023-01-15,meditation,82
+2023-01-15,mindfulness,19
 2023-01-15,yoga nidra,4
 2023-01-22,breathwork,2
 2023-01-22,guided meditation,4
-2023-01-22,meditation,84
-2023-01-22,mindfulness,22
+2023-01-22,meditation,87
+2023-01-22,mindfulness,21
 2023-01-22,yoga nidra,4
 2023-01-29,breathwork,2
 2023-01-29,guided meditation,4
-2023-01-29,meditation,83
-2023-01-29,mindfulness,21
-2023-01-29,yoga nidra,4
+2023-01-29,meditation,82
+2023-01-29,mindfulness,20
+2023-01-29,yoga nidra,3
 2023-02-05,breathwork,2
 2023-02-05,guided meditation,4
-2023-02-05,meditation,82
+2023-02-05,meditation,81
 2023-02-05,mindfulness,20
 2023-02-05,yoga nidra,3
 2023-02-12,breathwork,2
 2023-02-12,guided meditation,4
-2023-02-12,meditation,79
-2023-02-12,mindfulness,20
+2023-02-12,meditation,80
+2023-02-12,mindfulness,19
 2023-02-12,yoga nidra,4
 2023-02-19,breathwork,2
 2023-02-19,guided meditation,4
-2023-02-19,meditation,86
+2023-02-19,meditation,85
 2023-02-19,mindfulness,20
 2023-02-19,yoga nidra,4
 2023-02-26,breathwork,2
 2023-02-26,guided meditation,4
-2023-02-26,meditation,82
+2023-02-26,meditation,79
 2023-02-26,mindfulness,20
 2023-02-26,yoga nidra,4
 2023-03-05,breathwork,2
 2023-03-05,guided meditation,4
-2023-03-05,meditation,85
-2023-03-05,mindfulness,21
+2023-03-05,meditation,80
+2023-03-05,mindfulness,20
 2023-03-05,yoga nidra,3
 2023-03-12,breathwork,2
 2023-03-12,guided meditation,4
 2023-03-12,meditation,81
-2023-03-12,mindfulness,20
+2023-03-12,mindfulness,19
 2023-03-12,yoga nidra,3
 2023-03-19,breathwork,2
 2023-03-19,guided meditation,4
 2023-03-19,meditation,84
-2023-03-19,mindfulness,20
-2023-03-19,yoga nidra,4
+2023-03-19,mindfulness,19
+2023-03-19,yoga nidra,3
 2023-03-26,breathwork,2
 2023-03-26,guided meditation,4
-2023-03-26,meditation,79
+2023-03-26,meditation,77
 2023-03-26,mindfulness,20
-2023-03-26,yoga nidra,4
+2023-03-26,yoga nidra,3
 2023-04-02,breathwork,2
 2023-04-02,guided meditation,4
-2023-04-02,meditation,79
-2023-04-02,mindfulness,18
+2023-04-02,meditation,78
+2023-04-02,mindfulness,17
 2023-04-02,yoga nidra,3
 2023-04-09,breathwork,2
 2023-04-09,guided meditation,3
-2023-04-09,meditation,77
+2023-04-09,meditation,74
 2023-04-09,mindfulness,18
 2023-04-09,yoga nidra,3
 2023-04-16,breathwork,2
 2023-04-16,guided meditation,4
-2023-04-16,meditation,78
-2023-04-16,mindfulness,20
+2023-04-16,meditation,77
+2023-04-16,mindfulness,19
 2023-04-16,yoga nidra,3
 2023-04-23,breathwork,2
 2023-04-23,guided meditation,4
-2023-04-23,meditation,75
-2023-04-23,mindfulness,20
+2023-04-23,meditation,77
+2023-04-23,mindfulness,19
 2023-04-23,yoga nidra,3
 2023-04-30,breathwork,2
 2023-04-30,guided meditation,3
 2023-04-30,meditation,76
-2023-04-30,mindfulness,20
+2023-04-30,mindfulness,19
 2023-04-30,yoga nidra,3
 2023-05-07,breathwork,2
 2023-05-07,guided meditation,3
-2023-05-07,meditation,75
-2023-05-07,mindfulness,19
+2023-05-07,meditation,74
+2023-05-07,mindfulness,18
 2023-05-07,yoga nidra,3
 2023-05-14,breathwork,2
 2023-05-14,guided meditation,3
@@ -706,13 +701,13 @@ date,keyword,search_interest
 2023-05-14,yoga nidra,3
 2023-05-21,breathwork,2
 2023-05-21,guided meditation,3
-2023-05-21,meditation,74
+2023-05-21,meditation,70
 2023-05-21,mindfulness,19
 2023-05-21,yoga nidra,3
 2023-05-28,breathwork,2
 2023-05-28,guided meditation,3
-2023-05-28,meditation,70
-2023-05-28,mindfulness,17
+2023-05-28,meditation,71
+2023-05-28,mindfulness,18
 2023-05-28,yoga nidra,3
 2023-06-04,breathwork,2
 2023-06-04,guided meditation,3
@@ -721,33 +716,33 @@ date,keyword,search_interest
 2023-06-04,yoga nidra,3
 2023-06-11,breathwork,2
 2023-06-11,guided meditation,3
-2023-06-11,meditation,73
-2023-06-11,mindfulness,18
+2023-06-11,meditation,70
+2023-06-11,mindfulness,17
 2023-06-11,yoga nidra,3
 2023-06-18,breathwork,2
 2023-06-18,guided meditation,3
-2023-06-18,meditation,72
-2023-06-18,mindfulness,18
+2023-06-18,meditation,73
+2023-06-18,mindfulness,17
 2023-06-18,yoga nidra,3
 2023-06-25,breathwork,2
 2023-06-25,guided meditation,3
-2023-06-25,meditation,72
-2023-06-25,mindfulness,16
+2023-06-25,meditation,71
+2023-06-25,mindfulness,17
 2023-06-25,yoga nidra,3
 2023-07-02,breathwork,2
 2023-07-02,guided meditation,3
-2023-07-02,meditation,74
+2023-07-02,meditation,72
 2023-07-02,mindfulness,16
 2023-07-02,yoga nidra,3
 2023-07-09,breathwork,2
-2023-07-09,guided meditation,4
-2023-07-09,meditation,73
+2023-07-09,guided meditation,3
+2023-07-09,meditation,71
 2023-07-09,mindfulness,17
 2023-07-09,yoga nidra,3
 2023-07-16,breathwork,2
 2023-07-16,guided meditation,3
-2023-07-16,meditation,75
-2023-07-16,mindfulness,15
+2023-07-16,meditation,73
+2023-07-16,mindfulness,16
 2023-07-16,yoga nidra,3
 2023-07-23,breathwork,2
 2023-07-23,guided meditation,3
@@ -756,62 +751,62 @@ date,keyword,search_interest
 2023-07-23,yoga nidra,3
 2023-07-30,breathwork,2
 2023-07-30,guided meditation,3
-2023-07-30,meditation,73
+2023-07-30,meditation,72
 2023-07-30,mindfulness,16
 2023-07-30,yoga nidra,3
 2023-08-06,breathwork,2
 2023-08-06,guided meditation,3
-2023-08-06,meditation,73
+2023-08-06,meditation,70
 2023-08-06,mindfulness,16
 2023-08-06,yoga nidra,3
 2023-08-13,breathwork,2
 2023-08-13,guided meditation,3
-2023-08-13,meditation,74
+2023-08-13,meditation,73
 2023-08-13,mindfulness,16
 2023-08-13,yoga nidra,3
 2023-08-20,breathwork,2
 2023-08-20,guided meditation,3
-2023-08-20,meditation,73
-2023-08-20,mindfulness,19
+2023-08-20,meditation,72
+2023-08-20,mindfulness,17
 2023-08-20,yoga nidra,3
 2023-08-27,breathwork,2
 2023-08-27,guided meditation,3
-2023-08-27,meditation,74
+2023-08-27,meditation,73
 2023-08-27,mindfulness,18
 2023-08-27,yoga nidra,3
 2023-09-03,breathwork,2
 2023-09-03,guided meditation,3
-2023-09-03,meditation,73
+2023-09-03,meditation,74
 2023-09-03,mindfulness,18
 2023-09-03,yoga nidra,3
 2023-09-10,breathwork,2
 2023-09-10,guided meditation,3
-2023-09-10,meditation,72
+2023-09-10,meditation,75
 2023-09-10,mindfulness,20
 2023-09-10,yoga nidra,3
 2023-09-17,breathwork,2
 2023-09-17,guided meditation,3
-2023-09-17,meditation,75
+2023-09-17,meditation,73
 2023-09-17,mindfulness,21
 2023-09-17,yoga nidra,3
 2023-09-24,breathwork,2
 2023-09-24,guided meditation,3
-2023-09-24,meditation,75
+2023-09-24,meditation,74
 2023-09-24,mindfulness,20
 2023-09-24,yoga nidra,3
 2023-10-01,breathwork,2
 2023-10-01,guided meditation,3
-2023-10-01,meditation,74
+2023-10-01,meditation,75
 2023-10-01,mindfulness,19
 2023-10-01,yoga nidra,3
 2023-10-08,breathwork,2
 2023-10-08,guided meditation,3
-2023-10-08,meditation,74
-2023-10-08,mindfulness,20
+2023-10-08,meditation,75
+2023-10-08,mindfulness,19
 2023-10-08,yoga nidra,3
 2023-10-15,breathwork,2
 2023-10-15,guided meditation,3
-2023-10-15,meditation,73
+2023-10-15,meditation,71
 2023-10-15,mindfulness,20
 2023-10-15,yoga nidra,3
 2023-10-22,breathwork,2
@@ -822,7 +817,7 @@ date,keyword,search_interest
 2023-10-29,breathwork,2
 2023-10-29,guided meditation,3
 2023-10-29,meditation,66
-2023-10-29,mindfulness,18
+2023-10-29,mindfulness,17
 2023-10-29,yoga nidra,3
 2023-11-05,breathwork,2
 2023-11-05,guided meditation,3
@@ -831,13 +826,13 @@ date,keyword,search_interest
 2023-11-05,yoga nidra,3
 2023-11-12,breathwork,3
 2023-11-12,guided meditation,3
-2023-11-12,meditation,76
+2023-11-12,meditation,73
 2023-11-12,mindfulness,19
 2023-11-12,yoga nidra,3
 2023-11-19,breathwork,2
 2023-11-19,guided meditation,3
 2023-11-19,meditation,67
-2023-11-19,mindfulness,17
+2023-11-19,mindfulness,18
 2023-11-19,yoga nidra,3
 2023-11-26,breathwork,2
 2023-11-26,guided meditation,3
@@ -846,22 +841,22 @@ date,keyword,search_interest
 2023-11-26,yoga nidra,3
 2023-12-03,breathwork,2
 2023-12-03,guided meditation,3
-2023-12-03,meditation,73
-2023-12-03,mindfulness,18
+2023-12-03,meditation,72
+2023-12-03,mindfulness,19
 2023-12-03,yoga nidra,3
 2023-12-10,breathwork,2
 2023-12-10,guided meditation,3
-2023-12-10,meditation,72
-2023-12-10,mindfulness,18
+2023-12-10,meditation,71
+2023-12-10,mindfulness,19
 2023-12-10,yoga nidra,3
 2023-12-17,breathwork,2
 2023-12-17,guided meditation,3
-2023-12-17,meditation,69
+2023-12-17,meditation,72
 2023-12-17,mindfulness,15
 2023-12-17,yoga nidra,3
 2023-12-24,breathwork,2
 2023-12-24,guided meditation,3
-2023-12-24,meditation,70
+2023-12-24,meditation,66
 2023-12-24,mindfulness,12
 2023-12-24,yoga nidra,3
 2023-12-31,breathwork,2
@@ -871,7 +866,7 @@ date,keyword,search_interest
 2023-12-31,yoga nidra,3
 2024-01-07,breathwork,3
 2024-01-07,guided meditation,3
-2024-01-07,meditation,76
+2024-01-07,meditation,75
 2024-01-07,mindfulness,18
 2024-01-07,yoga nidra,3
 2024-01-14,breathwork,3
@@ -881,88 +876,88 @@ date,keyword,search_interest
 2024-01-14,yoga nidra,3
 2024-01-21,breathwork,3
 2024-01-21,guided meditation,3
-2024-01-21,meditation,73
-2024-01-21,mindfulness,20
+2024-01-21,meditation,74
+2024-01-21,mindfulness,19
 2024-01-21,yoga nidra,3
 2024-01-28,breathwork,3
 2024-01-28,guided meditation,3
 2024-01-28,meditation,76
-2024-01-28,mindfulness,20
+2024-01-28,mindfulness,19
 2024-01-28,yoga nidra,4
 2024-02-04,breathwork,3
 2024-02-04,guided meditation,3
-2024-02-04,meditation,78
+2024-02-04,meditation,77
 2024-02-04,mindfulness,21
 2024-02-04,yoga nidra,4
 2024-02-11,breathwork,2
 2024-02-11,guided meditation,3
-2024-02-11,meditation,79
-2024-02-11,mindfulness,19
+2024-02-11,meditation,74
+2024-02-11,mindfulness,18
 2024-02-11,yoga nidra,3
 2024-02-18,breathwork,3
 2024-02-18,guided meditation,3
-2024-02-18,meditation,73
+2024-02-18,meditation,74
 2024-02-18,mindfulness,20
 2024-02-18,yoga nidra,3
 2024-02-25,breathwork,3
 2024-02-25,guided meditation,3
-2024-02-25,meditation,79
+2024-02-25,meditation,77
 2024-02-25,mindfulness,20
 2024-02-25,yoga nidra,3
-2024-03-03,breathwork,2
+2024-03-03,breathwork,3
 2024-03-03,guided meditation,3
-2024-03-03,meditation,75
+2024-03-03,meditation,74
 2024-03-03,mindfulness,19
 2024-03-03,yoga nidra,3
-2024-03-10,breathwork,3
+2024-03-10,breathwork,2
 2024-03-10,guided meditation,3
-2024-03-10,meditation,73
+2024-03-10,meditation,71
 2024-03-10,mindfulness,19
 2024-03-10,yoga nidra,3
 2024-03-17,breathwork,2
 2024-03-17,guided meditation,3
-2024-03-17,meditation,84
+2024-03-17,meditation,83
 2024-03-17,mindfulness,20
 2024-03-17,yoga nidra,3
 2024-03-24,breathwork,3
 2024-03-24,guided meditation,3
-2024-03-24,meditation,70
+2024-03-24,meditation,71
 2024-03-24,mindfulness,17
 2024-03-24,yoga nidra,3
 2024-03-31,breathwork,3
 2024-03-31,guided meditation,3
 2024-03-31,meditation,69
-2024-03-31,mindfulness,17
+2024-03-31,mindfulness,19
 2024-03-31,yoga nidra,3
-2024-04-07,breathwork,3
+2024-04-07,breathwork,2
 2024-04-07,guided meditation,3
-2024-04-07,meditation,72
-2024-04-07,mindfulness,19
+2024-04-07,meditation,70
+2024-04-07,mindfulness,18
 2024-04-07,yoga nidra,3
 2024-04-14,breathwork,3
 2024-04-14,guided meditation,3
-2024-04-14,meditation,67
+2024-04-14,meditation,65
 2024-04-14,mindfulness,19
 2024-04-14,yoga nidra,3
 2024-04-21,breathwork,3
 2024-04-21,guided meditation,3
 2024-04-21,meditation,69
-2024-04-21,mindfulness,18
+2024-04-21,mindfulness,19
 2024-04-21,yoga nidra,3
 2024-04-28,breathwork,3
 2024-04-28,guided meditation,3
-2024-04-28,meditation,69
-2024-04-28,mindfulness,19
+2024-04-28,meditation,68
+2024-04-28,mindfulness,18
 2024-04-28,yoga nidra,3
 2024-05-05,breathwork,3
 2024-05-05,guided meditation,3
-2024-05-05,meditation,66
+2024-05-05,meditation,65
 2024-05-05,mindfulness,18
 2024-05-05,yoga nidra,3
-2024-05-12,breathwork,3
+2024-05-12,breathwork,2
 2024-05-12,guided meditation,3
-2024-05-12,meditation,65
-2024-05-12,mindfulness,19
+2024-05-12,meditation,66
+2024-05-12,mindfulness,18
 2024-05-12,yoga nidra,3
 2024-05-19,breathwork,2
 2024-05-19,guided meditation,3
@@ -982,7 +977,7 @@ date,keyword,search_interest
 2024-06-09,breathwork,2
 2024-06-09,guided meditation,3
 2024-06-09,meditation,67
-2024-06-09,mindfulness,18
+2024-06-09,mindfulness,17
 2024-06-09,yoga nidra,3
 2024-06-16,breathwork,3
 2024-06-16,guided meditation,3
@@ -991,17 +986,17 @@ date,keyword,search_interest
 2024-06-16,yoga nidra,3
 2024-06-23,breathwork,3
 2024-06-23,guided meditation,3
-2024-06-23,meditation,64
+2024-06-23,meditation,65
 2024-06-23,mindfulness,16
 2024-06-23,yoga nidra,3
 2024-06-30,breathwork,2
 2024-06-30,guided meditation,3
-2024-06-30,meditation,65
-2024-06-30,mindfulness,16
+2024-06-30,meditation,62
+2024-06-30,mindfulness,15
 2024-06-30,yoga nidra,3
 2024-07-07,breathwork,3
 2024-07-07,guided meditation,3
-2024-07-07,meditation,64
+2024-07-07,meditation,63
 2024-07-07,mindfulness,16
 2024-07-07,yoga nidra,3
 2024-07-14,breathwork,2
@@ -1011,102 +1006,102 @@ date,keyword,search_interest
 2024-07-14,yoga nidra,3
 2024-07-21,breathwork,2
 2024-07-21,guided meditation,3
-2024-07-21,meditation,65
+2024-07-21,meditation,64
 2024-07-21,mindfulness,16
 2024-07-21,yoga nidra,3
 2024-07-28,breathwork,3
 2024-07-28,guided meditation,3
-2024-07-28,meditation,66
+2024-07-28,meditation,64
 2024-07-28,mindfulness,15
 2024-07-28,yoga nidra,3
 2024-08-04,breathwork,3
 2024-08-04,guided meditation,3
-2024-08-04,meditation,66
+2024-08-04,meditation,65
 2024-08-04,mindfulness,15
 2024-08-04,yoga nidra,3
 2024-08-11,breathwork,3
 2024-08-11,guided meditation,3
-2024-08-11,meditation,68
-2024-08-11,mindfulness,17
+2024-08-11,meditation,69
+2024-08-11,mindfulness,16
 2024-08-11,yoga nidra,3
 2024-08-18,breathwork,3
 2024-08-18,guided meditation,3
-2024-08-18,meditation,67
-2024-08-18,mindfulness,18
+2024-08-18,meditation,66
+2024-08-18,mindfulness,17
 2024-08-18,yoga nidra,3
 2024-08-25,breathwork,2
 2024-08-25,guided meditation,3
-2024-08-25,meditation,70
+2024-08-25,meditation,68
 2024-08-25,mindfulness,18
 2024-08-25,yoga nidra,3
 2024-09-01,breathwork,3
 2024-09-01,guided meditation,3
-2024-09-01,meditation,70
+2024-09-01,meditation,68
 2024-09-01,mindfulness,19
 2024-09-01,yoga nidra,3
 2024-09-08,breathwork,2
 2024-09-08,guided meditation,3
-2024-09-08,meditation,69
+2024-09-08,meditation,68
 2024-09-08,mindfulness,20
 2024-09-08,yoga nidra,3
 2024-09-15,breathwork,3
 2024-09-15,guided meditation,3
-2024-09-15,meditation,70
-2024-09-15,mindfulness,20
+2024-09-15,meditation,69
+2024-09-15,mindfulness,21
 2024-09-15,yoga nidra,3
 2024-09-22,breathwork,3
 2024-09-22,guided meditation,3
 2024-09-22,meditation,67
-2024-09-22,mindfulness,20
+2024-09-22,mindfulness,19
 2024-09-22,yoga nidra,4
 2024-09-29,breathwork,3
 2024-09-29,guided meditation,3
-2024-09-29,meditation,66
-2024-09-29,mindfulness,21
+2024-09-29,meditation,67
+2024-09-29,mindfulness,20
 2024-09-29,yoga nidra,3
 2024-10-06,breathwork,2
 2024-10-06,guided meditation,3
-2024-10-06,meditation,68
+2024-10-06,meditation,64
 2024-10-06,mindfulness,21
 2024-10-06,yoga nidra,3
 2024-10-13,breathwork,3
 2024-10-13,guided meditation,3
-2024-10-13,meditation,65
-2024-10-13,mindfulness,21
+2024-10-13,meditation,64
+2024-10-13,mindfulness,20
 2024-10-13,yoga nidra,3
 2024-10-20,breathwork,3
 2024-10-20,guided meditation,3
-2024-10-20,meditation,65
-2024-10-20,mindfulness,20
+2024-10-20,meditation,68
+2024-10-20,mindfulness,19
 2024-10-20,yoga nidra,3
 2024-10-27,breathwork,3
 2024-10-27,guided meditation,3
-2024-10-27,meditation,62
+2024-10-27,meditation,61
 2024-10-27,mindfulness,20
 2024-10-27,yoga nidra,3
 2024-11-03,breathwork,3
 2024-11-03,guided meditation,3
-2024-11-03,meditation,66
-2024-11-03,mindfulness,25
+2024-11-03,meditation,65
+2024-11-03,mindfulness,24
 2024-11-03,yoga nidra,3
 2024-11-10,breathwork,3
 2024-11-10,guided meditation,3
-2024-11-10,meditation,68
+2024-11-10,meditation,67
 2024-11-10,mindfulness,24
 2024-11-10,yoga nidra,3
 2024-11-17,breathwork,3
 2024-11-17,guided meditation,3
 2024-11-17,meditation,65
-2024-11-17,mindfulness,24
+2024-11-17,mindfulness,23
 2024-11-17,yoga nidra,3
 2024-11-24,breathwork,3
 2024-11-24,guided meditation,3
-2024-11-24,meditation,62
+2024-11-24,meditation,61
 2024-11-24,mindfulness,21
 2024-11-24,yoga nidra,3
 2024-12-01,breathwork,3
 2024-12-01,guided meditation,3
-2024-12-01,meditation,68
+2024-12-01,meditation,65
 2024-12-01,mindfulness,20
 2024-12-01,yoga nidra,3
 2024-12-08,breathwork,3
@@ -1116,12 +1111,12 @@ date,keyword,search_interest
 2024-12-08,yoga nidra,3
 2024-12-15,breathwork,2
 2024-12-15,guided meditation,3
-2024-12-15,meditation,69
+2024-12-15,meditation,68
 2024-12-15,mindfulness,16
 2024-12-15,yoga nidra,3
 2024-12-22,breathwork,2
 2024-12-22,guided meditation,2
-2024-12-22,meditation,61
+2024-12-22,meditation,62
 2024-12-22,mindfulness,11
 2024-12-22,yoga nidra,2
 2024-12-29,breathwork,3
@@ -1131,138 +1126,138 @@ date,keyword,search_interest
 2024-12-29,yoga nidra,3
 2025-01-05,breathwork,3
 2025-01-05,guided meditation,3
-2025-01-05,meditation,69
+2025-01-05,meditation,72
 2025-01-05,mindfulness,19
 2025-01-05,yoga nidra,3
 2025-01-12,breathwork,3
 2025-01-12,guided meditation,3
-2025-01-12,meditation,74
+2025-01-12,meditation,72
 2025-01-12,mindfulness,20
 2025-01-12,yoga nidra,3
 2025-01-19,breathwork,3
 2025-01-19,guided meditation,3
-2025-01-19,meditation,76
+2025-01-19,meditation,70
 2025-01-19,mindfulness,18
 2025-01-19,yoga nidra,3
 2025-01-26,breathwork,3
 2025-01-26,guided meditation,3
-2025-01-26,meditation,71
+2025-01-26,meditation,69
 2025-01-26,mindfulness,20
 2025-01-26,yoga nidra,3
 2025-02-02,breathwork,3
 2025-02-02,guided meditation,3
-2025-02-02,meditation,68
-2025-02-02,mindfulness,20
+2025-02-02,meditation,67
+2025-02-02,mindfulness,19
 2025-02-02,yoga nidra,3
 2025-02-09,breathwork,3
 2025-02-09,guided meditation,3
-2025-02-09,meditation,68
-2025-02-09,mindfulness,20
+2025-02-09,meditation,67
+2025-02-09,mindfulness,19
 2025-02-09,yoga nidra,3
 2025-02-16,breathwork,3
 2025-02-16,guided meditation,3
-2025-02-16,meditation,66
+2025-02-16,meditation,65
 2025-02-16,mindfulness,20
 2025-02-16,yoga nidra,3
 2025-02-23,breathwork,3
 2025-02-23,guided meditation,3
-2025-02-23,meditation,68
+2025-02-23,meditation,67
 2025-02-23,mindfulness,20
 2025-02-23,yoga nidra,3
 2025-03-02,breathwork,3
 2025-03-02,guided meditation,3
 2025-03-02,meditation,67
-2025-03-02,mindfulness,20
+2025-03-02,mindfulness,19
 2025-03-02,yoga nidra,3
 2025-03-09,breathwork,3
 2025-03-09,guided meditation,3
-2025-03-09,meditation,67
+2025-03-09,meditation,65
 2025-03-09,mindfulness,19
 2025-03-09,yoga nidra,3
 2025-03-16,breathwork,3
 2025-03-16,guided meditation,3
-2025-03-16,meditation,68
-2025-03-16,mindfulness,20
+2025-03-16,meditation,67
+2025-03-16,mindfulness,19
 2025-03-16,yoga nidra,3
 2025-03-23,breathwork,3
 2025-03-23,guided meditation,3
-2025-03-23,meditation,65
+2025-03-23,meditation,66
 2025-03-23,mindfulness,19
 2025-03-23,yoga nidra,3
 2025-03-30,breathwork,3
 2025-03-30,guided meditation,3
-2025-03-30,meditation,64
-2025-03-30,mindfulness,19
+2025-03-30,meditation,66
+2025-03-30,mindfulness,20
 2025-03-30,yoga nidra,3
 2025-04-06,breathwork,3
 2025-04-06,guided meditation,3
-2025-04-06,meditation,60
-2025-04-06,mindfulness,19
+2025-04-06,meditation,65
+2025-04-06,mindfulness,18
 2025-04-06,yoga nidra,3
 2025-04-13,breathwork,3
 2025-04-13,guided meditation,3
-2025-04-13,meditation,61
-2025-04-13,mindfulness,17
+2025-04-13,meditation,63
+2025-04-13,mindfulness,16
 2025-04-13,yoga nidra,3
 2025-04-20,breathwork,3
 2025-04-20,guided meditation,3
-2025-04-20,meditation,64
+2025-04-20,meditation,65
 2025-04-20,mindfulness,18
 2025-04-20,yoga nidra,3
 2025-04-27,breathwork,3
 2025-04-27,guided meditation,3
-2025-04-27,meditation,65
-2025-04-27,mindfulness,19
+2025-04-27,meditation,62
+2025-04-27,mindfulness,18
 2025-04-27,yoga nidra,3
 2025-05-04,breathwork,3
 2025-05-04,guided meditation,3
-2025-05-04,meditation,59
+2025-05-04,meditation,58
 2025-05-04,mindfulness,18
 2025-05-04,yoga nidra,3
 2025-05-11,breathwork,3
 2025-05-11,guided meditation,3
-2025-05-11,meditation,63
-2025-05-11,mindfulness,19
+2025-05-11,meditation,62
+2025-05-11,mindfulness,18
 2025-05-11,yoga nidra,3
 2025-05-18,breathwork,3
 2025-05-18,guided meditation,3
-2025-05-18,meditation,61
-2025-05-18,mindfulness,18
+2025-05-18,meditation,60
+2025-05-18,mindfulness,17
 2025-05-18,yoga nidra,3
 2025-05-25,breathwork,3
 2025-05-25,guided meditation,3
-2025-05-25,meditation,59
+2025-05-25,meditation,58
 2025-05-25,mindfulness,17
 2025-05-25,yoga nidra,3
 2025-06-01,breathwork,3
 2025-06-01,guided meditation,3
-2025-06-01,meditation,64
-2025-06-01,mindfulness,18
+2025-06-01,meditation,62
+2025-06-01,mindfulness,17
 2025-06-01,yoga nidra,3
 2025-06-08,breathwork,3
 2025-06-08,guided meditation,3
-2025-06-08,meditation,64
+2025-06-08,meditation,66
 2025-06-08,mindfulness,19
 2025-06-08,yoga nidra,3
 2025-06-15,breathwork,3
 2025-06-15,guided meditation,3
-2025-06-15,meditation,63
-2025-06-15,mindfulness,19
+2025-06-15,meditation,64
+2025-06-15,mindfulness,18
 2025-06-15,yoga nidra,3
 2025-06-22,breathwork,3
 2025-06-22,guided meditation,3
-2025-06-22,meditation,64
+2025-06-22,meditation,66
 2025-06-22,mindfulness,18
 2025-06-22,yoga nidra,3
 2025-06-29,breathwork,3
 2025-06-29,guided meditation,3
-2025-06-29,meditation,61
-2025-06-29,mindfulness,16
+2025-06-29,meditation,59
+2025-06-29,mindfulness,15
 2025-06-29,yoga nidra,3
 2025-07-06,breathwork,3
 2025-07-06,guided meditation,3
-2025-07-06,meditation,68
-2025-07-06,mindfulness,19
+2025-07-06,meditation,66
+2025-07-06,mindfulness,20
 2025-07-06,yoga nidra,3
 2025-07-13,breathwork,3
 2025-07-13,guided meditation,4
@@ -1271,13 +1266,13 @@ date,keyword,search_interest
 2025-07-13,yoga nidra,3
 2025-07-20,breathwork,3
 2025-07-20,guided meditation,4
-2025-07-20,meditation,79
-2025-07-20,mindfulness,25
+2025-07-20,meditation,78
+2025-07-20,mindfulness,26
 2025-07-20,yoga nidra,3
 2025-07-27,breathwork,3
 2025-07-27,guided meditation,5
-2025-07-27,meditation,72
-2025-07-27,mindfulness,20
+2025-07-27,meditation,73
+2025-07-27,mindfulness,21
 2025-07-27,yoga nidra,3
 2025-08-03,breathwork,5
 2025-08-03,guided meditation,6
@@ -1286,26 +1281,31 @@ date,keyword,search_interest
 2025-08-03,yoga nidra,3
 2025-08-10,breathwork,5
 2025-08-10,guided meditation,6
-2025-08-10,meditation,85
-2025-08-10,mindfulness,31
+2025-08-10,meditation,84
+2025-08-10,mindfulness,32
 2025-08-10,yoga nidra,3
 2025-08-17,breathwork,5
 2025-08-17,guided meditation,6
-2025-08-17,meditation,85
-2025-08-17,mindfulness,32
+2025-08-17,meditation,86
+2025-08-17,mindfulness,30
 2025-08-17,yoga nidra,3
-2025-08-24,breathwork,4
-2025-08-24,guided meditation,4
-2025-08-24,meditation,74
-2025-08-24,mindfulness,22
-2025-08-24,yoga nidra,3
-2025-08-31,breathwork,3
+2025-08-24,breathwork,5
+2025-08-24,guided meditation,5
+2025-08-24,meditation,77
+2025-08-24,mindfulness,27
+2025-08-24,yoga nidra,4
+2025-08-31,breathwork,4
 2025-08-31,guided meditation,3
-2025-08-31,meditation,61
-2025-08-31,mindfulness,17
+2025-08-31,meditation,67
+2025-08-31,mindfulness,21
 2025-08-31,yoga nidra,3
 2025-09-07,breathwork,3
 2025-09-07,guided meditation,3
 2025-09-07,meditation,63
 2025-09-07,mindfulness,18
 2025-09-07,yoga nidra,3
+2025-09-14,breathwork,3
+2025-09-14,guided meditation,3
+2025-09-14,meditation,60
+2025-09-14,mindfulness,18
+2025-09-14,yoga nidra,3

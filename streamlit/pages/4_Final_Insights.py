@@ -114,13 +114,13 @@ with card_width():
                     with open(JOURNAL_PATH, "a", encoding="utf-8") as f:
                         f.write(f"[{ts}] {text}\n---\n")
                     st.success("Reflection saved! 🧘")
-                    st.session_state["final_insights_journal"] = ""  # clear after save
+                    st.session_state.update({"final_insights_journal": ""})  # clear after save
                 except Exception as e:
                     st.error(f"Could not save your reflection. ({e})")
 
     with col_clear:
         if st.button("🧹 Clear", use_container_width=True, key="btn_clear_reflection"):
-            st.session_state["final_insights_journal"] = ""
+            st.session_state.update({"final_insights_journal": ""})
             st.toast("Cleared.")
 
 space(0.5)

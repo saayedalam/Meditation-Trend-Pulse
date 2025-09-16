@@ -81,52 +81,10 @@ render_card(
     side="right",
     center=True
 )
-# ─────────────────────────────────────────────────────────────
-# 🟧 Card 3 — Reflect On Your Journey (Sacral)
-# ─────────────────────────────────────────────────────────────
-# render_card(
-#     title_html="📝 Reflect On Your Journey",
-#     body_html="What’s one insight, intention, or realization you’re taking away from this exploration?",
-#     color_hex=CHAKRA_SOLAR_PLEXUS,
-#     side="left",
-#     center=False
-# )
 
-# # 🗒️ Journaling (card-width wrapper between Card 3 and Card 4)
-# with card_width():
-#     journal_entry = st.text_area(
-#         label="Reflection notes", 
-#         placeholder="Type your reflection here...",
-#         height=150, 
-#         key="final_insights_journal",
-#         label_visibility="visible",
-#     )
-#     col_save, col_clear = st.columns(2)
-
-#     with col_save:
-#         if st.button("💾 Save Reflection", use_container_width=True, key="btn_save_reflection"):
-#             text = (journal_entry or "").strip()
-#             if not text:
-#                 st.warning("Please write something before saving.")
-#             else:
-#                 try:
-#                     ts = datetime.now().strftime("%Y-%m-%d %H:%M")
-#                     with open(JOURNAL_PATH, "a", encoding="utf-8") as f:
-#                         f.write(f"[{ts}] {text}\n---\n")
-#                     st.success("Reflection saved! 🧘")
-#                     st.session_state.update({"final_insights_journal": ""})  # clear after save
-#                 except Exception as e:
-#                     st.error(f"Could not save your reflection. ({e})")
-
-#     with col_clear:
-#         if st.button("🧹 Clear", use_container_width=True, key="btn_clear_reflection"):
-#             st.session_state.update({"final_insights_journal": ""})
-#             st.toast("Cleared.")
-
-# space(0.5)
 
 # ─────────────────────────────────────────────────────────────
-# 🟥 Card 4 — Closing Quote (Root)
+# 🟥 Card 3 — Closing Quote (Root)
 # ─────────────────────────────────────────────────────────────
 render_card(
     title_html="💬 Closing Mantra",

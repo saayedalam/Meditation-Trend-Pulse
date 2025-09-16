@@ -149,7 +149,7 @@ else:
         .properties(height=420)
         .interactive(bind_y=False)
     )
-    st.altair_chart(line_chart, use_container_width=True)
+    st.altair_chart(line_chart, width="stretch")
     space(2)
     horizontal_rule()
 
@@ -233,7 +233,7 @@ df_top_cleaned = df_top_cleaned[["Search Term", "Peak Date", "Interest Score"]]
 # style score
 styled_df = df_top_cleaned.style.map(format_interest, subset=["Interest Score"])
 
-st.dataframe(styled_df, use_container_width=True, hide_index=True)
+st.dataframe(styled_df, width="stretch", hide_index=True)
 
 space()
 

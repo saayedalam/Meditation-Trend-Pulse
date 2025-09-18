@@ -24,3 +24,4 @@ __pycache__/
 # ──────────────────────────────────────────────
 .last_run_date
 automation/archive.py
+automation/archieve.py

@@ -1,9 +1,11 @@
 # ──────────────────────────────────────────────
-# Jupyter notebooks & logs
+# Jupyter notebooks, environments & logs
 # ──────────────────────────────────────────────
 .ipynb_checkpoints/
 logs/
 *.log
+.venv/
+.env
 
 # ──────────────────────────────────────────────
 # Streamlit configuration (local secrets/credentials)
@@ -25,3 +27,4 @@ __pycache__/
 .last_run_date
 automation/archive.py
 automation/archieve.py
+

@@ -171,7 +171,7 @@ column_config = {
 st.data_editor(
     df_total_cleaned,
     column_config=column_config,
-    width="stretch",
+    use_container_width=True,
     hide_index=True,
     disabled=True,
 )

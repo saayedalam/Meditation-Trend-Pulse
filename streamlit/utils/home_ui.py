@@ -1,7 +1,5 @@
 # utils/home_ui.py
-from __future__ import annotations
 
-from typing import Sequence
 import textwrap
 import streamlit as st
 
@@ -12,10 +10,12 @@ from utils.ui import (
     CHAKRA_HEART, CHAKRA_THROAT, CHAKRA_THIRD_EYE, CHAKRA_CROWN,
 )
 
-# ─────────────────────────────────────────────────────────────
-# Internal: inject pulsing chakra CSS once
-# ─────────────────────────────────────────────────────────────
+
 def _inject_home_css_once() -> None:
+    """
+    Inject CSS for the animated header once per session.
+    Respects reduced-motion user preferences.
+    """
     if st.session_state.get("_home_css_injected"):
         return
     st.markdown(
@@ -49,14 +49,14 @@ def _inject_home_css_once() -> None:
     st.session_state["_home_css_injected"] = True
 
 
-# ─────────────────────────────────────────────────────────────
-# 1) Animated header
-# ─────────────────────────────────────────────────────────────
 def render_home_header(
     *,
     title: str = "Meditation Trend Pulse",
     subtitle: str = "Explore how the world is tuning into stillness — from meditation to breathwork.",
 ) -> None:
+    """
+    Render the page header (animated title + subtitle).
+    """
     _inject_home_css_once()
     st.markdown(
         f"""
@@ -73,23 +73,49 @@ def render_home_header(
     )
 
 
-# ─────────────────────────────────────────────────────────────
-# 2) Intro card (7‑chakra gradient + nav tiles)
-# ─────────────────────────────────────────────────────────────
-def render_home_intro_card(
-    *,
-    topic_tags=("Google Trends", "Python + Streamlit", "Altair Charts", "Weekly Updates"),
-):
+def _gradient_stops_rgba() -> str:
     chakra_hexes = [
         CHAKRA_ROOT, CHAKRA_SACRAL, CHAKRA_SOLAR_PLEXUS,
         CHAKRA_HEART, CHAKRA_THROAT, CHAKRA_THIRD_EYE, CHAKRA_CROWN
     ]
-    chakra_rgba_stops = ", ".join([f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes])
+    return ", ".join(f"rgba({hex_to_rgb(h)},0.08)" for h in chakra_hexes)
 
-    pills_html = "".join(
+
+def _pills_html(topic_tags: tuple[str, ...]) -> str:
+    return "".join(
         f'<span style="font-size:0.85rem; padding:0.28rem 0.55rem; border-radius:999px; background:#ffffffcc; color:#374151;">{t}</span>'
         for t in topic_tags
     )
+
+
+def _tile_html(href: str, border_color: str, title: str, subtitle: str) -> str:
+    return f"""
+      <a href="{href}" target="_self" style="text-decoration:none; display:block; height:100%;">
+        <div style="background:#ffffffdd; border-left:6px solid {border_color}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
+          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">{title}</div>
+          <div style="font-size:0.95rem; color:#4b5563;">{subtitle}</div>
+        </div>
+      </a>
+    """.strip()
+
+
+def render_home_intro_card(
+    *,
+    topic_tags: tuple[str, ...] = ("Google Trends", "Python + Streamlit", "Altair Charts", "Weekly Updates"),
+) -> None:
+    """
+    Render the overview card with topic tags and navigation tiles.
+    """
+    pills_html = _pills_html(topic_tags)
+    chakra_rgba_stops = _gradient_stops_rgba()
+
+    tiles = [
+        _tile_html("/Global_Trends",  CHAKRA_HEART,      "📈 Global Trends",   "Peaks, seasonality, growth"),
+        _tile_html("/Country_Trends", CHAKRA_THROAT,     "🌍 Country View",    "Top countries & comparisons"),
+        _tile_html("/Related_Queries", CHAKRA_THIRD_EYE, "🔍 Related Queries", "What else people search"),
+        _tile_html("/Final_Insights", CHAKRA_CROWN,      "🧠 Final Insights",  "Big takeaways & reflection"),
+    ]
+    tiles_html = "\n".join(tiles)
 
     intro_html = f"""
 <div style="background:linear-gradient(135deg,{chakra_rgba_stops}); border-radius:12px; padding:1.25rem;">
@@ -111,34 +137,11 @@ def render_home_intro_card(
       }}
     </style>
     <div class="home-grid">
-      <a href="/Global_Trends" target="_self" style="text-decoration:none; display:block; height:100%;">
-        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_HEART}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
-          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">📈 Global Trends</div>
-          <div style="font-size:0.95rem; color:#4b5563;">Peaks, seasonality, growth</div>
-        </div>
-      </a>
-      <a href="/Country_Trends" target="_self" style="text-decoration:none; display:block; height:100%;">
-        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THROAT}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
-          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🌍 Country View</div>
-          <div style="font-size:0.95rem; color:#4b5563;">Top countries & comparisons</div>
-        </div>
-      </a>
-      <a href="/Related_Queries" target="_self" style="text-decoration:none; display:block; height:100%;">
-        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_THIRD_EYE}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
-          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🔍 Related Queries</div>
-          <div style="font-size:0.95rem; color:#4b5563;">What else people search</div>
-        </div>
-      </a>
-      <a href="/Final_Insights" target="_self" style="text-decoration:none; display:block; height:100%;">
-        <div style="background:#ffffffdd; border-left:6px solid {CHAKRA_CROWN}; border-radius:12px; padding:0.8rem 0.9rem; box-shadow:0 2px 8px rgba(0,0,0,0.04); height:100%; display:flex; flex-direction:column; justify-content:center;">
-          <div style="font-weight:700; margin-bottom:0.2rem; color:#1f2937;">🧠 Final Insights</div>
-          <div style="font-size:0.95rem; color:#4b5563;">Big takeaways & reflection</div>
-        </div>
-      </a>
+      {tiles_html}
     </div>
   </div>
 </div>
-"""
+""".strip()
 
     render_card(
         title_html="Project Overview",
@@ -147,9 +150,8 @@ def render_home_intro_card(
         side=None,
         center=True,
     )
-# ─────────────────────────────────────────────────────────────
-# 3) Author + links
-# ─────────────────────────────────────────────────────────────
+
+
 def render_home_author_card(
     *,
     name_html: str = '<a href="https://www.datascienceportfol.io/saayedalam" target="_blank" rel="noopener noreferrer" style="color:#7b3fe4; text-decoration:none;">Saayed Alam</a>',
@@ -157,6 +159,9 @@ def render_home_author_card(
     github_url: str = "https://github.com/saayedalam/Meditation-Trend-Pulse",
     linkedin_url: str = "https://www.linkedin.com/in/saayedalam/",
 ) -> None:
+    """
+    Render the author card with name and external links.
+    """
     author_html = f"""
     <div style='text-align:center; margin-top:2rem; padding:1.5rem; 
                 background: linear-gradient(135deg, rgba(131,58,180,0.05), rgba(253,29,29,0.05), rgba(252,176,69,0.05));

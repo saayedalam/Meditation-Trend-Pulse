@@ -81,7 +81,7 @@ with col1:
         content_paragraph="Shows the top 10 most frequent search queries for each meditation keyword.",
         content_list=[
             "🧠 Commonly co-searched phrases, e.g., “guided meditation for anxiety”.",
-            "🎯 Useful for understanding core search intent
+            "🎯 Useful for understanding core search intent",
         ],
         gradient_color=CHAKRA_THIRD_EYE,
     )

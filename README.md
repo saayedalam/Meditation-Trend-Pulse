@@ -3,7 +3,7 @@
 **Interactive dashboard + automation pipeline** tracking global and country-level interest in meditation, mindfulness, and breathwork.  
 Built with **Python, PyTrends, Prophet, and Streamlit** to demonstrate end-to-end data workflows: ingestion, automation, analysis, forecasting, and dashboarding.
 
-🌐 **Live App:** [Streamlit Dashboard](https://your-streamlit-link-here)  
+🌐 **Live App:** [Streamlit Dashboard](https://meditationtrendpulse.streamlit.app/)  
 📂 **Repo Highlights:** `/automation` · `/data` · `/notebooks` · `/streamlit`  
 
 ---
@@ -48,7 +48,6 @@ meditation-trend-pulse/
 - **Global Trends** → 5-year search interest, % change table, peak interest dates  
 - **Country Trends** → top countries by practice, cross-keyword comparisons  
 - **Related Queries** → top & rising search queries, shared interest signals  
-- **Forecasting** → Prophet-based projections with uncertainty intervals  
 
 Each page uses custom UI components (chakra-themed cards, headers, footers) for a professional look.
 
@@ -74,17 +73,8 @@ This project demonstrates:
 - **Breadth of skills** → automation, time series forecasting, dashboarding  
 - **Stakeholder readiness** → insights framed for business & non-technical audiences  
 
-Together with my other portfolio projects (Loan Default Prediction + CMS Hospital SQL/BI), this completes a **well-rounded, job-ready data portfolio**.
-
----
-
-## 🚀 Next Steps
-- Add more keywords (e.g., yoga, meditation apps) for broader analysis.  
-- Connect to YouTube API for multimedia trend comparison.  
-- Deploy continuous integration for dataset + dashboard updates.  
-
 ---
 
 ## 👤 Author
 **Saayed Alam**  
-🔗 [Portfolio Website](https://your-website-link-here) | [LinkedIn](https://www.linkedin.com/in/saayedalam) | [GitHub](https://github.com/saayedalam)
+🔗 [Portfolio Website](http://saayedalam.me) | [LinkedIn](https://www.linkedin.com/in/saayedalam) | [GitHub](https://github.com/saayedalam)

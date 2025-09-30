@@ -130,7 +130,8 @@ else:
         ],
     ).properties(height=500)
 
-    st.altair_chart(bar_chart, use_container_width=True)
+    #st.altair_chart(bar_chart, use_container_width=True) ##depecreated
+    st.altair_chart(bar_chart, use_container_width="stretch")
     space()
     horizontal_rule()
 
@@ -168,10 +169,19 @@ column_config = {
     "Total Interest": st.column_config.NumberColumn(label="Total Interest"),
 }
 
+# ##depecreated
+# st.data_editor(
+#     df_total_cleaned,
+#     column_config=column_config,
+#     use_container_width=True,
+#     hide_index=True,
+#     disabled=True,
+# )
+
 st.data_editor(
     df_total_cleaned,
     column_config=column_config,
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
     disabled=True,
 )

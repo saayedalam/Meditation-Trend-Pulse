@@ -1,5 +1,10 @@
-streamlit
-altair
-pandas
 numpy
+pandas
+pytrends
+matplotlib
+prophet
+cmdstanpy
+scikit-learn
+altair
+streamlit
 pycountry

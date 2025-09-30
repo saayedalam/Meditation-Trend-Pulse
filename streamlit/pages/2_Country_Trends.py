@@ -130,8 +130,7 @@ else:
         ],
     ).properties(height=500)
 
-    #st.altair_chart(bar_chart, use_container_width=True) ##depecreated
-    st.altair_chart(bar_chart, use_container_width="stretch")
+    st.altair_chart(bar_chart, use_container_width=True) 
     space()
     horizontal_rule()
 

@@ -149,8 +149,7 @@ else:
         .properties(height=420)
         .interactive(bind_y=False)
     )
-    #st.altair_chart(line_chart, use_container_width=True) ##depecrated
-    st.altair_chart(line_chart, use_container_width="stretch")
+    st.altair_chart(line_chart, use_container_width=True) 
     space(2)
     horizontal_rule()
 

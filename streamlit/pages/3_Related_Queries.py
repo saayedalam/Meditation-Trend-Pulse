@@ -78,10 +78,10 @@ col1, col2 = st.columns(2)
 with col1:
     render_section_card(
         icon="🔝",
-        content_paragraph="Shows the **top 10 most frequent search queries** for each meditation keyword.",
+        content_paragraph="Shows the top 10 most frequent search queries for each meditation keyword.",
         content_list=[
             "🧠 Commonly co-searched phrases, e.g., “guided meditation for anxiety”.",
-            "🎯 Useful for understanding **core search intent**."
+            "🎯 Useful for understanding core search intent
         ],
         gradient_color=CHAKRA_THIRD_EYE,
     )
@@ -89,10 +89,10 @@ with col1:
 with col2:
     render_section_card(
         icon="📈",
-        content_paragraph="Shows the <strong>fastest-growing search queries</strong> from Google Trends “Rising” data.",
+        content_paragraph="Shows the fastest-growing search queries from Google Trends “Rising” data.",
         content_list=[
             "🚀 Captures real-time spikes or sudden popularity shifts.",
-            '📊 <strong>Scores may exceed 100</strong> — they reflect absolute growth, not normalized values.',
+            '📊 Scores may exceed 100 — they reflect absolute growth, not normalized values.',
         ],
         gradient_color=CHAKRA_THIRD_EYE,
     )
@@ -142,7 +142,7 @@ render_section_header(
 
 render_section_card(
     icon="💬",
-    content_paragraph="This section highlights <strong>search queries that appear under multiple keywords</strong>.",
+    content_paragraph="This section highlights search queries that appear under multiple keywords.",
     content_list=[
         "♻️ Helps uncover universal themes and overlapping intent across meditation-related terms.",
         "🧠 Great for identifying high-impact queries with broad relevance.",

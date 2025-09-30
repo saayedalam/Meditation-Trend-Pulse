@@ -166,8 +166,8 @@ render_section_card(
     icon="📋",
     content_paragraph="This table shows how global interest in each search term has changed over the past 5 years, based on Google Trends data.",
     content_list=[
-        "🟢 **Positive %** means global interest increased.",
-        "🔴 **Negative %** means global interest declined.",
+        "🟢 Positive % means global interest increased.",
+        "🔴 Negative % means global interest declined.",
         "💡 Use this view to identify which practices are gaining traction — and which are fading.",
     ],
     gradient_color=CHAKRA_HEART,

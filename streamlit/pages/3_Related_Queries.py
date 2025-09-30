@@ -78,10 +78,10 @@ col1, col2 = st.columns(2)
 with col1:
     render_section_card(
         icon="🔝",
-        content_paragraph="Shows the <strong>top 10 most frequent search queries</strong> for each meditation keyword.",
+        content_paragraph="Shows the **top 10 most frequent search queries** for each meditation keyword.",
         content_list=[
             "🧠 Commonly co-searched phrases, e.g., “guided meditation for anxiety”.",
-            "🎯 Useful for understanding <strong>core search intent</strong>."
+            "🎯 Useful for understanding **core search intent**."
         ],
         gradient_color=CHAKRA_THIRD_EYE,
     )
